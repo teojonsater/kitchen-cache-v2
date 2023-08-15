@@ -1,9 +1,10 @@
 import {Outlet} from "react-router-dom";
+import IngredientsCard from "./design/IngredientsCard";
 
 function Layout() {
     return (
         <>
-            <h1>Hej</h1>
+            <IngredientsCard/>
             <Outlet/>
         </>
     );

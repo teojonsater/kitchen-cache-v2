@@ -14,7 +14,7 @@ import {
     Text,
     VStack
 } from "@chakra-ui/react";
-import AccessTimeIcon from '@mui/icons-material/AccessTime';
+import AccessTimeRoundedIcon from '@mui/icons-material/AccessTimeRounded';
 import ShoppingBasketOutlinedIcon from '@mui/icons-material/ShoppingBasketOutlined';
 import PaymentsOutlinedIcon from '@mui/icons-material/PaymentsOutlined';
 
@@ -24,7 +24,7 @@ function StatsCard() {
             <CardBody>
                 <HStack divider={<StackDivider />} justifyContent={"space-between"} color="white">
                     <VStack>
-                        <Icon as={AccessTimeIcon} boxSize={10}/>
+                        <Icon as={AccessTimeRoundedIcon} boxSize={10}/>
                         <Text>90 min</Text>
                     </VStack>
                     <VStack>

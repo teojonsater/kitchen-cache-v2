@@ -7,9 +7,9 @@ import {
     Heading,
     HStack,
     Icon,
-    IconButton,
+    IconButton, ListItem,
     Spacer,
-    StackDivider, Switch, Text,
+    StackDivider, Switch, Text, UnorderedList,
     VStack
 } from "@chakra-ui/react";
 import RemoveRoundedIcon from "@mui/icons-material/RemoveRounded";
@@ -21,8 +21,8 @@ function IngredientsCard() {
             <CardBody>
                 <Flex direction="column" gap="5">
                     <VStack spacing="4" alignItems="start" divider={<StackDivider/>}>
-                        <Heading size='md' textAlign="center" textTransform="uppercase" bgColor="teal.400"
-                                 color="white" py="3" px="3" w="full" borderRadius="lg">Ingredienser</Heading>
+                        <Heading size='lg' textAlign="center" bgColor="teal.400"
+                                 color="white" py="4" px="3" w="full" borderRadius="lg">Ingredienser</Heading>
                         <Flex w="full" alignItems='center' gap='2'>
                             <HStack>
                                 <IconButton
@@ -32,7 +32,7 @@ function IngredientsCard() {
                                     variant="outline"
                                     colorScheme="teal"
                                 />
-                                <Heading size='xs'>2 portioner</Heading>
+                                <Text fontSize="lg">2 portioner</Text>
                                 <IconButton
                                     aria-label={"increase no. ingredients"}
                                     icon={<Icon as={AddRoundedIcon} boxSize="4"/>}
@@ -43,24 +43,25 @@ function IngredientsCard() {
                             </HStack>
                             <Spacer/>
                             <FormControl display='flex' alignItems='center' w="fit-content">
-                                <FormLabel htmlFor='ingredientMeasurement' mb='0'>
+                                <FormLabel htmlFor='ingredientMeasurement' mb='0' fontSize="lg" mr="2">
                                     SE
                                 </FormLabel>
                                 <Switch id='ingredientMeasurement' colorScheme="teal"/>
                             </FormControl>
                         </Flex>
                     </VStack>
-                    <Box border="1px solid" borderColor="gray.200" borderRadius="lg" p="2">
-                        <VStack spacing="0" alignItems="start">
-                            <Text><b>5 ml</b> ingefära</Text>
-                            <Text><b>50 g</b> ost</Text>
-                        </VStack>
+                    <Box border="1px solid" borderColor="gray.200" borderRadius="lg" p="3">
+                        <Heading size="sm" mb="2" color="teal.700" fontWeight="bold">Grupp 1</Heading>
+                        <UnorderedList>
+                            <ListItem><b>5 ml</b> ingefära</ListItem>
+                            <ListItem><b>50 g</b> ost</ListItem>
+                        </UnorderedList>
                     </Box>
-                    <Box border="1px solid" borderColor="gray.200" borderRadius="lg" p="2">
-                        <Heading size="sm" mb="2" color="teal.700">Grupp 1</Heading>
+                    <Box border="1px solid" borderColor="gray.200" borderRadius="lg" p="3">
+                        <Heading size="sm" mb="2" color="teal.700" fontWeight="bold">Grupp 2</Heading>
                         <VStack spacing="0" alignItems="start">
-                            <Text><b>5 ml</b> ingefära</Text>
-                            <Text><b>50 g</b> ost</Text>
+                            <Text>Sparris</Text>
+                            <Text><b>2</b> kaviar</Text>
                         </VStack>
                     </Box>
                 </Flex>

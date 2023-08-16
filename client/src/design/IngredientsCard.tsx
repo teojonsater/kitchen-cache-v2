@@ -21,8 +21,8 @@ function IngredientsCard() {
             <CardBody>
                 <Flex direction="column" gap="5">
                     <VStack spacing="4" alignItems="start" divider={<StackDivider/>}>
-                        <Heading size='lg' textAlign="center" bgColor="teal.400"
-                                 color="white" py="4" px="3" w="full" borderRadius="lg">Ingredienser</Heading>
+                        <Heading size='md' textAlign="center" bgColor="teal.400"
+                                 color="white" p="3" w="full" borderRadius="lg">Ingredienser</Heading>
                         <Flex w="full" alignItems='center' gap='2'>
                             <HStack>
                                 <IconButton

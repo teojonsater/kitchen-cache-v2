@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 706.42 247.29">
+    <defs>
+        <style>
+            .cls-1, .cls-2 {
+            stroke: #2D3748;
+            stroke-linecap: round;
+            stroke-width: 16.15px;
+            }
+
+            .cls-2 {
+            fill: none;
+            stroke-miterlimit: 10;
+            }
+
+            .cls-3 {
+            font-family: Merriweather-Bold, Merriweather;
+            font-size: 102.77px;
+            font-weight: 700;
+            fill: #2D3748;
+            }
+
+            .cls-4 {
+            fill: #2D3748;
+            }
+        </style>
+    </defs>
+    <path class="cls-2"
+          d="m105.83,99.1V14.55c0-3.57-2.9-6.47-6.47-6.47h-34.64c-3.57,0-6.47,2.9-6.47,6.47v84.55h47.58Z"/>
+    <line class="cls-1" x1="237.11" y1="122.59" x2="253.26" y2="122.59"/>
+    <line class="cls-1" x1="8.07" y1="122.59" x2="24.22" y2="122.59"/>
+    <text class="cls-3" transform="translate(303.46 116.47)">
+        <tspan x="0" y="0">Kitchen</tspan>
+        <tspan x="0" y="102.77">Cache</tspan>
+    </text>
+    <path class="cls-2" d="m147.2,99.1V14.55c0-3.57-2.9-6.47-6.47-6.47h-29.12c-3.57,0-6.47,2.9-6.47,6.47v84.55h42.06Z"/>
+    <path class="cls-2"
+          d="m168.69,99.1h44.27l-23.94-72.96c-1.11-3.4-4.77-5.24-8.17-4.13l-27.67,9.08c-3.4,1.11-5.24,4.77-4.13,8.17l19.64,59.84Z"/>
+    <path class="cls-2"
+          d="m24.22,99.1h212.88v109.68c0,12.39-10.06,22.45-22.45,22.45H46.68c-12.39,0-22.45-10.06-22.45-22.45v-109.68h0Z"/>
+    <rect class="cls-4" x="148.42" y="80.21" width="12" height="17"/>
+</svg>

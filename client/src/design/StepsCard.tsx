@@ -17,8 +17,8 @@ function StepsCard() {
             <CardBody>
                 <Flex direction="column" gap="5">
                     <VStack spacing="4" alignItems="start" divider={<StackDivider/>}>
-                        <Heading size='md' textAlign="center" textTransform="uppercase" bgColor="teal.400"
-                                 color="white" py="3" px="3" w="full" borderRadius="lg">Gör Så Här</Heading>
+                        <Heading size='md' textAlign="center" bgColor="teal.400"
+                                 color="white" py="3" px="3" w="full" borderRadius="lg">Gör såhär</Heading>
                         <OrderedList>
                             <HStack>
                                 <Checkbox colorScheme='teal' mr={4} isChecked={true} />

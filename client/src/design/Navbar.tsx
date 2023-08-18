@@ -6,10 +6,9 @@ import {
     Icon,
     Image,
     Popover,
-    PopoverArrow, PopoverBody,
-    PopoverCloseButton,
+    PopoverArrow,
     PopoverContent,
-    PopoverTrigger, VStack
+    PopoverTrigger
 } from "@chakra-ui/react";
 import LogoTextBlack from "../assets/logo/LogoTextBlack.svg";
 import RestaurantMenuRoundedIcon from '@mui/icons-material/RestaurantMenuRounded';
@@ -20,7 +19,7 @@ function Navbar() {
     return (
         <HStack bgColor="gray.100" py="4" px="10" spacing="2">
             <a href={"/"}>
-            <Image src={LogoTextBlack} alt="logo" w="28"/>
+                <Image src={LogoTextBlack} alt="logo" w="28"/>
             </a>
             <Popover>
                 <PopoverTrigger>
@@ -33,12 +32,12 @@ function Navbar() {
                 </PopoverTrigger>
                 <PopoverContent w="fit-content">
                     <PopoverArrow/>
-                        <Button variant="ghost">
-                            Alla recept
-                        </Button>
-                        <Button variant="ghost">
-                            Skapa recept
-                        </Button>
+                    <Button variant="ghost">
+                        Alla recept
+                    </Button>
+                    <Button variant="ghost">
+                        Skapa recept
+                    </Button>
                 </PopoverContent>
             </Popover>
             <Button>

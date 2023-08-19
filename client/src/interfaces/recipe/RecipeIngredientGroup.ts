@@ -1,7 +1,7 @@
 import type RecipeIngredient from "./RecipeIngredient";
 
 interface RecipeIngredientGroup {
-	title: string;
+	title?: string;
 	ingredients: RecipeIngredient[];
 }
 

@@ -2,15 +2,15 @@ import type RecipeIngredientGroup from "./RecipeIngredientGroup";
 
 interface RecipeObject {
 	id: string;
-	createdAt: string;
+	createdAt: Date;
 	title: string;
-	desc: string;
+	desc?: string;
 	servings: number;
 	cookingTime: number;
-	originalRecipe: string;
+	originalRecipe?: string;
 	image: string;
 	steps: string[];
-	ingredients: RecipeIngredientGroup[];
+	ingredientGroups: RecipeIngredientGroup[];
 }
 
 export default RecipeObject;

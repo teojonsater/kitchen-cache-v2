@@ -14,12 +14,13 @@ import PaymentsOutlinedIcon from "@mui/icons-material/PaymentsOutlined";
 
 function StatsCard() {
 	return (
-		<Card w={"sm"} bgColor={"teal.400"}>
-			<CardBody>
+		<Card bgColor={"teal.400"}>
+			<CardBody as={HStack} align="center">
 				<HStack
 					divider={<StackDivider />}
 					justifyContent={"space-between"}
 					color="white"
+					w="full"
 				>
 					<VStack>
 						<Icon as={AccessTimeRoundedIcon} boxSize={10} />

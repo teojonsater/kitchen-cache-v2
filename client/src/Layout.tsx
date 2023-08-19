@@ -1,11 +1,8 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import IngredientsCard from "./design/IngredientsCard";
-import Navbar from "./design/Navbar";
 import { Box, Flex } from "@chakra-ui/react";
-import StepsCard from "./design/StepsCard";
-import StatsCard from "./design/StatsCard";
-import DescriptionCard from "./design/DescriptionCard";
+import RecipePage from "./pages/RecipePage";
+import Navbar from "./design/Navbar";
 
 function Layout() {
 	return (
@@ -13,10 +10,7 @@ function Layout() {
 			<Flex w="full" justifyContent="center">
 				<Box maxWidth="4xl" w="full" bgColor="white">
 					<Navbar />
-					<IngredientsCard />
-					<StepsCard />
-					<StatsCard />
-					<DescriptionCard />
+					<RecipePage />
 					<Outlet />
 				</Box>
 			</Flex>

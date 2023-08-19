@@ -12,7 +12,7 @@ import OpenInNewRoundedIcon from "@mui/icons-material/OpenInNewRounded";
 
 function DescriptionCard() {
 	return (
-		<Card w={"lg"}>
+		<Card>
 			<CardBody>
 				<VStack
 					spacing="4"

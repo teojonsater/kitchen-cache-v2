@@ -14,7 +14,7 @@ import {
 
 function StepsCard() {
 	return (
-		<Card w="lg">
+		<Card>
 			<CardBody>
 				<Flex direction="column" gap="5">
 					<VStack

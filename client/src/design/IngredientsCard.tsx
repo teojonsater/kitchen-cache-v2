@@ -23,7 +23,7 @@ import AddRoundedIcon from "@mui/icons-material/AddRounded";
 
 function IngredientsCard() {
 	return (
-		<Card w="sm">
+		<Card>
 			<CardBody>
 				<Flex direction="column" gap="5">
 					<VStack

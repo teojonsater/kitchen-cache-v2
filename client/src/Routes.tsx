@@ -1,16 +1,16 @@
+import React from "react";
 import {
-    createBrowserRouter,
-    createRoutesFromElements, Route,
+	createBrowserRouter,
+	createRoutesFromElements,
+	Route,
 } from "react-router-dom";
 import Layout from "./Layout";
 
 const router = createBrowserRouter(
-    createRoutesFromElements(
-        <Route path="/" element={<Layout />} />
-    )
+	createRoutesFromElements(<Route path="/" element={<Layout />} />),
 );
 
-/*<Route path="/" errorElement={<ErrorPage />} element={<Layout />}>
+/* <Route path="/" errorElement={<ErrorPage />} element={<Layout />}>
     <Route index element={<Home />} />
     <Route path="/recipes">
         <Route index element={<AllRecipesPage />} />
@@ -20,6 +20,6 @@ const router = createBrowserRouter(
     <Route path="/weekmenu">
         <Route index element={<WeekmenuPage />} />
     </Route>
-</Route>*/
+</Route> */
 
 export default router;

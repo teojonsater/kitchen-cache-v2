@@ -1,18 +1,22 @@
 import React from "react";
-import { SimpleGrid } from "@chakra-ui/react";
-import DescriptionCard from "../../../../design/DescriptionCard";
-import StatsCard from "../../../../design/StatsCard";
-import IngredientsCard from "../../../../design/IngredientsCard";
-import StepsCard from "../../../../design/StepsCard";
+import { Grid, GridItem } from "@chakra-ui/react";
+import DescCard from "./components/DescCard";
+import IngredientsCard from "./components/IngredientsCard";
+import StepsCard from "./components/StepsCard";
 
 function RecipeBody() {
 	return (
-		<SimpleGrid columns={2} spacing={8} p="8">
-			<DescriptionCard />
-			<StatsCard />
-			<IngredientsCard />
-			<StepsCard />
-		</SimpleGrid>
+		<Grid templateColumns="repeat(2, 1fr)" gap="8" p="8">
+			<GridItem colSpan={2}>
+				<DescCard />
+			</GridItem>
+			<GridItem colSpan={1}>
+				<IngredientsCard />
+			</GridItem>
+			<GridItem colSpan={1}>
+				<StepsCard />
+			</GridItem>
+		</Grid>
 	);
 }
 

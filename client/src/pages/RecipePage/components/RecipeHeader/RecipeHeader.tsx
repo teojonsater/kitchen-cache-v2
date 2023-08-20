@@ -1,20 +1,38 @@
 import React from "react";
 import { Heading, HStack, Icon, IconButton, VStack } from "@chakra-ui/react";
 import EditRoundedIcon from "@mui/icons-material/EditRounded";
-import StatsCard from "../../../../design/StatsCard";
+import type RecipeIngredientGroup from "../../../../interfaces/recipe/RecipeIngredientGroup";
+import OriginalRecipe from "./components/OriginalRecipe";
+import RecipeStats from "./components/RecipeStats";
 
 interface Props {
 	title: string;
+	originalRecipe?: string;
+	cookingTime?: number;
+	ingredientGroups?: RecipeIngredientGroup[];
 }
 
-function RecipeHeader({ title }: Props) {
+function RecipeHeader({
+	title,
+	originalRecipe = undefined,
+	cookingTime = undefined,
+	ingredientGroups = undefined,
+}: Props) {
 	return (
 		<HStack p="8" justify="space-between" align="start">
-			<VStack>
+			<VStack align="start">
 				<Heading as="h1" size="2xl">
 					{title}
 				</Heading>
-				<StatsCard />
+				{cookingTime && ingredientGroups && (
+					<RecipeStats
+						cookingTime={cookingTime}
+						ingredientGroups={ingredientGroups}
+					/>
+				)}
+				{originalRecipe && (
+					<OriginalRecipe originalRecipe={originalRecipe} />
+				)}
 			</VStack>
 			<IconButton
 				aria-label="Edit recipe"

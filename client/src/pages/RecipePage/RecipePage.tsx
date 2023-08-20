@@ -6,48 +6,53 @@ import { v4 as uuid } from "uuid";
 import RecipeHeader from "./components/RecipeHeader";
 
 function RecipePage() {
-	const placeholderRecipe: RecipeObject = {
-		cookingTime: 90,
+	const [recipe] = React.useState<RecipeObject>({
+		cookingTime: 30,
 		createdAt: new Date(),
 		desc: "Detta är en beskrivning på ett recept. Denna beskrivning kommer fortsätta för att se hur det ser ut när det blir flera rader.",
 		id: uuid(),
 		image: "https://www.expatica.com/app/uploads/sites/5/2014/05/french-food.jpg",
 		ingredientGroups: [
 			{
-				title: "Grupp 1",
+				name: "Grupp 1",
 				ingredients: [
 					{
 						amount: 1,
 						measurement: "kg",
-						title: "Kyckling",
+						name: "Kyckling",
 					},
 					{
 						amount: 10,
 						measurement: "dl",
-						title: "Ris",
+						name: "Ris",
 					},
 				],
 			},
 			{
-				title: "Grupp 2",
+				name: "Grupp 2",
 				ingredients: [
 					{
 						amount: 1,
 						measurement: "kg",
-						title: "Kyckling",
+						name: "Kyckling",
 					},
 				],
 			},
 		],
-		originalRecipe: "Mammas kycklinggryta",
+		originalRecipe: "https://www.google.com",
 		servings: 5,
 		steps: ["Stek kycklingen", "Koka riset", "Koka såsen", "Servera"],
-		title: "Recepttitel",
-	};
+		name: "Receptnamn",
+	});
 
 	return (
 		<Flex direction="column">
-			<RecipeHeader title={placeholderRecipe.title} />
+			<RecipeHeader
+				title={recipe.name}
+				originalRecipe={recipe.originalRecipe}
+				cookingTime={recipe.cookingTime}
+				ingredientGroups={recipe.ingredientGroups}
+			/>
 			<Box>Banner</Box>
 			<RecipeBody />
 		</Flex>

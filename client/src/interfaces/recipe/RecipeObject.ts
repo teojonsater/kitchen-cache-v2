@@ -3,7 +3,7 @@ import type RecipeIngredientGroup from "./RecipeIngredientGroup";
 interface RecipeObject {
 	id: string;
 	createdAt: Date;
-	title: string;
+	name: string;
 	desc?: string;
 	servings: number;
 	cookingTime: number;

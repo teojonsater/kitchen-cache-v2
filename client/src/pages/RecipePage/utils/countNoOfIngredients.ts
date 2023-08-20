@@ -7,8 +7,8 @@ function countNoOfIngredients(
 
 	ingredientsGroups.forEach((recipeGroup) => {
 		recipeGroup.ingredients.forEach((ingredient) => {
-			if (!uniqueIngredients.includes(ingredient.name)) {
-				uniqueIngredients.push(ingredient.name);
+			if (!uniqueIngredients.includes(ingredient.name.toLowerCase())) {
+				uniqueIngredients.push(ingredient.name.toLowerCase());
 			}
 		});
 	});

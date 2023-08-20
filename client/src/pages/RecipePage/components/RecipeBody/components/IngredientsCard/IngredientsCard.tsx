@@ -1,6 +1,5 @@
 import React from "react";
 import {
-	Box,
 	Card,
 	CardBody,
 	Flex,
@@ -10,20 +9,24 @@ import {
 	HStack,
 	Icon,
 	IconButton,
-	ListItem,
 	Spacer,
 	StackDivider,
 	Switch,
 	Text,
-	UnorderedList,
 	VStack,
 } from "@chakra-ui/react";
 import RemoveRoundedIcon from "@mui/icons-material/RemoveRounded";
 import AddRoundedIcon from "@mui/icons-material/AddRounded";
+import type RecipeIngredientGroup from "../../../../../../interfaces/recipe/RecipeIngredientGroup";
+import IngredientGroupBox from "./IngredientGroupBox";
 
-function IngredientsCard() {
+interface Props {
+	ingredientGroups: RecipeIngredientGroup[];
+}
+
+function IngredientsCard({ ingredientGroups }: Props) {
 	return (
-		<Card>
+		<Card h="full">
 			<CardBody>
 				<Flex direction="column" gap="5">
 					<VStack
@@ -87,50 +90,12 @@ function IngredientsCard() {
 							</FormControl>
 						</Flex>
 					</VStack>
-					<Box
-						border="1px solid"
-						borderColor="gray.200"
-						borderRadius="lg"
-						p="3"
-					>
-						<Heading
-							size="sm"
-							mb="2"
-							color="teal.700"
-							fontWeight="bold"
-						>
-							Grupp 1
-						</Heading>
-						<UnorderedList>
-							<ListItem>
-								<b>5 ml</b> ingefära
-							</ListItem>
-							<ListItem>
-								<b>50 g</b> ost
-							</ListItem>
-						</UnorderedList>
-					</Box>
-					<Box
-						border="1px solid"
-						borderColor="gray.200"
-						borderRadius="lg"
-						p="3"
-					>
-						<Heading
-							size="sm"
-							mb="2"
-							color="teal.700"
-							fontWeight="bold"
-						>
-							Grupp 2
-						</Heading>
-						<VStack spacing="0" alignItems="start">
-							<Text>Sparris</Text>
-							<Text>
-								<b>2</b> kaviar
-							</Text>
-						</VStack>
-					</Box>
+					{ingredientGroups.map((ingredientGroup, index) => (
+						<IngredientGroupBox
+							ingredientGroup={ingredientGroup}
+							key={index}
+						/>
+					))}
 				</Flex>
 			</CardBody>
 		</Card>

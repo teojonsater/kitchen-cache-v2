@@ -15,7 +15,6 @@ function RecipePage() {
 		image: "https://www.expatica.com/app/uploads/sites/5/2014/05/french-food.jpg",
 		ingredientGroups: [
 			{
-				name: "Grupp 1",
 				ingredients: [
 					{
 						amount: 1,
@@ -30,7 +29,7 @@ function RecipePage() {
 				],
 			},
 			{
-				name: "Grupp 2",
+				name: "Kött",
 				ingredients: [
 					{
 						amount: 1,
@@ -55,7 +54,11 @@ function RecipePage() {
 				ingredientGroups={recipe.ingredientGroups}
 			/>
 			<RecipeBanner image={recipe.image} />
-			<RecipeBody />
+			<RecipeBody
+				desc={recipe.desc}
+				ingredientGroups={recipe.ingredientGroups}
+				steps={recipe.steps}
+			/>
 		</Flex>
 	);
 }

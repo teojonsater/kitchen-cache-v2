@@ -2,15 +2,17 @@ import React from "react";
 import {
 	Card,
 	CardBody,
-	Icon,
-	Link,
+	Heading,
 	StackDivider,
 	Text,
 	VStack,
 } from "@chakra-ui/react";
-import OpenInNewRoundedIcon from "@mui/icons-material/OpenInNewRounded";
 
-function DescCard() {
+interface Props {
+	desc: string;
+}
+
+function DescCard({ desc }: Props) {
 	return (
 		<Card>
 			<CardBody>
@@ -19,19 +21,18 @@ function DescCard() {
 					alignItems="start"
 					divider={<StackDivider />}
 				>
-					<Text>
-						Detta recept är så fkn jäkla otroligt gott att det är
-						sjukt. Om man vill kan man byta ut ägg mot mjöl men det
-						rekomenderas inte av oss.
-					</Text>
-					<Link
-						href="https://www.arla.se/recept/morotskaka/"
-						isExternal
-						color="teal.500"
+					<Heading
+						size="md"
+						textAlign="center"
+						bgColor="teal.400"
+						color="white"
+						p="3"
+						w="full"
+						borderRadius="lg"
 					>
-						Arla
-						<Icon as={OpenInNewRoundedIcon} boxSize={4} />
-					</Link>
+						Beskrivning
+					</Heading>
+					<Text>{desc}</Text>
 				</VStack>
 			</CardBody>
 		</Card>

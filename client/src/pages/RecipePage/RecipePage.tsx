@@ -3,6 +3,7 @@ import { Box, Flex } from "@chakra-ui/react";
 import RecipeBody from "./components/RecipeBody";
 import type RecipeObject from "../../interfaces/recipe/RecipeObject";
 import { v4 as uuid } from "uuid";
+import RecipeHeader from "./components/RecipeHeader";
 
 function RecipePage() {
 	const placeholderRecipe: RecipeObject = {
@@ -10,7 +11,7 @@ function RecipePage() {
 		createdAt: new Date(),
 		desc: "Detta är en beskrivning på ett recept. Denna beskrivning kommer fortsätta för att se hur det ser ut när det blir flera rader.",
 		id: uuid(),
-		image: "https://via.placeholder.com/1000",
+		image: "https://www.expatica.com/app/uploads/sites/5/2014/05/french-food.jpg",
 		ingredientGroups: [
 			{
 				title: "Grupp 1",
@@ -46,7 +47,7 @@ function RecipePage() {
 
 	return (
 		<Flex direction="column">
-			<Box>Header</Box>
+			<RecipeHeader title={placeholderRecipe.title} />
 			<Box>Banner</Box>
 			<RecipeBody />
 		</Flex>

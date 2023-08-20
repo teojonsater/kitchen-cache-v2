@@ -12,7 +12,7 @@ function RecipePage() {
 		createdAt: new Date(),
 		desc: "Supergoda kakor med citron och krispiga vallmofrön och smak av vanilj. Perfekt som gå bort-present om du lyckas hålla dig ifrån att äta alla själv! Receptet är publicerat i samarbete med boken Blåbärssnår, äppelskrutt och rabarberskugga.",
 		id: uuid(),
-		image: "https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_181465/cf_259/citron_och_vallmokakor.jpg",
+		image: "https://www.fikarutan.com/wp-content/uploads/2020/03/zaLz5hHaSz5mB563j5Itw-750x400.jpg",
 		ingredientGroups: [
 			{
 				ingredients: [

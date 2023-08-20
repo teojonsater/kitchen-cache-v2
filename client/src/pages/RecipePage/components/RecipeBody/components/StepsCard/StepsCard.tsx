@@ -3,7 +3,6 @@ import {
 	Card,
 	CardBody,
 	Heading,
-	OrderedList,
 	StackDivider,
 	VStack,
 } from "@chakra-ui/react";

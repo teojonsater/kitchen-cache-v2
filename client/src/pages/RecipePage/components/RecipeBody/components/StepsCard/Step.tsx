@@ -16,7 +16,7 @@ function Step({ step }: Props) {
 			p="3"
 			w="full"
 		>
-			<HStack>
+			<HStack align="start">
 				<Checkbox
 					onChange={setChecked.toggle}
 					isChecked={checked}
@@ -26,6 +26,7 @@ function Step({ step }: Props) {
 				<Text
 					color={checked ? "gray.300" : "gray.800"}
 					textDecoration={checked ? "line-through" : "none"}
+					noOfLines={checked ? 1 : undefined}
 				>
 					{step}
 				</Text>

@@ -24,6 +24,7 @@ const JosefinFontTheme = extendTheme({
 			},
 			body: {
 				fontWeight: "normal",
+				backgroundColor: "gray.50",
 			},
 		},
 	},

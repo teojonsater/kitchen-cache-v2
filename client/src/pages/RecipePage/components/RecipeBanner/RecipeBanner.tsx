@@ -8,7 +8,7 @@ interface Props {
 function RecipeBanner({ image }: Props) {
 	return (
 		<AspectRatio ratio={16 / 9}>
-			<Image src={image} objectFit="cover" />
+			<Image src={image} objectFit="cover" borderRadius="md" />
 		</AspectRatio>
 	);
 }

@@ -7,9 +7,9 @@ import Navbar from "./design/Navbar";
 function Layout() {
 	return (
 		<>
+			<Navbar />
 			<Flex w="full" justifyContent="center">
-				<Box maxWidth="4xl" w="full" bgColor="white">
-					<Navbar />
+				<Box maxWidth="4xl" w="full">
 					<RecipePage />
 					<Outlet />
 				</Box>

@@ -15,11 +15,13 @@ function IngredientGroupBox({ ingredientGroup }: Props) {
 				</Heading>
 			)}
 
-			<UnorderedList>
+			<UnorderedList spacing="2">
 				{ingredientGroup.ingredients.map((ingredient, index) => (
 					<ListItem key={index}>
 						<b>
-							{ingredient.amount} {ingredient.measurement}
+							{ingredient.amount > 0 && ingredient.amount}{" "}
+							{ingredient.measurement != "-" &&
+								ingredient.measurement}
 						</b>{" "}
 						{ingredient.name}
 					</ListItem>

@@ -1,6 +1,7 @@
 import React from "react";
 import {
 	Button,
+	ButtonGroup,
 	HStack,
 	Icon,
 	Image,
@@ -16,32 +17,50 @@ import ListAltRoundedIcon from "@mui/icons-material/ListAltRounded";
 
 function Navbar() {
 	return (
-		<HStack bgColor="gray.100" py="4" px="10" spacing="2">
-			<a href={"/"}>
-				<Image src={LogoTextBlack} alt="logo" w="28" />
-			</a>
-			<Popover>
-				<PopoverTrigger>
-					<Button
-						leftIcon={
-							<Icon as={RestaurantMenuRoundedIcon} boxSize="8" />
-						}
-					>
-						Recept
-					</Button>
-				</PopoverTrigger>
-				<PopoverContent w="fit-content">
-					<PopoverArrow />
-					<Button variant="ghost">Alla recept</Button>
-					<Button variant="ghost">Skapa recept</Button>
-				</PopoverContent>
-			</Popover>
-			<Button leftIcon={<Icon as={EggOutlinedIcon} boxSize="8" />}>
-				Ingredienser
-			</Button>
-			<Button leftIcon={<Icon as={ListAltRoundedIcon} boxSize="8" />}>
-				Veckomeny
-			</Button>
+		<HStack
+			justify="center"
+			bgColor="white"
+			borderBottom="1px solid"
+			borderColor="gray.200"
+		>
+			<HStack
+				py="4"
+				spacing="2"
+				w="full"
+				maxWidth="4xl"
+				px="10"
+				as={ButtonGroup}
+				variant="ghost"
+			>
+				<a href={"/"}>
+					<Image src={LogoTextBlack} alt="logo" w="28" />
+				</a>
+				<Popover>
+					<PopoverTrigger>
+						<Button
+							leftIcon={
+								<Icon
+									as={RestaurantMenuRoundedIcon}
+									boxSize="8"
+								/>
+							}
+						>
+							Recept
+						</Button>
+					</PopoverTrigger>
+					<PopoverContent w="fit-content">
+						<PopoverArrow />
+						<Button>Alla recept</Button>
+						<Button>Skapa recept</Button>
+					</PopoverContent>
+				</Popover>
+				<Button leftIcon={<Icon as={EggOutlinedIcon} boxSize="8" />}>
+					Ingredienser
+				</Button>
+				<Button leftIcon={<Icon as={ListAltRoundedIcon} boxSize="8" />}>
+					Veckomeny
+				</Button>
+			</HStack>
 		</HStack>
 	);
 }

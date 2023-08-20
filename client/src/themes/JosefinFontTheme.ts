@@ -1,10 +1,11 @@
 /* eslint-disable @typescript-eslint/naming-convention */
 import { extendTheme } from "@chakra-ui/react";
 import "@fontsource-variable/josefin-sans";
+import "@fontsource/yeseva-one";
 
 const JosefinFontTheme = extendTheme({
 	fonts: {
-		heading: `"Josefin Sans Variable", sans-serif`,
+		heading: `"Yeseva One", sans-serif`,
 		body: `"Josefin Sans Variable", sans-serif`,
 	},
 	fontWeights: {
@@ -29,7 +30,7 @@ const JosefinFontTheme = extendTheme({
 	components: {
 		Heading: {
 			baseStyle: {
-				fontWeight: "semiBold",
+				fontWeight: "normal",
 			},
 		},
 	},

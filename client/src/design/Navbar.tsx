@@ -1,7 +1,6 @@
 import React from "react";
 import {
 	Button,
-	Heading,
 	HStack,
 	Icon,
 	Image,
@@ -23,17 +22,12 @@ function Navbar() {
 			</a>
 			<Popover>
 				<PopoverTrigger>
-					<Button>
-						<HStack>
-							<Icon
-								as={RestaurantMenuRoundedIcon}
-								boxSize="8"
-								color="gray.700"
-							/>
-							<Heading size="sm" color="gray.700">
-								Recept
-							</Heading>
-						</HStack>
+					<Button
+						leftIcon={
+							<Icon as={RestaurantMenuRoundedIcon} boxSize="8" />
+						}
+					>
+						Recept
 					</Button>
 				</PopoverTrigger>
 				<PopoverContent w="fit-content">
@@ -42,25 +36,11 @@ function Navbar() {
 					<Button variant="ghost">Skapa recept</Button>
 				</PopoverContent>
 			</Popover>
-			<Button>
-				<HStack>
-					<Icon as={EggOutlinedIcon} boxSize="8" color="gray.700" />
-					<Heading size="sm" color="gray.700">
-						Ingredienser
-					</Heading>
-				</HStack>
+			<Button leftIcon={<Icon as={EggOutlinedIcon} boxSize="8" />}>
+				Ingredienser
 			</Button>
-			<Button>
-				<HStack>
-					<Icon
-						as={ListAltRoundedIcon}
-						boxSize="8"
-						color="gray.700"
-					/>
-					<Heading size="sm" color="gray.700">
-						Veckomeny
-					</Heading>
-				</HStack>
+			<Button leftIcon={<Icon as={ListAltRoundedIcon} boxSize="8" />}>
+				Veckomeny
 			</Button>
 		</HStack>
 	);

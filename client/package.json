@@ -8,6 +8,7 @@
 		"@emotion/styled": "^11.11.0",
 		"@fontsource-variable/josefin-sans": "^5.0.9",
 		"@fontsource/josefin-sans": "^5.0.9",
+		"@fontsource/yeseva-one": "^5.0.8",
 		"@mui/icons-material": "^5.14.3",
 		"@mui/material": "^5.14.4",
 		"@testing-library/jest-dom": "^5.17.0",

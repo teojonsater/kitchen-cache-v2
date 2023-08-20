@@ -1,9 +1,10 @@
 import React from "react";
-import { Box, Flex } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 import RecipeBody from "./components/RecipeBody";
-import type RecipeObject from "../../interfaces/recipe/RecipeObject";
 import { v4 as uuid } from "uuid";
 import RecipeHeader from "./components/RecipeHeader";
+import type RecipeObject from "../../interfaces/recipe/RecipeObject";
+import RecipeBanner from "./components/RecipeBanner";
 
 function RecipePage() {
 	const [recipe] = React.useState<RecipeObject>({
@@ -53,7 +54,7 @@ function RecipePage() {
 				cookingTime={recipe.cookingTime}
 				ingredientGroups={recipe.ingredientGroups}
 			/>
-			<Box>Banner</Box>
+			<RecipeBanner image={recipe.image} />
 			<RecipeBody />
 		</Flex>
 	);

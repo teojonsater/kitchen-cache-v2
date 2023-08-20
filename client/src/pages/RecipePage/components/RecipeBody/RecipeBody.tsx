@@ -23,7 +23,7 @@ function RecipeBody({ desc = undefined, ingredientGroups, steps }: Props) {
 				<IngredientsCard ingredientGroups={ingredientGroups} />
 			</GridItem>
 			<GridItem colSpan={1}>
-				<StepsCard />
+				<StepsCard steps={steps} />
 			</GridItem>
 		</Grid>
 	);

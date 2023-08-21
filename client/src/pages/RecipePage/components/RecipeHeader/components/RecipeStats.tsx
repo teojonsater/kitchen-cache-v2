@@ -4,7 +4,7 @@ import { Icon, Text, HStack, StackDivider } from "@chakra-ui/react";
 import AccessTimeRoundedIcon from "@mui/icons-material/AccessTimeRounded";
 import EggOutlinedIcon from "@mui/icons-material/EggOutlined";
 import PaymentsOutlinedIcon from "@mui/icons-material/PaymentsOutlined";
-import countNoOfIngredients from "../../../utils/countNoOfIngredients";
+import countNoOfIngredients from "../../../../../utils/countNoOfIngredients";
 
 interface Props {
 	cookingTime: number;

@@ -1,4 +1,4 @@
-import type RecipeIngredientGroup from "../../../interfaces/recipe/RecipeIngredientGroup";
+import type RecipeIngredientGroup from "../interfaces/recipe/RecipeIngredientGroup";
 
 function countNoOfIngredients(
 	ingredientsGroups: RecipeIngredientGroup[],

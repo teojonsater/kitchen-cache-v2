@@ -1,8 +1,9 @@
 import React from "react";
-import { SimpleGrid } from "@chakra-ui/react";
+import { Heading, SimpleGrid, VStack } from "@chakra-ui/react";
 import type RecipeObject from "../../interfaces/recipe/RecipeObject";
 import SummaryCard from "./components/SummaryCard";
 import { v4 as uuid } from "uuid";
+import SearchBar from "./components/SearchBar";
 
 function AllRecipesPage() {
 	const [recipe] = React.useState<RecipeObject>({
@@ -83,17 +84,23 @@ function AllRecipesPage() {
 	]);
 
 	return (
-		<SimpleGrid minChildWidth="xs" spacing={8}>
-			{allRecipes.map((recipe, index) => (
-				<SummaryCard
-					name={recipe.name}
-					cookingTime={recipe.cookingTime}
-					ingredientGroups={recipe.ingredientGroups}
-					image={recipe.image}
-					key={index}
-				/>
-			))}
-		</SimpleGrid>
+		<VStack spacing={8} align="start" p="8">
+			<Heading as="h1" size="2xl">
+				Alla Recept
+			</Heading>
+			<SearchBar />
+			<SimpleGrid w="full" minChildWidth="72" spacing={8}>
+				{allRecipes.map((recipe, index) => (
+					<SummaryCard
+						name={recipe.name}
+						cookingTime={recipe.cookingTime}
+						ingredientGroups={recipe.ingredientGroups}
+						image={recipe.image}
+						key={index}
+					/>
+				))}
+			</SimpleGrid>
+		</VStack>
 	);
 }
 

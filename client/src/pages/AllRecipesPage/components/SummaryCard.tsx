@@ -33,19 +33,23 @@ function SummaryCard({ name, cookingTime, ingredientGroups, image }: Props) {
 			<CardBody>
 				<VStack spacing="4" align="start">
 					<Heading size="md">{name}</Heading>
-					<HStack divider={<StackDivider />} color="gray.600">
-						<HStack>
+					<HStack
+						divider={<StackDivider />}
+						color="gray.600"
+						spacing="1.5"
+					>
+						<HStack spacing="1">
 							<Icon as={AccessTimeRoundedIcon} boxSize="4" />
 							<Text fontSize="sm">{cookingTime} min</Text>
 						</HStack>
-						<HStack>
+						<HStack spacing="1">
 							<Icon as={EggOutlinedIcon} boxSize="4" />
 							<Text fontSize="sm">
 								{countNoOfIngredients(ingredientGroups)}{" "}
 								ingredienser
 							</Text>
 						</HStack>
-						<HStack>
+						<HStack spacing="1">
 							<Icon as={PaymentsOutlinedIcon} boxSize="4" />
 							<Text fontSize="sm">53,17 kr</Text>
 						</HStack>

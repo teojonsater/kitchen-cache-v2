@@ -27,7 +27,7 @@ function Navbar() {
 				py="4"
 				spacing="2"
 				w="full"
-				maxWidth="4xl"
+				maxWidth="5xl"
 				px="10"
 				as={ButtonGroup}
 				variant="ghost"

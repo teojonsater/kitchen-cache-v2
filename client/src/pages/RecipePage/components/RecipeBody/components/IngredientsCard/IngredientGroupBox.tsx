@@ -1,17 +1,20 @@
 import React from "react";
-import { Box, Heading, ListItem, UnorderedList } from "@chakra-ui/react";
+import { Box, Heading, UnorderedList } from "@chakra-ui/react";
 import type RecipeIngredientGroup from "../../../../../../interfaces/recipe/RecipeIngredientGroup";
+import IngredientItem from "./IngredientItem";
 
 interface Props {
 	ingredientGroup: RecipeIngredientGroup;
 	originalServings: number;
 	alteredServings: number;
+	useMetric: boolean;
 }
 
 function IngredientGroupBox({
 	ingredientGroup,
 	originalServings,
 	alteredServings,
+	useMetric,
 }: Props) {
 	return (
 		<Box border="1px solid" borderColor="gray.200" borderRadius="lg" p="3">
@@ -23,23 +26,16 @@ function IngredientGroupBox({
 
 			<UnorderedList spacing="2">
 				{ingredientGroup.ingredients.map((ingredient, index) => {
-					const calculatedAmount =
-						Math.round(
-							((ingredient.amount / originalServings) *
-								alteredServings +
-								Number.EPSILON) *
-								100,
-						) / 100;
-
 					return (
-						<ListItem key={index}>
-							<b>
-								{ingredient.amount > 0 && calculatedAmount}{" "}
-								{ingredient.measurement != "-" &&
-									ingredient.measurement}
-							</b>{" "}
-							{ingredient.name}
-						</ListItem>
+						<IngredientItem
+							amount={ingredient.amount}
+							measurement={ingredient.measurement}
+							ingredient={ingredient.name}
+							originalServings={originalServings}
+							alteredServings={alteredServings}
+							useMetric={useMetric}
+							key={index}
+						/>
 					);
 				})}
 			</UnorderedList>

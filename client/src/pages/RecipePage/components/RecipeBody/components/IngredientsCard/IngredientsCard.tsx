@@ -5,6 +5,7 @@ import {
 	Flex,
 	Heading,
 	StackDivider,
+	useBoolean,
 	VStack,
 } from "@chakra-ui/react";
 import type RecipeIngredientGroup from "../../../../../../interfaces/recipe/RecipeIngredientGroup";
@@ -18,6 +19,7 @@ interface Props {
 
 function IngredientsCard({ ingredientGroups, servings }: Props) {
 	const [alteredServings, setAlteredServings] = useState(servings);
+	const [useMetric, setUseMetric] = useBoolean(false);
 
 	const handleAlteredServingsIncrease = () => {
 		setAlteredServings((prevServings) => prevServings + 1);
@@ -25,6 +27,10 @@ function IngredientsCard({ ingredientGroups, servings }: Props) {
 
 	const handleAlteredServingsDecrease = () => {
 		setAlteredServings((prevServings) => prevServings - 1);
+	};
+
+	const handleUseMetricToggle = () => {
+		setUseMetric.toggle();
 	};
 
 	return (
@@ -55,6 +61,8 @@ function IngredientsCard({ ingredientGroups, servings }: Props) {
 							onAlteredServingsDecrease={
 								handleAlteredServingsDecrease
 							}
+							useMetric={useMetric}
+							onUseMetricToggle={handleUseMetricToggle}
 						/>
 					</VStack>
 					{ingredientGroups.map((ingredientGroup, index) => (
@@ -62,6 +70,7 @@ function IngredientsCard({ ingredientGroups, servings }: Props) {
 							ingredientGroup={ingredientGroup}
 							originalServings={servings}
 							alteredServings={alteredServings}
+							useMetric={useMetric}
 							key={index}
 						/>
 					))}

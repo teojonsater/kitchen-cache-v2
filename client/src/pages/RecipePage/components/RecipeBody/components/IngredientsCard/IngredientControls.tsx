@@ -17,12 +17,16 @@ interface Props {
 	servings: number;
 	onAlteredServingsIncrease: () => void;
 	onAlteredServingsDecrease: () => void;
+	useMetric: boolean;
+	onUseMetricToggle: () => void;
 }
 
 function IngredientControls({
 	servings,
 	onAlteredServingsIncrease,
 	onAlteredServingsDecrease,
+	useMetric,
+	onUseMetricToggle,
 }: Props) {
 	return (
 		<Flex w="full" alignItems="center" gap="2">
@@ -51,7 +55,12 @@ function IngredientControls({
 				<FormLabel htmlFor="ingredientMeasurement" mb="0" mr="2">
 					SE
 				</FormLabel>
-				<Switch id="ingredientMeasurement" colorScheme="teal" />
+				<Switch
+					id="ingredientMeasurement"
+					colorScheme="teal"
+					onChange={onUseMetricToggle}
+					isChecked={useMetric}
+				/>
 			</FormControl>
 		</Flex>
 	);

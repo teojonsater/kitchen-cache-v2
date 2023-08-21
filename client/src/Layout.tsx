@@ -9,7 +9,7 @@ function Layout() {
 		<>
 			<Navbar />
 			<Flex w="full" justifyContent="center">
-				<Box maxWidth="4xl" w="full">
+				<Box maxWidth="5xl" w="full">
 					<RecipePage />
 					<Outlet />
 				</Box>

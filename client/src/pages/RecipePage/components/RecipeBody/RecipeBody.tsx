@@ -9,9 +9,15 @@ interface Props {
 	desc?: string;
 	ingredientGroups: RecipeIngredientGroup[];
 	steps: string[];
+	servings: number;
 }
 
-function RecipeBody({ desc = undefined, ingredientGroups, steps }: Props) {
+function RecipeBody({
+	desc = undefined,
+	ingredientGroups,
+	steps,
+	servings,
+}: Props) {
 	return (
 		<Grid templateColumns="repeat(2, 1fr)" gap="8" p="8">
 			{desc && (
@@ -20,7 +26,10 @@ function RecipeBody({ desc = undefined, ingredientGroups, steps }: Props) {
 				</GridItem>
 			)}
 			<GridItem colSpan={1}>
-				<IngredientsCard ingredientGroups={ingredientGroups} />
+				<IngredientsCard
+					ingredientGroups={ingredientGroups}
+					servings={servings}
+				/>
 			</GridItem>
 			<GridItem colSpan={1}>
 				<StepsCard steps={steps} />

@@ -4,9 +4,15 @@ import type RecipeIngredientGroup from "../../../../../../interfaces/recipe/Reci
 
 interface Props {
 	ingredientGroup: RecipeIngredientGroup;
+	originalServings: number;
+	alteredServings: number;
 }
 
-function IngredientGroupBox({ ingredientGroup }: Props) {
+function IngredientGroupBox({
+	ingredientGroup,
+	originalServings,
+	alteredServings,
+}: Props) {
 	return (
 		<Box border="1px solid" borderColor="gray.200" borderRadius="lg" p="3">
 			{ingredientGroup.name && (
@@ -16,16 +22,26 @@ function IngredientGroupBox({ ingredientGroup }: Props) {
 			)}
 
 			<UnorderedList spacing="2">
-				{ingredientGroup.ingredients.map((ingredient, index) => (
-					<ListItem key={index}>
-						<b>
-							{ingredient.amount > 0 && ingredient.amount}{" "}
-							{ingredient.measurement != "-" &&
-								ingredient.measurement}
-						</b>{" "}
-						{ingredient.name}
-					</ListItem>
-				))}
+				{ingredientGroup.ingredients.map((ingredient, index) => {
+					const calculatedAmount =
+						Math.round(
+							((ingredient.amount / originalServings) *
+								alteredServings +
+								Number.EPSILON) *
+								100,
+						) / 100;
+
+					return (
+						<ListItem key={index}>
+							<b>
+								{ingredient.amount > 0 && calculatedAmount}{" "}
+								{ingredient.measurement != "-" &&
+									ingredient.measurement}
+							</b>{" "}
+							{ingredient.name}
+						</ListItem>
+					);
+				})}
 			</UnorderedList>
 		</Box>
 	);

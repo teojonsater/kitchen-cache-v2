@@ -13,7 +13,17 @@ import RemoveRoundedIcon from "@mui/icons-material/RemoveRounded";
 import AddRoundedIcon from "@mui/icons-material/AddRounded";
 import React from "react";
 
-function IngredientControls() {
+interface Props {
+	servings: number;
+	onAlteredServingsIncrease: () => void;
+	onAlteredServingsDecrease: () => void;
+}
+
+function IngredientControls({
+	servings,
+	onAlteredServingsIncrease,
+	onAlteredServingsDecrease,
+}: Props) {
 	return (
 		<Flex w="full" alignItems="center" gap="2">
 			<HStack>
@@ -23,14 +33,17 @@ function IngredientControls() {
 					size="xs"
 					variant="outline"
 					colorScheme="teal"
+					isDisabled={servings <= 1}
+					onClick={onAlteredServingsDecrease}
 				/>
-				<Text>2 portioner</Text>
+				<Text>{servings} portioner</Text>
 				<IconButton
 					aria-label={"increase no. ingredients"}
 					icon={<Icon as={AddRoundedIcon} boxSize="4" />}
 					size="xs"
 					variant="outline"
 					colorScheme="teal"
+					onClick={onAlteredServingsIncrease}
 				/>
 			</HStack>
 			<Spacer />

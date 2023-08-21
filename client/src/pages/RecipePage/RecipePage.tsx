@@ -87,6 +87,7 @@ function RecipePage() {
 				desc={recipe.desc}
 				ingredientGroups={recipe.ingredientGroups}
 				steps={recipe.steps}
+				servings={recipe.servings}
 			/>
 		</Flex>
 	);

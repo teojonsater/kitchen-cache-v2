@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
 	Card,
 	CardBody,
@@ -13,9 +13,20 @@ import IngredientControls from "./IngredientControls";
 
 interface Props {
 	ingredientGroups: RecipeIngredientGroup[];
+	servings: number;
 }
 
-function IngredientsCard({ ingredientGroups }: Props) {
+function IngredientsCard({ ingredientGroups, servings }: Props) {
+	const [alteredServings, setAlteredServings] = useState(servings);
+
+	const handleAlteredServingsIncrease = () => {
+		setAlteredServings((prevServings) => prevServings + 1);
+	};
+
+	const handleAlteredServingsDecrease = () => {
+		setAlteredServings((prevServings) => prevServings - 1);
+	};
+
 	return (
 		<Card>
 			<CardBody>
@@ -36,11 +47,21 @@ function IngredientsCard({ ingredientGroups }: Props) {
 						>
 							Ingredienser
 						</Heading>
-						<IngredientControls />
+						<IngredientControls
+							servings={alteredServings}
+							onAlteredServingsIncrease={
+								handleAlteredServingsIncrease
+							}
+							onAlteredServingsDecrease={
+								handleAlteredServingsDecrease
+							}
+						/>
 					</VStack>
 					{ingredientGroups.map((ingredientGroup, index) => (
 						<IngredientGroupBox
 							ingredientGroup={ingredientGroup}
+							originalServings={servings}
+							alteredServings={alteredServings}
 							key={index}
 						/>
 					))}

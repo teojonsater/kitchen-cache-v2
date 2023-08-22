@@ -13,9 +13,20 @@ import sortByOptions from "../../utils/sortByOptions";
 interface Props {
 	searchQuery: string;
 	onSearchQueryChange: (event: ChangeEvent<HTMLInputElement>) => void;
+	searchedIngredients: string[];
+	filterIngredientsSearchQuery: string;
+	onFilterIngredientsSearchQueryChange: (
+		event: ChangeEvent<HTMLInputElement>,
+	) => void;
 }
 
-function SearchBar({ searchQuery, onSearchQueryChange }: Props) {
+function SearchBar({
+	searchQuery,
+	onSearchQueryChange,
+	searchedIngredients,
+	filterIngredientsSearchQuery,
+	onFilterIngredientsSearchQueryChange,
+}: Props) {
 	return (
 		<InputGroup>
 			<InputLeftElement
@@ -52,7 +63,13 @@ function SearchBar({ searchQuery, onSearchQueryChange }: Props) {
 				onChange={onSearchQueryChange}
 			/>
 			<InputRightElement>
-				<FilterButton />
+				<FilterButton
+					searchedIngredients={searchedIngredients}
+					filterIngredientsSearchQuery={filterIngredientsSearchQuery}
+					onFilterIngredientsSearchQueryChange={
+						onFilterIngredientsSearchQueryChange
+					}
+				/>
 			</InputRightElement>
 		</InputGroup>
 	);

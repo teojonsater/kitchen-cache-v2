@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
+import type { ChangeEvent } from "react";
 import {
 	Accordion,
 	Button,
@@ -18,7 +19,19 @@ import IngredientFilter from "./IngredientFilter";
 import TimeFilter from "./TimeFilter";
 import PriceFilter from "./PriceFilter";
 
-function FilterButton() {
+interface Props {
+	searchedIngredients: string[];
+	filterIngredientsSearchQuery: string;
+	onFilterIngredientsSearchQueryChange: (
+		event: ChangeEvent<HTMLInputElement>,
+	) => void;
+}
+
+function FilterButton({
+	searchedIngredients,
+	filterIngredientsSearchQuery,
+	onFilterIngredientsSearchQueryChange,
+}: Props) {
 	const drawerDisclosure = useDisclosure();
 
 	return (
@@ -46,7 +59,15 @@ function FilterButton() {
 
 					<DrawerBody>
 						<Accordion allowMultiple>
-							<IngredientFilter />
+							<IngredientFilter
+								searchedIngredients={searchedIngredients}
+								filterIngredientsSearchQuery={
+									filterIngredientsSearchQuery
+								}
+								onFilterIngredientsSearchQueryChange={
+									onFilterIngredientsSearchQueryChange
+								}
+							/>
 							<TimeFilter />
 							<PriceFilter />
 						</Accordion>

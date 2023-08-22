@@ -1,14 +1,33 @@
 import React from "react";
+import type { ChangeEvent } from "react";
 import {
 	AccordionButton,
 	AccordionIcon,
 	AccordionItem,
 	AccordionPanel,
 	Box,
+	FormControl,
+	FormLabel,
+	HStack,
+	Input,
+	Switch,
 	Text,
+	VStack,
 } from "@chakra-ui/react";
 
-function IngredientFilter() {
+interface Props {
+	searchedIngredients: string[];
+	filterIngredientsSearchQuery: string;
+	onFilterIngredientsSearchQueryChange: (
+		event: ChangeEvent<HTMLInputElement>,
+	) => void;
+}
+
+function IngredientFilter({
+	searchedIngredients,
+	filterIngredientsSearchQuery,
+	onFilterIngredientsSearchQueryChange,
+}: Props) {
 	return (
 		<AccordionItem>
 			<Text>
@@ -19,11 +38,31 @@ function IngredientFilter() {
 					<AccordionIcon />
 				</AccordionButton>
 			</Text>
-			<AccordionPanel pb={4}>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-				eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-				enim ad minim veniam, quis nostrud exercitation ullamco laboris
-				nisi ut aliquip ex ea commodo consequat.
+			<AccordionPanel pb="4">
+				<VStack spacing="3">
+					<Input
+						placeholder="Sök ingrediens"
+						bgColor="white"
+						shadow="base"
+						borderRadius="full"
+						focusBorderColor="teal.500"
+						value={filterIngredientsSearchQuery}
+						onChange={onFilterIngredientsSearchQueryChange}
+					/>
+					<FormControl>
+						<HStack>
+							<FormLabel mb="0">
+								Receptet ska inte innehålla...
+							</FormLabel>
+							<Switch colorScheme="teal" />
+						</HStack>
+					</FormControl>
+					<VStack>
+						{searchedIngredients.map((ingredient, index) => (
+							<Text key={index}>{ingredient}</Text>
+						))}
+					</VStack>
+				</VStack>
 			</AccordionPanel>
 		</AccordionItem>
 	);

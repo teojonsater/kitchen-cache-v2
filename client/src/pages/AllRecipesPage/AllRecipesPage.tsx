@@ -26,7 +26,11 @@ function AllRecipesPage() {
 	const [allIngredients] = useState<string[]>(
 		getAllIngredients(dummyRecipes),
 	);
+	const [searchedIngredients, setSearchedIngredients] =
+		useState<string[]>(allIngredients);
 	const [searchQuery, setSearchQuery] = useState<string>("");
+	const [filterIngredientsSearchQuery, setFilterIngredientsSearchQuery] =
+		useState<string>("");
 	const [filteredIngredients, setFilteredIngredients] = useState<string[]>(
 		[],
 	);
@@ -34,6 +38,22 @@ function AllRecipesPage() {
 	useEffect(() => {
 		setFilteredRecipes(filterRecipes(dummyRecipes, searchQuery));
 	}, [searchQuery]);
+
+	useEffect(() => {
+		setSearchedIngredients(
+			allIngredients.filter((ingredient) =>
+				ingredient
+					.toLowerCase()
+					.includes(filterIngredientsSearchQuery.toLowerCase()),
+			),
+		);
+	}, [filterIngredientsSearchQuery]);
+
+	const handleFilterIngredientsSearchQueryChange = (
+		event: ChangeEvent<HTMLInputElement>,
+	) => {
+		setFilterIngredientsSearchQuery(event.target.value);
+	};
 
 	const handleSearchQueryChange = (event: ChangeEvent<HTMLInputElement>) => {
 		setSearchQuery(event.target.value);
@@ -65,6 +85,13 @@ function AllRecipesPage() {
 					<SearchBar
 						searchQuery={searchQuery}
 						onSearchQueryChange={handleSearchQueryChange}
+						searchedIngredients={searchedIngredients}
+						filterIngredientsSearchQuery={
+							filterIngredientsSearchQuery
+						}
+						onFilterIngredientsSearchQueryChange={
+							handleFilterIngredientsSearchQueryChange
+						}
 					/>
 					<Link
 						href="#"

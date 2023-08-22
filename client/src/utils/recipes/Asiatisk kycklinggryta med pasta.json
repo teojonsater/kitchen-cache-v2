@@ -1,0 +1,117 @@
+﻿{
+    "id": "82991127-65c9-4c41-8bc8-002c737cbce8",
+    "createdAt": "2023-08-22T18:43:06.929103",
+    "name": "Asiatisk kycklinggryta med pasta",
+    "desc": "Härligt smakrik kycklinggryta som görs på kycklingfärs och mustiga kryddor. Hela hemligheten är såsen med hoisinsås, jordnötssmör, sesamolja och mirin. Precis innan servering rörs spenat ner i grytan, som allra helst serveras med pastasorten fettuccine.",
+    "servings": 6,
+    "cookingTime": 45,
+    "originalRecipe": "https://www.ica.se/recept/asiatisk-kycklinggryta-med-pasta-729921/",
+    "ingredients": [],
+    "image": "https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_250081/cf_259/asiatisk_kycklinggryta_med_pasta.jpg",
+    "steps": [
+        "Sås: Rör ihop hoisinsås, jordnötssmör, sesamolja, mirin och soja.",
+        "Sätt på en kastrull med vatten till pastan. ",
+        "Ansa och skiva champinjonerna. Skala och hacka lök och vitlök fint. Skala och riv ingefäran fint på ett rivjärn. Hacka gräslöken grovt. ",
+        "Fräs champinjonerna i oljan i en stor gryta ca 2 minuter. ",
+        "Lägg i och dela kycklingfärsen. Fräs ytterligare 2 minuter. Tillsätt lök, vitlök, ingefära och chiliflakes. Fräs ytterligare 2 minuter. ",
+        "Rör ner såsen i grytan och sjud på svag värme i 10 minuter. Smaka av med salt. ",
+        "Koka pastan enligt anvisningen på förpackningen. ",
+        "Späd eventuellt kycklinggrytan med 1-2 dl pastavatten (för 6 port). ",
+        "Rör ner pasta och spenat i grytan och toppa med gräslök. "
+    ],
+    "ingredientGroups": [
+        {
+            "ingredients": [
+                {
+                    "amount": 1,
+                    "measurement": "1/2",
+                    "name": "hoisinsås"
+                },
+                {
+                    "amount": 1,
+                    "measurement": "dl",
+                    "name": "jordnötssmör"
+                },
+                {
+                    "amount": 2,
+                    "measurement": "msk",
+                    "name": "sesamolja"
+                },
+                {
+                    "amount": 2,
+                    "measurement": "msk",
+                    "name": "mirin (risvin)"
+                },
+                {
+                    "amount": 2,
+                    "measurement": "msk",
+                    "name": "japansk soja"
+                }
+            ],
+            "name": "Sås"
+        },
+        {
+            "ingredients": [
+                {
+                    "amount": 250,
+                    "measurement": "g",
+                    "name": "champinjoner"
+                },
+                {
+                    "amount": 1,
+                    "measurement": "-",
+                    "name": "gul lök"
+                },
+                {
+                    "amount": 6,
+                    "measurement": "-",
+                    "name": "vitlöksklyftor"
+                },
+                {
+                    "amount": 4,
+                    "measurement": "cm",
+                    "name": "färsk ingefära"
+                },
+                {
+                    "amount": 1,
+                    "measurement": "-",
+                    "name": "förp gräslök (à 20 g)"
+                },
+                {
+                    "amount": 2,
+                    "measurement": "msk",
+                    "name": "neutral rapsolja"
+                },
+                {
+                    "amount": 1,
+                    "measurement": "-",
+                    "name": "förp kycklingfärs (à 800 g)"
+                },
+                {
+                    "amount": 1,
+                    "measurement": "msk",
+                    "name": "chiliflakes"
+                },
+                {
+                    "amount": 2,
+                    "measurement": "tsk",
+                    "name": "salt"
+                }
+            ]
+        },
+        {
+            "ingredients": [
+                {
+                    "amount": 2,
+                    "measurement": "-",
+                    "name": "förp färsk pasta gärna fettuchine (à 250 g)"
+                },
+                {
+                    "amount": 2,
+                    "measurement": "-",
+                    "name": "förp babyspenat (à 65 g)"
+                }
+            ]
+        }
+    ]
+}

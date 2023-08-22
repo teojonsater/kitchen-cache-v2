@@ -14,7 +14,7 @@ interface Props {
 
 function StepsCard({ steps }: Props) {
 	return (
-		<Card h="full">
+		<Card>
 			<CardBody>
 				<VStack
 					spacing="4"

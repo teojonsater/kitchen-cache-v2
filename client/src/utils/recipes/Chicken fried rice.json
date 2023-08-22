@@ -1,0 +1,89 @@
+﻿{
+    "id": "5f52befe-60fd-47fe-86ab-61b1c7402df4",
+    "createdAt": "2023-08-22T18:42:38.472780",
+    "name": "Chicken fried rice",
+    "desc": "En smakrik asiatisk rätt som går att äta med både pinnar och sked. Kycklingen och grönsakerna steks för sig i en del olja, innan det kokta riset hälls i en tom stekpanna. Ett ägg över det får riset att bli krämigt och en perfekt komponent till de övriga ingredienserna!",
+    "servings": 4,
+    "cookingTime": 45,
+    "originalRecipe": "https://www.ica.se/recept/chicken-fried-rice-724424/",
+    "ingredients": [],
+    "image": "https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_186709/cf_259/chicken_fried_rice.jpg",
+    "steps": [
+        "Koka riset enligt anvisning på förpackningen.",
+        "Skala och dela morötterna på längden och skiva dem.",
+        "Stek kycklingen i hälften av oljan i en stor stekpanna. Salta och peppra. Lägg upp på en tallrik.",
+        "Stek morötter, haricots verts och pressad vitlök i lite av den resterande oljan. Salta och peppra. Ta upp på en tallrik.",
+        "Stek riset i resten av oljan och knäck i äggen och rör runt. Krydda med sweet chilisås och soja. Blanda kycklingen med grönsaker och riset.",
+        "Strö över sesamfrö vid servering."
+    ],
+    "ingredientGroups": [
+        {
+            "ingredients": [
+                {
+                    "amount": 4,
+                    "measurement": "-",
+                    "name": "port ris"
+                }
+            ]
+        },
+        {
+            "ingredients": [
+                {
+                    "amount": 3,
+                    "measurement": "-",
+                    "name": "morötter"
+                },
+                {
+                    "amount": 600,
+                    "measurement": "g",
+                    "name": "strimlad kycklingfilé"
+                },
+                {
+                    "amount": 2,
+                    "measurement": "msk",
+                    "name": "olja"
+                },
+                {
+                    "amount": 0,
+                    "measurement": "-",
+                    "name": "salt"
+                },
+                {
+                    "amount": 0,
+                    "measurement": "-",
+                    "name": "peppar"
+                },
+                {
+                    "amount": 150,
+                    "measurement": "g",
+                    "name": "haricots verts (bönor)"
+                },
+                {
+                    "amount": 1,
+                    "measurement": "-",
+                    "name": "vitlöksklyfta"
+                },
+                {
+                    "amount": 4,
+                    "measurement": "-",
+                    "name": "ägg"
+                },
+                {
+                    "amount": 3,
+                    "measurement": "msk",
+                    "name": "sweet chilisås"
+                },
+                {
+                    "amount": 3,
+                    "measurement": "msk",
+                    "name": "japansk sojasås"
+                },
+                {
+                    "amount": 2,
+                    "measurement": "msk",
+                    "name": "sesamfrön"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,90 @@
+﻿{
+    "id": "b63613df-ace8-42e1-9bf4-865eaba5298a",
+    "createdAt": "2023-08-22T18:50:15.357562",
+    "name": "Ciderkyckling med dragon och ris",
+    "desc": "En härlig ciderkyckling som sprider en ljuvlig doft medan den tillagas. Lök, kyckling och äpple bryns i olja i en stor gryta. För att få den krämiga konsistensen tillsätter du grädde som får sjuda ihop med äppelcider, buljongtärning och dragon. Servera denna mustiga gryta med nykokt ris och tomathalvor. ",
+    "servings": 4,
+    "cookingTime": 30,
+    "originalRecipe": "https://www.ica.se/recept/ciderkyckling-med-dragon-och-ris-718263/",
+    "ingredients": [],
+    "image": "https://assets.icanet.se/e_sharpen:80,q_auto,dpr_1.25,w_718,h_718,c_lfill/imagevaultfiles/id_105176/cf_259/ciderkyckling_med_dragon_och_ris.jpg",
+    "steps": [
+        "Koka riset enligt anvisningen på förpackningen.",
+        "Skär kycklingen i strimlor. Skala löken och skär den och äpplet i klyftor. Skär bort kärnhuset från klyftorna på äpplet.",
+        "Bryn kyckling, lök och äpple i oljan i en stor gryta. Krydda med salt och peppar.",
+        "Blanda grädden med majsstärkelsen. Häll ner grädden, cider, buljongtärning och dragon i kastrullen. Låt sjuda ca 10 minuter. Smaka av med vinäger, salt och peppar.",
+        "Dela tomaterna i halvor.",
+        "Servera grytan med ris och tomater."
+    ],
+    "ingredientGroups": [
+        {
+            "ingredients": [
+                {
+                    "amount": 4,
+                    "measurement": "-",
+                    "name": "port ris"
+                },
+                {
+                    "amount": 4,
+                    "measurement": "-",
+                    "name": "kycklingfiléer"
+                },
+                {
+                    "amount": 2,
+                    "measurement": "-",
+                    "name": "rödlökar"
+                },
+                {
+                    "amount": 1,
+                    "measurement": "-",
+                    "name": "äpple"
+                },
+                {
+                    "amount": 1,
+                    "measurement": "msk",
+                    "name": "olja"
+                },
+                {
+                    "amount": 0,
+                    "measurement": "-",
+                    "name": "salt och peppar"
+                },
+                {
+                    "amount": 2,
+                    "measurement": "dl",
+                    "name": "vispgrädde"
+                },
+                {
+                    "amount": 2,
+                    "measurement": "tsk",
+                    "name": "majsstärkelse"
+                },
+                {
+                    "amount": 3,
+                    "measurement": "dl",
+                    "name": "äppelcider"
+                },
+                {
+                    "amount": 1,
+                    "measurement": "-",
+                    "name": "tärning kycklingbuljong eller motsvarande mängd fond"
+                },
+                {
+                    "amount": 1,
+                    "measurement": "tsk",
+                    "name": "dragon"
+                },
+                {
+                    "amount": 1,
+                    "measurement": "tsk",
+                    "name": "vitvinsvinäger"
+                },
+                {
+                    "amount": 250,
+                    "measurement": "g",
+                    "name": "körsbärstomater"
+                }
+            ]
+        }
+    ]
+}

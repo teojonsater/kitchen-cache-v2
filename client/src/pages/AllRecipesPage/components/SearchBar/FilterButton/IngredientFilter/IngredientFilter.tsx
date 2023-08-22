@@ -14,6 +14,7 @@ import {
 	Text,
 	VStack,
 } from "@chakra-ui/react";
+import IngredientItem from "./IngredientItem";
 
 interface Props {
 	searchedIngredients: string[];
@@ -21,12 +22,16 @@ interface Props {
 	onFilterIngredientsSearchQueryChange: (
 		event: ChangeEvent<HTMLInputElement>,
 	) => void;
+	onIngredientFilterChange: (ingredient: string) => void;
+	filteredIngredients: string[];
 }
 
 function IngredientFilter({
 	searchedIngredients,
 	filterIngredientsSearchQuery,
 	onFilterIngredientsSearchQueryChange,
+	onIngredientFilterChange,
+	filteredIngredients,
 }: Props) {
 	return (
 		<AccordionItem>
@@ -57,9 +62,16 @@ function IngredientFilter({
 							<Switch colorScheme="teal" />
 						</HStack>
 					</FormControl>
-					<VStack>
+					<VStack w="full" align="start">
 						{searchedIngredients.map((ingredient, index) => (
-							<Text key={index}>{ingredient}</Text>
+							<IngredientItem
+								key={index}
+								ingredient={ingredient}
+								onIngredientFilterChange={
+									onIngredientFilterChange
+								}
+								filteredIngredients={filteredIngredients}
+							/>
 						))}
 					</VStack>
 				</VStack>

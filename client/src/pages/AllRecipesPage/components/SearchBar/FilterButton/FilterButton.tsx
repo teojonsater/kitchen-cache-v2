@@ -25,12 +25,16 @@ interface Props {
 	onFilterIngredientsSearchQueryChange: (
 		event: ChangeEvent<HTMLInputElement>,
 	) => void;
+	onIngredientFilterChange: (ingredient: string) => void;
+	filteredIngredients: string[];
 }
 
 function FilterButton({
 	searchedIngredients,
 	filterIngredientsSearchQuery,
 	onFilterIngredientsSearchQueryChange,
+	onIngredientFilterChange,
+	filteredIngredients,
 }: Props) {
 	const drawerDisclosure = useDisclosure();
 
@@ -67,6 +71,10 @@ function FilterButton({
 								onFilterIngredientsSearchQueryChange={
 									onFilterIngredientsSearchQueryChange
 								}
+								onIngredientFilterChange={
+									onIngredientFilterChange
+								}
+								filteredIngredients={filteredIngredients}
 							/>
 							<TimeFilter />
 							<PriceFilter />

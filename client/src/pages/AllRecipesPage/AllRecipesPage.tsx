@@ -92,6 +92,8 @@ function AllRecipesPage() {
 						onFilterIngredientsSearchQueryChange={
 							handleFilterIngredientsSearchQueryChange
 						}
+						onIngredientFilterChange={handleIngredientFilterChange}
+						filteredIngredients={filteredIngredients}
 					/>
 					<Link
 						href="#"

@@ -15,21 +15,24 @@ import {
 import type RecipeObject from "../../interfaces/recipe/RecipeObject";
 import SummaryCard from "./components/SummaryCard";
 import SearchBar from "./components/SearchBar";
-import allRecipes from "../../utils/recipes";
 import filterRecipes from "./utils/filterRecipes";
 import NoSearchResults from "./components/NoSearchResults";
-import allIngredients from "../../utils/allIngredients";
+import dummyRecipes from "../../utils/dummyRecipes";
+import getAllIngredients from "./utils/getAllIngredients";
 
 function AllRecipesPage() {
 	const [filteredRecipes, setFilteredRecipes] =
-		useState<RecipeObject[]>(allRecipes);
+		useState<RecipeObject[]>(dummyRecipes);
+	const [allIngredients] = useState<string[]>(
+		getAllIngredients(dummyRecipes),
+	);
 	const [searchQuery, setSearchQuery] = useState<string>("");
 	const [filteredIngredients, setFilteredIngredients] = useState<string[]>(
 		[],
 	);
 
 	useEffect(() => {
-		setFilteredRecipes(filterRecipes(searchQuery));
+		setFilteredRecipes(filterRecipes(dummyRecipes, searchQuery));
 	}, [searchQuery]);
 
 	const handleSearchQueryChange = (event: ChangeEvent<HTMLInputElement>) => {

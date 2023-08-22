@@ -14,6 +14,7 @@ import SummaryCard from "./components/SummaryCard";
 import SearchBar from "./components/SearchBar";
 import allRecipes from "../../utils/recipes";
 import filterRecipes from "./utils/filterRecipes";
+import NoSearchResults from "./components/NoSearchResults";
 
 function AllRecipesPage() {
 	const [filteredRecipes, setFilteredRecipes] =
@@ -54,6 +55,8 @@ function AllRecipesPage() {
 				{filteredRecipes.length > 0 && (
 					<Text>{filteredRecipes.length} resultat</Text>
 				)}
+
+				{filteredRecipes.length == 0 && <NoSearchResults />}
 
 				<SimpleGrid w="full" minChildWidth="72" spacing={8}>
 					{filteredRecipes.map((recipe, index) => (

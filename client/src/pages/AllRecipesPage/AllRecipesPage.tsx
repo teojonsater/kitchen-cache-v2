@@ -6,6 +6,7 @@ import {
 	Heading,
 	Link,
 	SimpleGrid,
+	Text,
 	VStack,
 } from "@chakra-ui/react";
 import type RecipeObject from "../../interfaces/recipe/RecipeObject";
@@ -49,18 +50,24 @@ function AllRecipesPage() {
 				</Link>
 			</HStack>
 
-			<SimpleGrid w="full" minChildWidth="72" spacing={8}>
-				{filteredRecipes.map((recipe, index) => (
-					<SummaryCard
-						name={recipe.name}
-						cookingTime={recipe.cookingTime}
-						ingredientGroups={recipe.ingredientGroups}
-						image={recipe.image}
-						key={index}
-						searchQuery={searchQuery}
-					/>
-				))}
-			</SimpleGrid>
+			<VStack w="full" align="start">
+				{filteredRecipes.length > 0 && (
+					<Text>{filteredRecipes.length} resultat</Text>
+				)}
+
+				<SimpleGrid w="full" minChildWidth="72" spacing={8}>
+					{filteredRecipes.map((recipe, index) => (
+						<SummaryCard
+							name={recipe.name}
+							cookingTime={recipe.cookingTime}
+							ingredientGroups={recipe.ingredientGroups}
+							image={recipe.image}
+							key={index}
+							searchQuery={searchQuery}
+						/>
+					))}
+				</SimpleGrid>
+			</VStack>
 		</VStack>
 	);
 }

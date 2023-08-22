@@ -1,9 +1,14 @@
 import React from "react";
+import type { ChangeEvent } from "react";
 import { Input, InputGroup, InputRightElement } from "@chakra-ui/react";
-import TuneRoundedIcon from "@mui/icons-material/TuneRounded";
 import FilterButton from "./FilterButton";
 
-function SearchBar() {
+interface Props {
+	searchQuery: string;
+	onSearchQueryChange: (event: ChangeEvent<HTMLInputElement>) => void;
+}
+
+function SearchBar({ searchQuery, onSearchQueryChange }: Props) {
 	return (
 		<InputGroup>
 			<Input
@@ -12,6 +17,8 @@ function SearchBar() {
 				shadow="base"
 				borderRadius="full"
 				focusBorderColor="teal.500"
+				value={searchQuery}
+				onChange={onSearchQueryChange}
 			/>
 			<InputRightElement>
 				<FilterButton />

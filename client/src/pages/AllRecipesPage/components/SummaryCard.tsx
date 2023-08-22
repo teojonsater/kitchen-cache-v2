@@ -5,6 +5,7 @@ import {
 	CardBody,
 	HStack,
 	Heading,
+	Highlight,
 	Icon,
 	Image,
 	StackDivider,
@@ -22,9 +23,16 @@ interface Props {
 	cookingTime: number;
 	ingredientGroups: RecipeIngredientGroup[];
 	image: string;
+	searchQuery: string;
 }
 
-function SummaryCard({ name, cookingTime, ingredientGroups, image }: Props) {
+function SummaryCard({
+	name,
+	cookingTime,
+	ingredientGroups,
+	image,
+	searchQuery,
+}: Props) {
 	return (
 		<Card size="sm">
 			<AspectRatio ratio={16 / 9}>
@@ -32,7 +40,17 @@ function SummaryCard({ name, cookingTime, ingredientGroups, image }: Props) {
 			</AspectRatio>
 			<CardBody>
 				<VStack spacing="4" align="start">
-					<Heading size="md">{name}</Heading>
+					<Heading size="md">
+						<Highlight
+							query={searchQuery}
+							styles={{
+								rounded: "md",
+								bg: "teal.200",
+							}}
+						>
+							{name}
+						</Highlight>
+					</Heading>
 					<HStack
 						divider={<StackDivider />}
 						color="gray.600"

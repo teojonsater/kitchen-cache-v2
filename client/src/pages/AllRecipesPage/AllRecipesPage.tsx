@@ -36,8 +36,10 @@ function AllRecipesPage() {
 	);
 
 	useEffect(() => {
-		setFilteredRecipes(filterRecipes(dummyRecipes, searchQuery));
-	}, [searchQuery]);
+		setFilteredRecipes(
+			filterRecipes(dummyRecipes, searchQuery, filteredIngredients),
+		);
+	}, [searchQuery, filteredIngredients]);
 
 	useEffect(() => {
 		setSearchedIngredients(

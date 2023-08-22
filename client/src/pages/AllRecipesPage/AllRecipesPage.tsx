@@ -24,10 +24,9 @@ function AllRecipesPage() {
 	const [filteredRecipes, setFilteredRecipes] =
 		useState<RecipeObject[]>(allRecipes);
 	const [searchQuery, setSearchQuery] = useState<string>("");
-	const [filteredIngredients, setFilteredIngredients] = useState<string[]>([
-		"mjölk",
-		"mjöl",
-	]);
+	const [filteredIngredients, setFilteredIngredients] = useState<string[]>(
+		[],
+	);
 
 	useEffect(() => {
 		setFilteredRecipes(filterRecipes(searchQuery));

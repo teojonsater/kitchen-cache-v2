@@ -1,6 +1,18 @@
 import React, { useState, useEffect } from "react";
 import type { ChangeEvent } from "react";
-import { Heading, SimpleGrid, VStack } from "@chakra-ui/react";
+import {
+	Button,
+	HStack,
+	Heading,
+	Link,
+	RangeSlider,
+	RangeSliderFilledTrack,
+	RangeSliderThumb,
+	RangeSliderTrack,
+	SimpleGrid,
+	Text,
+	VStack,
+} from "@chakra-ui/react";
 import type RecipeObject from "../../interfaces/recipe/RecipeObject";
 import SummaryCard from "./components/SummaryCard";
 import SearchBar from "./components/SearchBar";
@@ -20,15 +32,50 @@ function AllRecipesPage() {
 		setSearchQuery(event.target.value);
 	};
 
+	const [sliderValues, setSliderValues] = useState([10, 30]);
+
+	const handleChange = (newValues: [number, number]) => {
+		setSliderValues(newValues);
+	};
+
 	return (
 		<VStack spacing={8} align="start" p="8">
 			<Heading as="h1" size="2xl">
 				Alla Recept
 			</Heading>
-			<SearchBar
-				searchQuery={searchQuery}
-				onSearchQueryChange={handleSearchQueryChange}
-			/>
+
+			<HStack w="full">
+				<SearchBar
+					searchQuery={searchQuery}
+					onSearchQueryChange={handleSearchQueryChange}
+				/>
+				<Link href="#" isExternal _hover={{ textDecoration: "none" }}>
+					<Button variant="outline" colorScheme="teal">
+						Slumpa Recept
+					</Button>
+				</Link>
+			</HStack>
+
+			<HStack w="full">
+				<Text w="12">{sliderValues[0]}</Text>
+				<RangeSlider
+					aria-label={["min", "max"]}
+					value={sliderValues}
+					min={10}
+					max={30}
+					step={0.01}
+					onChange={handleChange}
+					colorScheme="teal"
+				>
+					<RangeSliderTrack>
+						<RangeSliderFilledTrack />
+					</RangeSliderTrack>
+					<RangeSliderThumb index={0} ringOffsetColor={"teal"} />
+					<RangeSliderThumb index={1} />
+				</RangeSlider>
+				<Text w="12">{sliderValues[1]}</Text>
+			</HStack>
+
 			<SimpleGrid w="full" minChildWidth="72" spacing={8}>
 				{filteredRecipes.map((recipe, index) => (
 					<SummaryCard

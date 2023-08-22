@@ -39,7 +39,11 @@ function AllRecipesPage() {
 					onSearchQueryChange={handleSearchQueryChange}
 				/>
 				<Link href="#" isExternal _hover={{ textDecoration: "none" }}>
-					<Button variant="outline" colorScheme="teal">
+					<Button
+						variant="outline"
+						colorScheme="teal"
+						isDisabled={filteredRecipes.length == 0 ? true : false}
+					>
 						Slumpa Recept
 					</Button>
 				</Link>

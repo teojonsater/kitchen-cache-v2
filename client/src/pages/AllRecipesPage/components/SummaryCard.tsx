@@ -39,7 +39,12 @@ function SummaryCard({
 				<Image borderTopRadius="sm" objectFit="cover" src={image} />
 			</AspectRatio>
 			<CardBody>
-				<VStack spacing="4" align="start">
+				<VStack
+					h="full"
+					spacing="4"
+					align="start"
+					justify="space-between"
+				>
 					<Heading size="md">
 						<Highlight
 							query={searchQuery}

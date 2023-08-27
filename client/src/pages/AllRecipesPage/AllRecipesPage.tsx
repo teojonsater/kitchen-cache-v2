@@ -131,7 +131,13 @@ function AllRecipesPage() {
 				</HStack>
 				<HStack>
 					{filteredIngredients.map((ingredient, index) => (
-						<Tag borderRadius="full" colorScheme="teal" key={index}>
+						<Tag
+							borderRadius="full"
+							colorScheme={
+								ingredientFilterSwitch ? "red" : "teal"
+							}
+							key={index}
+						>
 							<TagLabel>{ingredient}</TagLabel>
 							<TagCloseButton
 								onClick={() => {

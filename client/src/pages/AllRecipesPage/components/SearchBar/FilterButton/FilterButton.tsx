@@ -90,7 +90,14 @@ function FilterButton({
 						<Button variant="outline" mr={3}>
 							Rensa filter
 						</Button>
-						<Button colorScheme="teal">Filtrera</Button>
+						<Button
+							colorScheme="teal"
+							onClick={() => {
+								drawerDisclosure.onClose();
+							}}
+						>
+							Filtrera
+						</Button>
 					</DrawerFooter>
 				</DrawerContent>
 			</Drawer>

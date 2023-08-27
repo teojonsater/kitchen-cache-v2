@@ -34,12 +34,21 @@ function AllRecipesPage() {
 	const [filteredIngredients, setFilteredIngredients] = useState<string[]>(
 		[],
 	);
+	const [ingredientFilterSwitch, setIngredientFilterSwitch] =
+		useState<boolean>(false);
 
 	useEffect(() => {
 		setFilteredRecipes(
-			filterRecipes(dummyRecipes, searchQuery, filteredIngredients),
+			filterRecipes(
+				dummyRecipes,
+				searchQuery,
+				filteredIngredients,
+				ingredientFilterSwitch,
+			),
 		);
-	}, [searchQuery, filteredIngredients]);
+
+		console.log(ingredientFilterSwitch);
+	}, [searchQuery, filteredIngredients, ingredientFilterSwitch]);
 
 	useEffect(() => {
 		setSearchedIngredients(
@@ -76,6 +85,10 @@ function AllRecipesPage() {
 		}
 	};
 
+	const handleIngredientFilterSwitchChange = () => {
+		setIngredientFilterSwitch(!ingredientFilterSwitch);
+	};
+
 	return (
 		<VStack spacing={8} align="start" p="8">
 			<Heading as="h1" size="2xl">
@@ -96,6 +109,9 @@ function AllRecipesPage() {
 						}
 						onIngredientFilterChange={handleIngredientFilterChange}
 						filteredIngredients={filteredIngredients}
+						onIngredientFilterSwitchChange={
+							handleIngredientFilterSwitchChange
+						}
 					/>
 					<Link
 						href="#"

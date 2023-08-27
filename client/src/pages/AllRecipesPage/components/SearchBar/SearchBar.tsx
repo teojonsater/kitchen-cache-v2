@@ -20,6 +20,7 @@ interface Props {
 	) => void;
 	onIngredientFilterChange: (ingredient: string) => void;
 	filteredIngredients: string[];
+	onIngredientFilterSwitchChange: () => void;
 }
 
 function SearchBar({
@@ -30,6 +31,7 @@ function SearchBar({
 	onFilterIngredientsSearchQueryChange,
 	onIngredientFilterChange,
 	filteredIngredients,
+	onIngredientFilterSwitchChange,
 }: Props) {
 	return (
 		<InputGroup>
@@ -75,6 +77,9 @@ function SearchBar({
 					}
 					onIngredientFilterChange={onIngredientFilterChange}
 					filteredIngredients={filteredIngredients}
+					onIngredientFilterSwitchChange={
+						onIngredientFilterSwitchChange
+					}
 				/>
 			</InputRightElement>
 		</InputGroup>

@@ -24,6 +24,7 @@ interface Props {
 	) => void;
 	onIngredientFilterChange: (ingredient: string) => void;
 	filteredIngredients: string[];
+	onIngredientFilterSwitchChange: () => void;
 }
 
 function IngredientFilter({
@@ -32,6 +33,7 @@ function IngredientFilter({
 	onFilterIngredientsSearchQueryChange,
 	onIngredientFilterChange,
 	filteredIngredients,
+	onIngredientFilterSwitchChange,
 }: Props) {
 	return (
 		<AccordionItem>
@@ -59,7 +61,10 @@ function IngredientFilter({
 							<FormLabel mb="0">
 								Receptet ska inte innehålla...
 							</FormLabel>
-							<Switch colorScheme="teal" />
+							<Switch
+								onChange={onIngredientFilterSwitchChange}
+								colorScheme="teal"
+							/>
 						</HStack>
 					</FormControl>
 					<VStack w="full" align="start">

@@ -27,6 +27,7 @@ interface Props {
 	) => void;
 	onIngredientFilterChange: (ingredient: string) => void;
 	filteredIngredients: string[];
+	onIngredientFilterSwitchChange: () => void;
 }
 
 function FilterButton({
@@ -35,6 +36,7 @@ function FilterButton({
 	onFilterIngredientsSearchQueryChange,
 	onIngredientFilterChange,
 	filteredIngredients,
+	onIngredientFilterSwitchChange,
 }: Props) {
 	const drawerDisclosure = useDisclosure();
 
@@ -75,6 +77,9 @@ function FilterButton({
 									onIngredientFilterChange
 								}
 								filteredIngredients={filteredIngredients}
+								onIngredientFilterSwitchChange={
+									onIngredientFilterSwitchChange
+								}
 							/>
 							<TimeFilter />
 							<PriceFilter />

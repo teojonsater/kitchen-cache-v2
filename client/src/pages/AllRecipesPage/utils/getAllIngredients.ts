@@ -13,6 +13,8 @@ function getAllIngredients(recipes: RecipeObject[]): string[] {
 		});
 	});
 
+	allIngredients.sort();
+
 	return allIngredients;
 }
 

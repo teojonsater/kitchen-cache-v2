@@ -56,6 +56,27 @@ const JosefinFontTheme = extendTheme({
 				},
 			},
 		},
+		FormLabel: {
+			baseStyle: {
+				fontWeight: "bold",
+				color: "teal.400",
+			},
+		},
+		Input: {
+			defaultProps: {
+				focusBorderColor: "teal.500",
+			},
+		},
+		Textarea: {
+			defaultProps: {
+				focusBorderColor: "teal.500",
+			},
+		},
+		NumberInput: {
+			defaultProps: {
+				focusBorderColor: "teal.500",
+			},
+		},
 	},
 });
 

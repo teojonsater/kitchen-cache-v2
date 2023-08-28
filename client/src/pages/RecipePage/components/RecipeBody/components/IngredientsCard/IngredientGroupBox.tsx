@@ -19,7 +19,7 @@ function IngredientGroupBox({
 	return (
 		<Box border="1px solid" borderColor="gray.200" borderRadius="lg" p="3">
 			{ingredientGroup.name && (
-				<Heading size="sm" mb="2" color="teal.700" fontWeight="bold">
+				<Heading size="sm" mb="2" color="teal.700">
 					{ingredientGroup.name}
 				</Heading>
 			)}

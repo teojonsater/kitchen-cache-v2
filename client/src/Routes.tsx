@@ -22,7 +22,7 @@ const router = createBrowserRouter(
 				</Layout>
 			}
 		>
-			<Route index element={<Navigate to="/recipe" />} />
+			<Route index element={<Navigate to="/recipe" replace />} />
 			<Route path="recipe" element={<RecipePage />} />
 			<Route path="recipes">
 				<Route index element={<AllRecipesPage />} />

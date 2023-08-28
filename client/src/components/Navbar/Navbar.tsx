@@ -56,10 +56,14 @@ function Navbar() {
 					<PopoverContent w="fit-content">
 						<PopoverArrow />
 						<ChakraLink as={ReactRouterNavLink} to="/recipes">
-							<Button w="full">Alla recept</Button>
+							<Button w="full" borderBottomRadius="0">
+								Alla recept
+							</Button>
 						</ChakraLink>
 						<ChakraLink as={ReactRouterNavLink} to="/recipes/new">
-							<Button w="full">Skapa recept</Button>
+							<Button w="full" borderTopRadius="0">
+								Skapa recept
+							</Button>
 						</ChakraLink>
 					</PopoverContent>
 				</Popover>

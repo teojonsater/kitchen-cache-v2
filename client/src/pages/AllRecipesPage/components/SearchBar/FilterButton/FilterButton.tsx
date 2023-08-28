@@ -18,6 +18,8 @@ import TuneRoundedIcon from "@mui/icons-material/TuneRounded";
 import IngredientFilter from "./IngredientFilter";
 import TimeFilter from "./TimeFilter";
 import PriceFilter from "./PriceFilter";
+import type RecipeObject from "../../../../../interfaces/recipe/RecipeObject";
+import { on } from "events";
 
 interface Props {
 	searchedIngredients: string[];
@@ -28,6 +30,9 @@ interface Props {
 	onIngredientFilterChange: (ingredient: string) => void;
 	filteredIngredients: string[];
 	onIngredientFilterSwitchChange: () => void;
+	allRecipes: RecipeObject[];
+	filterCookingTimeValues: number[];
+	onFilterCookingTimeValuesChange: (newValues: [number, number]) => void;
 }
 
 function FilterButton({
@@ -37,6 +42,9 @@ function FilterButton({
 	onIngredientFilterChange,
 	filteredIngredients,
 	onIngredientFilterSwitchChange,
+	allRecipes,
+	filterCookingTimeValues,
+	onFilterCookingTimeValuesChange,
 }: Props) {
 	const drawerDisclosure = useDisclosure();
 
@@ -81,7 +89,15 @@ function FilterButton({
 									onIngredientFilterSwitchChange
 								}
 							/>
-							<TimeFilter />
+							<TimeFilter
+								allRecipes={allRecipes}
+								filterCookingTimeValues={
+									filterCookingTimeValues
+								}
+								onFilterCookingTimeValuesChange={
+									onFilterCookingTimeValuesChange
+								}
+							/>
 							<PriceFilter />
 						</Accordion>
 					</DrawerBody>

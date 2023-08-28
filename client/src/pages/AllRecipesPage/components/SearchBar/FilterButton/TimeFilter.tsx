@@ -12,14 +12,20 @@ import {
 	RangeSliderTrack,
 	Text,
 } from "@chakra-ui/react";
+import getAllCookingTimes from "../../../utils/getAllCookingTimes";
+import type RecipeObject from "../../../../../interfaces/recipe/RecipeObject";
 
-function TimeFilter() {
-	const [sliderValues, setSliderValues] = useState([10, 30]);
+interface Props {
+	allRecipes: RecipeObject[];
+	filterCookingTimeValues: number[];
+	onFilterCookingTimeValuesChange: (newValues: [number, number]) => void;
+}
 
-	const handleChange = (newValues: [number, number]) => {
-		setSliderValues(newValues);
-	};
-
+function TimeFilter({
+	allRecipes,
+	filterCookingTimeValues,
+	onFilterCookingTimeValuesChange,
+}: Props) {
 	return (
 		<AccordionItem>
 			<Text>
@@ -32,14 +38,14 @@ function TimeFilter() {
 			</Text>
 			<AccordionPanel pb={4}>
 				<HStack w="full">
-					<Text w="12">{sliderValues[0]}</Text>
+					<Text w="12">{filterCookingTimeValues[0]}</Text>
 					<RangeSlider
 						aria-label={["min", "max"]}
-						value={sliderValues}
-						min={10}
-						max={30}
-						step={0.01}
-						onChange={handleChange}
+						value={filterCookingTimeValues}
+						min={Math.min(...getAllCookingTimes(allRecipes))}
+						max={Math.max(...getAllCookingTimes(allRecipes))}
+						step={5}
+						onChange={onFilterCookingTimeValuesChange}
 						colorScheme="teal"
 					>
 						<RangeSliderTrack>
@@ -48,7 +54,7 @@ function TimeFilter() {
 						<RangeSliderThumb index={0} ringOffsetColor={"teal"} />
 						<RangeSliderThumb index={1} />
 					</RangeSlider>
-					<Text w="12">{sliderValues[1]}</Text>
+					<Text w="12">{filterCookingTimeValues[1]}</Text>
 				</HStack>
 			</AccordionPanel>
 		</AccordionItem>

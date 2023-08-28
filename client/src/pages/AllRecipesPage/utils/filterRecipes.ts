@@ -7,11 +7,15 @@ function filterRecipes(
 	searchQuery: string,
 	filteredIngredients: string[],
 	ingredientFilterSwitch: boolean,
+	filterCookingTimeValues: [number, number],
 ) {
 	if (filteredIngredients.length === 0) {
 		// Return all recipes if no ingredients are filtered
-		return allRecipes.filter((recipe) =>
-			recipe.name.toLowerCase().includes(searchQuery.toLowerCase()),
+		return allRecipes.filter(
+			(recipe) =>
+				recipe.name.toLowerCase().includes(searchQuery.toLowerCase()) &&
+				recipe.cookingTime >= filterCookingTimeValues[0] &&
+				recipe.cookingTime <= filterCookingTimeValues[1],
 		);
 	} else {
 		// Return recipes matching both name and ingredient criteria
@@ -24,7 +28,9 @@ function filterRecipes(
 					: recipeContainsEveryIngredient(
 							recipe,
 							filteredIngredients,
-					  )),
+					  )) &&
+				recipe.cookingTime >= filterCookingTimeValues[0] &&
+				recipe.cookingTime <= filterCookingTimeValues[1],
 		);
 	}
 }

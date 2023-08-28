@@ -9,6 +9,8 @@ import {
 } from "@chakra-ui/react";
 import FilterButton from "./FilterButton";
 import sortByOptions from "../../utils/sortByOptions";
+import type RecipeObject from "../../../../interfaces/recipe/RecipeObject";
+import { on } from "events";
 
 interface Props {
 	searchQuery: string;
@@ -21,6 +23,9 @@ interface Props {
 	onIngredientFilterChange: (ingredient: string) => void;
 	filteredIngredients: string[];
 	onIngredientFilterSwitchChange: () => void;
+	allRecipes: RecipeObject[];
+	filterCookingTimeValues: number[];
+	onFilterCookingTimeValuesChange: (newValues: [number, number]) => void;
 }
 
 function SearchBar({
@@ -32,6 +37,9 @@ function SearchBar({
 	onIngredientFilterChange,
 	filteredIngredients,
 	onIngredientFilterSwitchChange,
+	allRecipes,
+	filterCookingTimeValues,
+	onFilterCookingTimeValuesChange,
 }: Props) {
 	return (
 		<InputGroup>
@@ -79,6 +87,11 @@ function SearchBar({
 					filteredIngredients={filteredIngredients}
 					onIngredientFilterSwitchChange={
 						onIngredientFilterSwitchChange
+					}
+					allRecipes={allRecipes}
+					filterCookingTimeValues={filterCookingTimeValues}
+					onFilterCookingTimeValuesChange={
+						onFilterCookingTimeValuesChange
 					}
 				/>
 			</InputRightElement>

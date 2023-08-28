@@ -19,6 +19,7 @@ import filterRecipes from "./utils/filterRecipes";
 import NoSearchResults from "./components/NoSearchResults";
 import dummyRecipes from "../../utils/dummyRecipes";
 import getAllIngredients from "./utils/getAllIngredients";
+import getAllCookingTimes from "./utils/getAllCookingTimes";
 
 function AllRecipesPage() {
 	const [filteredRecipes, setFilteredRecipes] =
@@ -36,6 +37,12 @@ function AllRecipesPage() {
 	);
 	const [ingredientFilterSwitch, setIngredientFilterSwitch] =
 		useState<boolean>(false);
+	const [filterCookingTimeValues, setFilterCookingTimeValues] = useState<
+		[number, number]
+	>([
+		Math.min(...getAllCookingTimes(dummyRecipes)),
+		Math.max(...getAllCookingTimes(dummyRecipes)),
+	]);
 
 	useEffect(() => {
 		setFilteredRecipes(
@@ -44,11 +51,17 @@ function AllRecipesPage() {
 				searchQuery,
 				filteredIngredients,
 				ingredientFilterSwitch,
+				filterCookingTimeValues,
 			),
 		);
 
 		console.log(ingredientFilterSwitch);
-	}, [searchQuery, filteredIngredients, ingredientFilterSwitch]);
+	}, [
+		searchQuery,
+		filteredIngredients,
+		ingredientFilterSwitch,
+		filterCookingTimeValues,
+	]);
 
 	useEffect(() => {
 		setSearchedIngredients(
@@ -89,8 +102,14 @@ function AllRecipesPage() {
 		setIngredientFilterSwitch(!ingredientFilterSwitch);
 	};
 
+	const handleFilterCookingTimeValuesChange = (
+		newValues: [number, number],
+	) => {
+		setFilterCookingTimeValues(newValues);
+	};
+
 	return (
-		<VStack spacing={8} align="start" p="8">
+		<VStack spacing="8" align="start" p="8">
 			<Heading as="h1" size="2xl">
 				Alla Recept
 			</Heading>
@@ -111,6 +130,11 @@ function AllRecipesPage() {
 						filteredIngredients={filteredIngredients}
 						onIngredientFilterSwitchChange={
 							handleIngredientFilterSwitchChange
+						}
+						allRecipes={dummyRecipes}
+						filterCookingTimeValues={filterCookingTimeValues}
+						onFilterCookingTimeValuesChange={
+							handleFilterCookingTimeValuesChange
 						}
 					/>
 					<Link

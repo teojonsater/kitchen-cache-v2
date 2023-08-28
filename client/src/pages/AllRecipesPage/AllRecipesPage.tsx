@@ -136,7 +136,10 @@ function AllRecipesPage() {
 			Math.min(...getAllCookingTimes(dummyRecipes)),
 			Math.max(...getAllCookingTimes(dummyRecipes)),
 		]);
-		//TODO: Add clear price filter
+		setFilterCostPerServingValues([
+			Math.floor(Math.min(...getAllCostPerServings(dummyRecipes))),
+			Math.ceil(Math.max(...getAllCostPerServings(dummyRecipes))),
+		]);
 	};
 
 	return (

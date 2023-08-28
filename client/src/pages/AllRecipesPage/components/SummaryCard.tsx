@@ -24,6 +24,7 @@ interface Props {
 	ingredientGroups: RecipeIngredientGroup[];
 	image: string;
 	searchQuery: string;
+	costPerServing: number;
 }
 
 function SummaryCard({
@@ -32,6 +33,7 @@ function SummaryCard({
 	ingredientGroups,
 	image,
 	searchQuery,
+	costPerServing,
 }: Props) {
 	return (
 		<Card size="sm">
@@ -74,7 +76,9 @@ function SummaryCard({
 						</HStack>
 						<HStack spacing="1">
 							<Icon as={PaymentsOutlinedIcon} boxSize="4" />
-							<Text fontSize="sm">53,17 kr</Text>
+							<Text fontSize="sm">
+								{costPerServing.toFixed(2)} kr
+							</Text>
 						</HStack>
 					</HStack>
 				</VStack>

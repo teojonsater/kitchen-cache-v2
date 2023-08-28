@@ -9,9 +9,10 @@ import countNoOfIngredients from "../../../../../utils/countNoOfIngredients";
 interface Props {
 	cookingTime: number;
 	ingredientGroups: RecipeIngredientGroup[];
+	costPerServing: number;
 }
 
-function RecipeStats({ cookingTime, ingredientGroups }: Props) {
+function RecipeStats({ cookingTime, ingredientGroups, costPerServing }: Props) {
 	return (
 		<HStack divider={<StackDivider />} color="gray.600">
 			<HStack>
@@ -26,7 +27,7 @@ function RecipeStats({ cookingTime, ingredientGroups }: Props) {
 			</HStack>
 			<HStack>
 				<Icon as={PaymentsOutlinedIcon} boxSize="6" />
-				<Text fontSize="sm">53,17 kr</Text>
+				<Text fontSize="sm">{costPerServing.toFixed(2)} kr</Text>
 			</HStack>
 		</HStack>
 	);

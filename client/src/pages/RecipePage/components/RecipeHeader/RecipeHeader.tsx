@@ -10,6 +10,7 @@ interface Props {
 	originalRecipe?: string;
 	cookingTime?: number;
 	ingredientGroups?: RecipeIngredientGroup[];
+	costPerServing: number;
 }
 
 function RecipeHeader({
@@ -17,6 +18,7 @@ function RecipeHeader({
 	originalRecipe = undefined,
 	cookingTime = undefined,
 	ingredientGroups = undefined,
+	costPerServing,
 }: Props) {
 	return (
 		<HStack p="8" justify="space-between" align="start">
@@ -28,6 +30,7 @@ function RecipeHeader({
 					<RecipeStats
 						cookingTime={cookingTime}
 						ingredientGroups={ingredientGroups}
+						costPerServing={costPerServing}
 					/>
 				)}
 				{originalRecipe && (

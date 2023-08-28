@@ -18,6 +18,7 @@ function RecipePage() {
 				originalRecipe={recipe.originalRecipe}
 				cookingTime={recipe.cookingTime}
 				ingredientGroups={recipe.ingredientGroups}
+				costPerServing={recipe.costPerServing}
 			/>
 			<RecipeBanner image={recipe.image} />
 			<RecipeBody

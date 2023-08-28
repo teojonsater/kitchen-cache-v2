@@ -212,6 +212,7 @@ function AllRecipesPage() {
 								image={recipe.image}
 								key={index}
 								searchQuery={searchQuery}
+								costPerServing={recipe.costPerServing}
 							/>
 						),
 					)}

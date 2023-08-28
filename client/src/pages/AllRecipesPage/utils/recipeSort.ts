@@ -37,11 +37,17 @@ function recipeSort(
 			break;
 		case sortByOptions[4]:
 			// Pris: Lägst
-			// TODO: Wait until it is in interface for recipeObject
+			sortedRecipes.sort(
+				(recipeA: RecipeObject, recipeB: RecipeObject) =>
+					recipeA.costPerServing - recipeB.costPerServing,
+			);
 			break;
 		case sortByOptions[5]:
 			// Pris: Högst
-			// TODO: Wait until it is in interface for recipeObject
+			sortedRecipes.sort(
+				(recipeA: RecipeObject, recipeB: RecipeObject) =>
+					recipeB.costPerServing - recipeA.costPerServing,
+			);
 			break;
 	}
 

@@ -3,6 +3,7 @@
     "createdAt": "2023-08-22T17:05:45.710093",
     "name": "Vodkapasta med bacon",
     "desc": "Vodkapasta är ett riktigt smarrigt och gott recept. Smaken av det salta baconet passar perfekt till vodkapastasåsen som smaksätts med chiliflakes och vitlök. Vodkapasta gör sig allra bäst med pasta penne vars form gör att den goda såsen enkelt följer med upp från tallriken.",
+    "costPerServing": 51.50,
     "servings": 4,
     "cookingTime": 30,
     "originalRecipe": "https://www.ica.se/recept/vodkapasta-med-bacon-726344/",

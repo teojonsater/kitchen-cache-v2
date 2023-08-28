@@ -5,6 +5,7 @@ interface RecipeObject {
 	createdAt: Date;
 	name: string;
 	desc?: string;
+	costPerServing: number;
 	servings: number;
 	cookingTime: number;
 	originalRecipe?: string;

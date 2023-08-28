@@ -3,6 +3,7 @@
     "createdAt": "2023-08-22T17:20:56.739809",
     "name": "Billig linsbolognese",
     "desc": "Här är receptet som ger dig många portioner av en riktigt smakrik linsbolognese till en billig peng. Morötter, lök och krossade tomater är basen och naturligtvis linser. Använd färdigkokta så går bolognesen fort att göra. Linssåsen går utmärkt att frysa in och ta fram i omgångar till middagar eller kanske matlådor. ",
+    "costPerServing": 30.86,
     "servings": 10,
     "cookingTime": 45,
     "originalRecipe": "https://www.ica.se/recept/billig-linsbolognese-729888/",

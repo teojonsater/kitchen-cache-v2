@@ -3,6 +3,7 @@
     "createdAt": "2023-08-22T18:42:44.366722",
     "name": "Kyckling med woksås och nudlar",
     "desc": "En färdig woksås på flaska är icke att underskatta. Den omger både kycklingen och grönsakerna fint i pannan, och det som får den lilla extra välbehövda syran är limen vid sidan av. Ack så viktig!",
+    "costPerServing": 42.62,
     "servings": 4,
     "cookingTime": 30,
     "originalRecipe": "https://www.ica.se/recept/kyckling-med-woksas-och-nudlar-725004/",

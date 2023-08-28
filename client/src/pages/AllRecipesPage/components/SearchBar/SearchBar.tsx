@@ -28,6 +28,7 @@ interface Props {
 	onFilterCookingTimeValuesChange: (newValues: [number, number]) => void;
 	sortByOption: string;
 	onSortByOptionChange: (event: ChangeEvent<HTMLSelectElement>) => void;
+	onClearFilterBtnClick: () => void;
 }
 
 function SearchBar({
@@ -44,6 +45,7 @@ function SearchBar({
 	onFilterCookingTimeValuesChange,
 	sortByOption,
 	onSortByOptionChange,
+	onClearFilterBtnClick,
 }: Props) {
 	return (
 		<InputGroup>
@@ -99,6 +101,7 @@ function SearchBar({
 					onFilterCookingTimeValuesChange={
 						onFilterCookingTimeValuesChange
 					}
+					onClearFilterBtnClick={onClearFilterBtnClick}
 				/>
 			</InputRightElement>
 		</InputGroup>

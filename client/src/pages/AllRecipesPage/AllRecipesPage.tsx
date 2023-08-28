@@ -117,6 +117,16 @@ function AllRecipesPage() {
 		setSortByOption(event.target.value);
 	};
 
+	const handleClearFilterBtnClick = () => {
+		setIngredientFilterSwitch(false);
+		setFilteredIngredients([]);
+		setFilterCookingTimeValues([
+			Math.min(...getAllCookingTimes(dummyRecipes)),
+			Math.max(...getAllCookingTimes(dummyRecipes)),
+		]);
+		//TODO: Add clear price filter
+	};
+
 	return (
 		<VStack spacing="8" align="start" p="8">
 			<Heading as="h1" size="2xl">
@@ -147,6 +157,7 @@ function AllRecipesPage() {
 						}
 						sortByOption={sortByOption}
 						onSortByOptionChange={handleSortByOptionChange}
+						onClearFilterBtnClick={handleClearFilterBtnClick}
 					/>
 					<Link
 						href="#"

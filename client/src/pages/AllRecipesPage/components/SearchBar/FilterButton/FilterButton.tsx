@@ -33,6 +33,7 @@ interface Props {
 	allRecipes: RecipeObject[];
 	filterCookingTimeValues: number[];
 	onFilterCookingTimeValuesChange: (newValues: [number, number]) => void;
+	onClearFilterBtnClick: () => void;
 }
 
 function FilterButton({
@@ -45,6 +46,7 @@ function FilterButton({
 	allRecipes,
 	filterCookingTimeValues,
 	onFilterCookingTimeValuesChange,
+	onClearFilterBtnClick,
 }: Props) {
 	const drawerDisclosure = useDisclosure();
 
@@ -103,7 +105,11 @@ function FilterButton({
 					</DrawerBody>
 
 					<DrawerFooter borderTopWidth="1px">
-						<Button variant="outline" mr={3}>
+						<Button
+							variant="outline"
+							mr={3}
+							onClick={onClearFilterBtnClick}
+						>
 							Rensa filter
 						</Button>
 						<Button

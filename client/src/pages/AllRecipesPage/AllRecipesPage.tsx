@@ -22,6 +22,7 @@ import getAllIngredients from "./utils/getAllIngredients";
 import getAllCookingTimes from "./utils/getAllCookingTimes";
 import sortByOptions from "./utils/sortByOptions";
 import recipeSort from "./utils/recipeSort";
+import getAllCostPerServings from "./utils/getAllCostPerServings";
 
 function AllRecipesPage() {
 	const [filteredRecipes, setFilteredRecipes] =
@@ -45,6 +46,11 @@ function AllRecipesPage() {
 		Math.min(...getAllCookingTimes(dummyRecipes)),
 		Math.max(...getAllCookingTimes(dummyRecipes)),
 	]);
+	const [filterCostPerServingValues, setFilterCostPerServingValues] =
+		useState<[number, number]>([
+			Math.floor(Math.min(...getAllCostPerServings(dummyRecipes))),
+			Math.ceil(Math.max(...getAllCostPerServings(dummyRecipes))),
+		]);
 	const [sortByOption, setSortByOption] = useState<string>("Titel: A-Ö");
 
 	useEffect(() => {
@@ -55,6 +61,7 @@ function AllRecipesPage() {
 				filteredIngredients,
 				ingredientFilterSwitch,
 				filterCookingTimeValues,
+				filterCostPerServingValues,
 			),
 		);
 
@@ -64,6 +71,7 @@ function AllRecipesPage() {
 		filteredIngredients,
 		ingredientFilterSwitch,
 		filterCookingTimeValues,
+		filterCostPerServingValues,
 	]);
 
 	useEffect(() => {
@@ -117,6 +125,10 @@ function AllRecipesPage() {
 		setSortByOption(event.target.value);
 	};
 
+	const handleFilterCostPerServingValues = (newValues: [number, number]) => {
+		setFilterCostPerServingValues(newValues);
+	};
+
 	const handleClearFilterBtnClick = () => {
 		setIngredientFilterSwitch(false);
 		setFilteredIngredients([]);
@@ -158,6 +170,10 @@ function AllRecipesPage() {
 						sortByOption={sortByOption}
 						onSortByOptionChange={handleSortByOptionChange}
 						onClearFilterBtnClick={handleClearFilterBtnClick}
+						filterCostPerServingValues={filterCostPerServingValues}
+						onFilterCostPerServingValues={
+							handleFilterCostPerServingValues
+						}
 					/>
 					<Link
 						href="#"

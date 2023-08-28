@@ -12,14 +12,20 @@ import {
 	RangeSliderTrack,
 	Text,
 } from "@chakra-ui/react";
+import type RecipeObject from "../../../../../interfaces/recipe/RecipeObject";
+import getAllCostPerServings from "../../../utils/getAllCostPerServings";
 
-function PriceFilter() {
-	const [sliderValues, setSliderValues] = useState([10, 30]);
+interface Props {
+	allRecipes: RecipeObject[];
+	filterCostPerServingValues: number[];
+	onFilterCostPerServingValues: (newValues: [number, number]) => void;
+}
 
-	const handleChange = (newValues: [number, number]) => {
-		setSliderValues(newValues);
-	};
-
+function PriceFilter({
+	allRecipes,
+	filterCostPerServingValues,
+	onFilterCostPerServingValues,
+}: Props) {
 	return (
 		<AccordionItem>
 			<Text>
@@ -32,14 +38,18 @@ function PriceFilter() {
 			</Text>
 			<AccordionPanel pb={4}>
 				<HStack w="full">
-					<Text w="12">{sliderValues[0]}</Text>
+					<Text w="12">{filterCostPerServingValues[0]}</Text>
 					<RangeSlider
 						aria-label={["min", "max"]}
-						value={sliderValues}
-						min={10}
-						max={30}
-						step={0.01}
-						onChange={handleChange}
+						value={filterCostPerServingValues}
+						min={Math.floor(
+							Math.min(...getAllCostPerServings(allRecipes)),
+						)}
+						max={Math.ceil(
+							Math.max(...getAllCostPerServings(allRecipes)),
+						)}
+						step={1}
+						onChange={onFilterCostPerServingValues}
 						colorScheme="teal"
 					>
 						<RangeSliderTrack>
@@ -48,7 +58,9 @@ function PriceFilter() {
 						<RangeSliderThumb index={0} ringOffsetColor={"teal"} />
 						<RangeSliderThumb index={1} />
 					</RangeSlider>
-					<Text w="12">{sliderValues[1]}</Text>
+					<Text w="12" align="end">
+						{filterCostPerServingValues[1]}
+					</Text>
 				</HStack>
 			</AccordionPanel>
 		</AccordionItem>

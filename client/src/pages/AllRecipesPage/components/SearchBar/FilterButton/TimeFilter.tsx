@@ -54,7 +54,9 @@ function TimeFilter({
 						<RangeSliderThumb index={0} ringOffsetColor={"teal"} />
 						<RangeSliderThumb index={1} />
 					</RangeSlider>
-					<Text w="12">{filterCookingTimeValues[1]}</Text>
+					<Text w="12" align="end">
+						{filterCookingTimeValues[1]}
+					</Text>
 				</HStack>
 			</AccordionPanel>
 		</AccordionItem>

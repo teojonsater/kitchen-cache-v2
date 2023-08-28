@@ -29,6 +29,8 @@ interface Props {
 	sortByOption: string;
 	onSortByOptionChange: (event: ChangeEvent<HTMLSelectElement>) => void;
 	onClearFilterBtnClick: () => void;
+	filterCostPerServingValues: number[];
+	onFilterCostPerServingValues: (newValues: [number, number]) => void;
 }
 
 function SearchBar({
@@ -46,6 +48,8 @@ function SearchBar({
 	sortByOption,
 	onSortByOptionChange,
 	onClearFilterBtnClick,
+	filterCostPerServingValues,
+	onFilterCostPerServingValues,
 }: Props) {
 	return (
 		<InputGroup>
@@ -102,6 +106,8 @@ function SearchBar({
 						onFilterCookingTimeValuesChange
 					}
 					onClearFilterBtnClick={onClearFilterBtnClick}
+					filterCostPerServingValues={filterCostPerServingValues}
+					onFilterCostPerServingValues={onFilterCostPerServingValues}
 				/>
 			</InputRightElement>
 		</InputGroup>

@@ -34,6 +34,8 @@ interface Props {
 	filterCookingTimeValues: number[];
 	onFilterCookingTimeValuesChange: (newValues: [number, number]) => void;
 	onClearFilterBtnClick: () => void;
+	filterCostPerServingValues: number[];
+	onFilterCostPerServingValues: (newValues: [number, number]) => void;
 }
 
 function FilterButton({
@@ -47,6 +49,8 @@ function FilterButton({
 	filterCookingTimeValues,
 	onFilterCookingTimeValuesChange,
 	onClearFilterBtnClick,
+	filterCostPerServingValues,
+	onFilterCostPerServingValues,
 }: Props) {
 	const drawerDisclosure = useDisclosure();
 
@@ -100,7 +104,15 @@ function FilterButton({
 									onFilterCookingTimeValuesChange
 								}
 							/>
-							<PriceFilter />
+							<PriceFilter
+								allRecipes={allRecipes}
+								filterCostPerServingValues={
+									filterCostPerServingValues
+								}
+								onFilterCostPerServingValues={
+									onFilterCostPerServingValues
+								}
+							/>
 						</Accordion>
 					</DrawerBody>
 

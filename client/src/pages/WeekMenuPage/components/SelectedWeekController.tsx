@@ -26,30 +26,29 @@ function SelectedWeekController({
 }: Props) {
 	return (
 		<HStack>
-			<ButtonGroup isAttached variant="outline">
+			<ButtonGroup size="sm" colorScheme="teal">
 				<IconButton
 					onClick={() => {
 						onSelectedWeekNumberDecrease();
 					}}
 					aria-label="Previous week"
 					icon={<Icon as={KeyboardArrowLeftIcon} />}
+					variant="outline"
 				/>
-				<Button w={"32"}>
-					{currentWeekNumber === weekNumber
-						? "Denna vecka"
-						: `V. ${weekNumber}`}
+				<Button
+					w="14"
+					onClick={onBackToCurrentWeekBtnClick}
+					variant="ghost"
+				>
+					V. {weekNumber}
 				</Button>
 				<IconButton
 					onClick={onSelectedWeekNumberIncrease}
 					aria-label="Next week"
 					icon={<Icon as={KeyboardArrowRightIcon} />}
+					variant="outline"
 				/>
 			</ButtonGroup>
-			{currentWeekNumber !== weekNumber && (
-				<Button onClick={onBackToCurrentWeekBtnClick} variant="outline">
-					Tillbaka till denna vecka
-				</Button>
-			)}
 		</HStack>
 	);
 }

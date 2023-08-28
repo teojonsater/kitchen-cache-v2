@@ -26,6 +26,8 @@ interface Props {
 	allRecipes: RecipeObject[];
 	filterCookingTimeValues: number[];
 	onFilterCookingTimeValuesChange: (newValues: [number, number]) => void;
+	sortByOption: string;
+	onSortByOptionChange: (event: ChangeEvent<HTMLSelectElement>) => void;
 }
 
 function SearchBar({
@@ -40,6 +42,8 @@ function SearchBar({
 	allRecipes,
 	filterCookingTimeValues,
 	onFilterCookingTimeValuesChange,
+	sortByOption,
+	onSortByOptionChange,
 }: Props) {
 	return (
 		<InputGroup>
@@ -52,6 +56,8 @@ function SearchBar({
 					borderLeftRadius="full"
 					focusBorderColor="teal.500"
 					color="white"
+					onChange={onSortByOptionChange}
+					value={sortByOption}
 				>
 					{sortByOptions.map((sortBy, index) => {
 						return (

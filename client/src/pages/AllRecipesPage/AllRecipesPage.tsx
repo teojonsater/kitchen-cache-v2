@@ -20,6 +20,8 @@ import NoSearchResults from "./components/NoSearchResults";
 import dummyRecipes from "../../utils/dummyRecipes";
 import getAllIngredients from "./utils/getAllIngredients";
 import getAllCookingTimes from "./utils/getAllCookingTimes";
+import sortByOptions from "./utils/sortByOptions";
+import recipeSort from "./utils/recipeSort";
 
 function AllRecipesPage() {
 	const [filteredRecipes, setFilteredRecipes] =
@@ -43,6 +45,7 @@ function AllRecipesPage() {
 		Math.min(...getAllCookingTimes(dummyRecipes)),
 		Math.max(...getAllCookingTimes(dummyRecipes)),
 	]);
+	const [sortByOption, setSortByOption] = useState<string>("Titel: A-Ö");
 
 	useEffect(() => {
 		setFilteredRecipes(
@@ -108,6 +111,12 @@ function AllRecipesPage() {
 		setFilterCookingTimeValues(newValues);
 	};
 
+	const handleSortByOptionChange = (
+		event: ChangeEvent<HTMLSelectElement>,
+	) => {
+		setSortByOption(event.target.value);
+	};
+
 	return (
 		<VStack spacing="8" align="start" p="8">
 			<Heading as="h1" size="2xl">
@@ -136,6 +145,8 @@ function AllRecipesPage() {
 						onFilterCookingTimeValuesChange={
 							handleFilterCookingTimeValuesChange
 						}
+						sortByOption={sortByOption}
+						onSortByOptionChange={handleSortByOptionChange}
 					/>
 					<Link
 						href="#"
@@ -181,16 +192,18 @@ function AllRecipesPage() {
 				{filteredRecipes.length == 0 && <NoSearchResults />}
 
 				<SimpleGrid w="full" minChildWidth="72" spacing={8}>
-					{filteredRecipes.map((recipe, index) => (
-						<SummaryCard
-							name={recipe.name}
-							cookingTime={recipe.cookingTime}
-							ingredientGroups={recipe.ingredientGroups}
-							image={recipe.image}
-							key={index}
-							searchQuery={searchQuery}
-						/>
-					))}
+					{recipeSort(filteredRecipes, sortByOption).map(
+						(recipe, index) => (
+							<SummaryCard
+								name={recipe.name}
+								cookingTime={recipe.cookingTime}
+								ingredientGroups={recipe.ingredientGroups}
+								image={recipe.image}
+								key={index}
+								searchQuery={searchQuery}
+							/>
+						),
+					)}
 				</SimpleGrid>
 			</VStack>
 		</VStack>

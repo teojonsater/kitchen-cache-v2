@@ -1,17 +1,20 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import { Box, Flex } from "@chakra-ui/react";
-import RecipePage from "./pages/RecipePage";
-import Navbar from "./design/Navbar";
+import Navbar from "./components/Navbar";
 
-function Layout() {
+interface Props {
+	children?: React.ReactNode;
+}
+
+function Layout({ children = undefined }: Props) {
 	return (
 		<>
 			<Navbar />
 			<Flex w="full" justifyContent="center">
 				<Box maxWidth="5xl" w="full">
-					<RecipePage />
-					<Outlet />
+					{children && children}
+					{!children && <Outlet />}
 				</Box>
 			</Flex>
 		</>

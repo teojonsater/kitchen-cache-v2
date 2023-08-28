@@ -9,8 +9,13 @@ import {
 	PopoverArrow,
 	PopoverContent,
 	PopoverTrigger,
+	Link as ChakraLink,
 } from "@chakra-ui/react";
-import LogoTextBlack from "../assets/logo/LogoTextBlack.svg";
+import {
+	Link as ReactRouterLink,
+	NavLink as ReactRouterNavLink,
+} from "react-router-dom";
+import LogoTextBlack from "../../assets/logo/LogoTextBlack.svg";
 import RestaurantMenuRoundedIcon from "@mui/icons-material/RestaurantMenuRounded";
 import EggOutlinedIcon from "@mui/icons-material/EggOutlined";
 import ListAltRoundedIcon from "@mui/icons-material/ListAltRounded";
@@ -32,9 +37,9 @@ function Navbar() {
 				as={ButtonGroup}
 				variant="ghost"
 			>
-				<a href={"/"}>
+				<ChakraLink as={ReactRouterLink} to="/">
 					<Image src={LogoTextBlack} alt="logo" w="28" />
-				</a>
+				</ChakraLink>
 				<Popover>
 					<PopoverTrigger>
 						<Button
@@ -50,8 +55,12 @@ function Navbar() {
 					</PopoverTrigger>
 					<PopoverContent w="fit-content">
 						<PopoverArrow />
-						<Button>Alla recept</Button>
-						<Button>Skapa recept</Button>
+						<ChakraLink as={ReactRouterNavLink} to="/recipes">
+							<Button w="full">Alla recept</Button>
+						</ChakraLink>
+						<ChakraLink as={ReactRouterNavLink} to="/recipes/new">
+							<Button w="full">Skapa recept</Button>
+						</ChakraLink>
 					</PopoverContent>
 				</Popover>
 				<Button leftIcon={<Icon as={EggOutlinedIcon} boxSize="8" />}>

@@ -3,11 +3,31 @@ import {
 	createBrowserRouter,
 	createRoutesFromElements,
 	Route,
+	Navigate,
 } from "react-router-dom";
 import Layout from "./Layout";
+import RecipePage from "./pages/RecipePage";
+import CreateRecipePage from "./pages/CreateRecipePage";
+import { Heading } from "@chakra-ui/react";
 
 const router = createBrowserRouter(
-	createRoutesFromElements(<Route path="/" element={<Layout />} />),
+	createRoutesFromElements(
+		<Route
+			path="/"
+			element={<Layout />}
+			errorElement={
+				<Layout>
+					<Heading>404</Heading>
+				</Layout>
+			}
+		>
+			<Route index element={<Navigate to="/recipe" />} />
+			<Route path="recipe" element={<RecipePage />} />
+			<Route path="recipes">
+				<Route path="new" element={<CreateRecipePage />} />
+			</Route>
+		</Route>,
+	),
 );
 
 /* <Route path="/" errorElement={<ErrorPage />} element={<Layout />}>

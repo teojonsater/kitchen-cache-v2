@@ -16,7 +16,7 @@ import {
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 import React from "react";
 import SubdirectoryArrowRightRoundedIcon from "@mui/icons-material/SubdirectoryArrowRightRounded";
-import { measurementsArray } from "../../../../../utils/measurements";
+import { measurementsArray } from "../../../utils/measurements";
 
 interface Props {
 	showArrow?: boolean;
@@ -32,9 +32,9 @@ function IngredientField({ showArrow = false, indent = false }: Props) {
 			<HStack w="full" ml={indent ? "6" : undefined}>
 				<Grid templateColumns="repeat(9, 1fr)" gap="2" w="full">
 					<GridItem colSpan={2}>
-						<FormControl isRequired>
+						<FormControl>
 							<NumberInput size="sm">
-								<NumberInputField />
+								<NumberInputField placeholder="mängd" />
 								<NumberInputStepper>
 									<NumberIncrementStepper />
 									<NumberDecrementStepper />
@@ -43,7 +43,7 @@ function IngredientField({ showArrow = false, indent = false }: Props) {
 						</FormControl>
 					</GridItem>
 					<GridItem colSpan={2}>
-						<FormControl isRequired>
+						<FormControl>
 							<Select size="sm">
 								{measurementsArray.map((measurement, index) => (
 									<option key={index} value={measurement}>
@@ -54,7 +54,7 @@ function IngredientField({ showArrow = false, indent = false }: Props) {
 						</FormControl>
 					</GridItem>
 					<GridItem colSpan={5}>
-						<FormControl isRequired>
+						<FormControl>
 							<Input size="sm" placeholder="Ingrediens" />
 						</FormControl>
 					</GridItem>
@@ -64,7 +64,7 @@ function IngredientField({ showArrow = false, indent = false }: Props) {
 					aria-label="Delete Step"
 					variant="ghost"
 					borderRadius="full"
-					icon={<Icon as={CloseRoundedIcon} boxSize="4" />}
+					icon={<Icon as={CloseRoundedIcon} boxSize="3" />}
 				/>
 			</HStack>
 		</HStack>

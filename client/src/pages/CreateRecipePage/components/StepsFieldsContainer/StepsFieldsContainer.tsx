@@ -16,11 +16,6 @@ function StepsFieldsContainer() {
 			<CardBody>
 				<FormLabel>Steg</FormLabel>
 				<VStack align="stretch">
-					<StepField />
-					<StepField />
-					<StepField />
-					<StepField />
-					<StepField />
 					<Button
 						maxW="fit-content"
 						size="sm"

@@ -5,6 +5,7 @@ import {
 	CardBody,
 	GridItem,
 	Image,
+	Input,
 	SimpleGrid,
 } from "@chakra-ui/react";
 import React from "react";
@@ -15,15 +16,25 @@ function ImageField() {
 			<CardBody>
 				<SimpleGrid columns={2} spacing="4">
 					<GridItem>
-						<Button
-							w="full"
-							variant="link"
-							h="full"
-							border="2px dashed"
-							borderColor="gray.200"
-						>
-							Ladda upp bild
-						</Button>
+						<Input
+							name="recipeImage"
+							type="file"
+							display="none"
+							id="image-upload"
+						/>
+						<label htmlFor="image-upload">
+							<Button
+								w="full"
+								variant="link"
+								h="full"
+								border="2px dashed"
+								borderColor="gray.200"
+								as="span"
+								cursor="pointer"
+							>
+								Ladda upp bild
+							</Button>
+						</label>
 					</GridItem>
 					<GridItem>
 						<AspectRatio ratio={16 / 9}>

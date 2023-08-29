@@ -10,7 +10,7 @@ import React from "react";
 
 function OriginalRecipeField() {
 	return (
-		<Card>
+		<Card h="full">
 			<CardBody>
 				<FormControl>
 					<FormLabel>Ursprungligt recept</FormLabel>

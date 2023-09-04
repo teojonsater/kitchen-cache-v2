@@ -45,14 +45,22 @@ function WeekmenuPage() {
 			<Heading as="h1" size="2xl">
 				Veckomeny
 			</Heading>
-
-			<SelectedWeekController
-				onSelectedWeekNumberDecrease={handleSelectedWeekNumberDecrease}
-				onSelectedWeekNumberIncrease={handleSelectedWeekNumberIncrease}
-				onBackToCurrentWeekBtnClick={handleBackToCurrentWeekBtnClick}
-				weekNumber={selectedWeekNumber}
-				currentWeekNumber={currentWeekNumber}
-			/>
+			<HStack justify="space-between">
+				<SelectedWeekController
+					onSelectedWeekNumberDecrease={
+						handleSelectedWeekNumberDecrease
+					}
+					onSelectedWeekNumberIncrease={
+						handleSelectedWeekNumberIncrease
+					}
+					onBackToCurrentWeekBtnClick={
+						handleBackToCurrentWeekBtnClick
+					}
+					weekNumber={selectedWeekNumber}
+					currentWeekNumber={currentWeekNumber}
+				/>
+				<Button colorScheme="teal">Spara</Button>
+			</HStack>
 
 			<VStack align="start">
 				<Heading color="teal.700">Måndag</Heading>

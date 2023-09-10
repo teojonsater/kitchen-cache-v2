@@ -51,7 +51,7 @@ function ServingsField({ hookFormErrors, hookFormRegister }: Props) {
 							<NumberDecrementStepper />
 						</NumberInputStepper>
 					</NumberInput>
-					{hookFormErrors && hookFormErrors.formServings && (
+					{hookFormErrors.formServings && (
 						<FormErrorMessage>
 							{hookFormErrors.formServings?.message?.toString()}
 						</FormErrorMessage>

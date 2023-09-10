@@ -6,7 +6,7 @@ interface RecipeForm {
 	formCookingTime: number;
 	formImage: File;
 	// formIngredients TODO: add this
-	formSteps: string[];
+	formSteps: Array<{ formStep: string }>;
 }
 
 export default RecipeForm;

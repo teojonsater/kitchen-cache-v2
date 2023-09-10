@@ -52,7 +52,10 @@ function CreateRecipePage() {
 						/>
 					</GridItem>
 					<GridItem colSpan={2}>
-						<DescField />
+						<DescField
+							hookFormErrors={errors}
+							hookFormRegister={register}
+						/>
 					</GridItem>
 					<GridItem colSpan={{ base: 2, md: 1 }}>
 						<ServingsField />

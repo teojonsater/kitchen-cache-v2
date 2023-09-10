@@ -39,18 +39,10 @@ function IngredientsCard({ ingredientGroups, servings }: Props) {
 				<Flex direction="column" gap="5">
 					<VStack
 						spacing="4"
-						alignItems="start"
+						alignItems="center"
 						divider={<StackDivider />}
 					>
-						<Heading
-							size="md"
-							textAlign="center"
-							bgColor="teal.400"
-							color="white"
-							p="3"
-							w="full"
-							borderRadius="lg"
-						>
+						<Heading size="md" variant="highlighted">
 							Ingredienser
 						</Heading>
 						<IngredientControls

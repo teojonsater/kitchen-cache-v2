@@ -29,9 +29,31 @@ const JosefinFontTheme = extendTheme({
 		},
 	},
 	components: {
+		Mark: {
+			baseStyle: {
+				borderRadius: "0.8em 0.3em",
+				background: "transparent",
+				backgroundImage:
+					"linear-gradient(to right, rgba(56, 178, 172, 0.1), rgba(56, 178, 172, 0.7) 4%, rgba(56, 178, 172, 0.3))",
+				boxDecorationBreak: "clone",
+			},
+		},
 		Heading: {
 			baseStyle: {
 				fontWeight: "normal",
+			},
+			variants: {
+				highlighted: {
+					width: "50%",
+					minW: "fit-content",
+					textAlign: "center",
+					padding: "0.4em 1em",
+					borderRadius: "0.8em 0.3em",
+					background: "transparent",
+					backgroundImage:
+						"linear-gradient(to right, rgba(56, 178, 172, 0.1), rgba(56, 178, 172, 0.7) 4%, rgba(56, 178, 172, 0.3))",
+					boxDecorationBreak: "clone",
+				},
 			},
 		},
 	},

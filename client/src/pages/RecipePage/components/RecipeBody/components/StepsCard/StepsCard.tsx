@@ -18,19 +18,10 @@ function StepsCard({ steps }: Props) {
 			<CardBody>
 				<VStack
 					spacing="4"
-					alignItems="start"
+					alignItems="center"
 					divider={<StackDivider />}
 				>
-					<Heading
-						size="md"
-						textAlign="center"
-						bgColor="teal.400"
-						color="white"
-						py="3"
-						px="3"
-						w="full"
-						borderRadius="lg"
-					>
+					<Heading size="md" variant="highlighted">
 						Gör såhär
 					</Heading>
 					<VStack align="start" w="full">

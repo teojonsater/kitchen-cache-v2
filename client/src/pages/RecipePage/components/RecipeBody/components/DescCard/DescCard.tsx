@@ -18,18 +18,10 @@ function DescCard({ desc }: Props) {
 			<CardBody>
 				<VStack
 					spacing="4"
-					alignItems="start"
+					alignItems="center"
 					divider={<StackDivider />}
 				>
-					<Heading
-						size="md"
-						textAlign="center"
-						bgColor="teal.400"
-						color="white"
-						p="3"
-						w="full"
-						borderRadius="lg"
-					>
+					<Heading size="md" variant="highlighted">
 						Beskrivning
 					</Heading>
 					<Text>{desc}</Text>

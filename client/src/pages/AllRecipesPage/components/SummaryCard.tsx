@@ -48,15 +48,7 @@ function SummaryCard({
 					justify="space-between"
 				>
 					<Heading size="md">
-						<Highlight
-							query={searchQuery}
-							styles={{
-								rounded: "md",
-								bg: "teal.200",
-							}}
-						>
-							{name}
-						</Highlight>
+						<Highlight query={searchQuery}>{name}</Highlight>
 					</Heading>
 					<HStack
 						divider={<StackDivider />}

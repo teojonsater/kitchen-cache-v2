@@ -5,8 +5,20 @@ interface RecipeForm {
 	formServings: number;
 	formCookingTime: number;
 	formImage: File;
-	// formIngredients TODO: add this
 	formSteps: Array<{ formStep: string }>;
+	formIngredients: Array<{
+		formIngredientAmount?: number;
+		formIngredientMeasurement: string;
+		formIngredientName: string;
+	}>;
+	formIngredientGroups: Array<{
+		formIngredientGroupName: string;
+		formIngredientGroupIngredients: Array<{
+			formIngredientAmount?: number;
+			formIngredientMeasurement: string;
+			formIngredientName: string;
+		}>;
+	}>;
 }
 
 export default RecipeForm;

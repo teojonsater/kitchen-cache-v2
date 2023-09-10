@@ -6,16 +6,23 @@ import DescField from "./components/DescField";
 import ServingsField from "./components/ServingsField";
 import CookingTimeField from "./components/CookingTimeField";
 import ImageField from "./components/ImageField";
-import IngredientsFieldsContainer from "../../design/IngredientsFieldsContainer";
 import StepFieldsContainer from "./components/StepFieldsContainer";
-import { useForm, useFieldArray } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import type RecipeForm from "./interfaces/RecipeForm";
+import IngredientsContainer from "./components/IngredientsContainer";
 
 function CreateRecipePage() {
 	const defaultFormValues: Partial<RecipeForm> = {
 		formServings: 4,
 		formCookingTime: 60,
 		formSteps: [{ formStep: "" }],
+		formIngredients: [
+			{
+				formIngredientAmount: undefined,
+				formIngredientMeasurement: "-",
+				formIngredientName: "",
+			},
+		],
 	};
 
 	const {
@@ -27,10 +34,6 @@ function CreateRecipePage() {
 		defaultValues: defaultFormValues,
 	});
 
-	const formStepFields = useFieldArray({
-		control: control,
-		name: "formSteps",
-	});
 	const handleFormSubmit = (data: RecipeForm) => {
 		alert(JSON.stringify(data, null, 4));
 	};
@@ -79,12 +82,15 @@ function CreateRecipePage() {
 						<ImageField />
 					</GridItem>
 					<GridItem colSpan={{ base: 2, md: 1 }}>
-						<IngredientsFieldsContainer />
+						<IngredientsContainer
+							hookFormRegister={register}
+							hookFormControl={control}
+						/>
 					</GridItem>
 					<GridItem colSpan={{ base: 2, md: 1 }}>
 						<StepFieldsContainer
 							hookFormRegister={register}
-							hookFormFields={formStepFields}
+							hookFormControl={control}
 						/>
 					</GridItem>
 					<GridItem colSpan={2}>

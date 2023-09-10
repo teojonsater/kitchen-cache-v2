@@ -11,25 +11,30 @@ import {
 import React from "react";
 import StepField from "./components/StepField";
 import AddRoundedIcon from "@mui/icons-material/AddRounded";
-import type { UseFieldArrayReturn } from "react-hook-form";
 import type RecipeForm from "../../interfaces/RecipeForm";
+import { useFieldArray } from "react-hook-form";
 
 interface Props {
-	hookFormFields: UseFieldArrayReturn<RecipeForm, "formSteps">;
+	hookFormControl: any;
 	hookFormRegister: any;
 }
 
-function StepFieldsContainer({ hookFormFields, hookFormRegister }: Props) {
+function StepFieldsContainer({ hookFormControl, hookFormRegister }: Props) {
+	const formStepFields = useFieldArray<RecipeForm>({
+		control: hookFormControl,
+		name: "formSteps",
+	});
+
 	return (
 		<Card>
 			<CardBody>
 				<FormLabel>Steg</FormLabel>
 				<VStack align="stretch">
-					{hookFormFields.fields.map((field, index) => (
+					{formStepFields.fields.map((field, index) => (
 						<StepField
 							key={field.id}
 							index={index}
-							hookFormFields={hookFormFields}
+							formStepFields={formStepFields}
 							hookFormRegister={hookFormRegister}
 						/>
 					))}
@@ -40,7 +45,7 @@ function StepFieldsContainer({ hookFormFields, hookFormRegister }: Props) {
 						variant="ghost"
 						leftIcon={<Icon as={AddRoundedIcon} boxSize="4" />}
 						onClick={() => {
-							hookFormFields.append({
+							formStepFields.append({
 								formStep: "",
 							});
 						}}

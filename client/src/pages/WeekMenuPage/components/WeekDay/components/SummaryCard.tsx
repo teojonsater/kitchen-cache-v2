@@ -1,10 +1,7 @@
 import React from "react";
 import {
-	AspectRatio,
-	Button,
 	Card,
 	CardBody,
-	CardFooter,
 	HStack,
 	Heading,
 	Icon,
@@ -15,7 +12,6 @@ import {
 	NumberInput,
 	NumberInputField,
 	NumberInputStepper,
-	Stack,
 	StackDivider,
 	Text,
 	VStack,

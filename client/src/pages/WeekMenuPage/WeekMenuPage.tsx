@@ -1,22 +1,10 @@
 import React, { useState } from "react";
-import {
-	Button,
-	HStack,
-	Heading,
-	Icon,
-	IconButton,
-	NumberDecrementStepper,
-	NumberIncrementStepper,
-	NumberInput,
-	NumberInputField,
-	NumberInputStepper,
-	Text,
-	VStack,
-} from "@chakra-ui/react";
+import { Button, HStack, Heading, Icon, VStack } from "@chakra-ui/react";
 import SelectedWeekController from "./components/SelectedWeekController";
 import getCurrentWeekNumber from "./utils/getCurrentWeekNumber";
 import AddRoundedIcon from "@mui/icons-material/AddRounded";
-import SummaryCard from "./components/SummaryCard";
+import SummaryCard from "./components/WeekDay/components/SummaryCard";
+import WeekDay from "./components/WeekDay";
 
 function WeekmenuPage() {
 	const currentWeekNumber: number = getCurrentWeekNumber();
@@ -62,83 +50,7 @@ function WeekmenuPage() {
 				<Button colorScheme="teal">Spara</Button>
 			</HStack>
 
-			<VStack align="start">
-				<Heading color="teal.700">Måndag</Heading>
-				<SummaryCard />
-				<Button
-					variant="ghost"
-					colorScheme="teal"
-					leftIcon={<Icon as={AddRoundedIcon} />}
-				>
-					Lägg till recept
-				</Button>
-			</VStack>
-
-			<VStack align="start">
-				<Heading color="teal.700">Tisdag</Heading>
-				<Button
-					variant="ghost"
-					colorScheme="teal"
-					leftIcon={<Icon as={AddRoundedIcon} />}
-				>
-					Lägg till recept
-				</Button>
-			</VStack>
-
-			<VStack align="start">
-				<Heading color="teal.700">Onsdag</Heading>
-				<Button
-					variant="ghost"
-					colorScheme="teal"
-					leftIcon={<Icon as={AddRoundedIcon} />}
-				>
-					Lägg till recept
-				</Button>
-			</VStack>
-
-			<VStack align="start">
-				<Heading color="teal.700">Torsdag</Heading>
-				<Button
-					variant="ghost"
-					colorScheme="teal"
-					leftIcon={<Icon as={AddRoundedIcon} />}
-				>
-					Lägg till recept
-				</Button>
-			</VStack>
-
-			<VStack align="start">
-				<Heading color="teal.700">Fredag</Heading>
-				<Button
-					variant="ghost"
-					colorScheme="teal"
-					leftIcon={<Icon as={AddRoundedIcon} />}
-				>
-					Lägg till recept
-				</Button>
-			</VStack>
-
-			<VStack align="start">
-				<Heading color="teal.700">Lördag</Heading>
-				<Button
-					variant="ghost"
-					colorScheme="teal"
-					leftIcon={<Icon as={AddRoundedIcon} />}
-				>
-					Lägg till recept
-				</Button>
-			</VStack>
-
-			<VStack align="start">
-				<Heading color="teal.700">Söndag</Heading>
-				<Button
-					variant="ghost"
-					colorScheme="teal"
-					leftIcon={<Icon as={AddRoundedIcon} />}
-				>
-					Lägg till recept
-				</Button>
-			</VStack>
+			<WeekDay />
 		</VStack>
 	);
 }

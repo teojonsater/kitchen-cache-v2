@@ -34,6 +34,8 @@ function CreateRecipePage() {
 		register,
 		formState: { errors },
 		control,
+		watch,
+		setError,
 	} = useForm<RecipeForm>({
 		defaultValues: defaultFormValues,
 	});
@@ -84,12 +86,28 @@ function CreateRecipePage() {
 			steps: recipeForm.formSteps.map((step) => step.formStep),
 			ingredientGroups: ingredientGroups,
 		};
-
-		alert(JSON.stringify(recipe, null, 4));
 		console.log(recipe);
 	};
 
 	const handleFormSubmit = (data: RecipeForm) => {
+		if (data.formImage && data.formImage?.type?.split("/")[0] !== "image") {
+			setError("formImage", {
+				type: "filetype",
+				message: "Endast bilder är tillåtna",
+			});
+			return;
+		}
+
+		if (data.formImage && data.formImage?.size > 10000000) {
+			setError("formImage", {
+				type: "filesize",
+				message: "Din bild överstiger 10MB i storlek",
+			});
+			return;
+		}
+
+		alert(JSON.stringify(data, null, 4));
+		console.log(data);
 		recipeFormToRecipe(data);
 	};
 
@@ -134,7 +152,11 @@ function CreateRecipePage() {
 						/>
 					</GridItem>
 					<GridItem colSpan={2}>
-						<ImageField />
+						<ImageField
+							hookFormControl={control}
+							hookFormErrors={errors}
+							imageFile={watch("formImage")}
+						/>
 					</GridItem>
 					<GridItem colSpan={{ base: 2, md: 1 }}>
 						<IngredientsContainer

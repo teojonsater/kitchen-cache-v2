@@ -80,7 +80,12 @@ function AddRecipeBtn({ onAddRecipe, day }: Props) {
 											key={index}
 											onClick={() => {
 												recipePickerModalDisclosure.onClose();
+												setModalSearchQuery("");
 												onAddRecipe(day, recipe);
+											}}
+											_hover={{
+												textDecoration: "none",
+												boxShadow: "xl",
 											}}
 										>
 											<SummaryCard

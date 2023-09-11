@@ -10,6 +10,10 @@ import StepFieldsContainer from "./components/StepFieldsContainer";
 import { useForm } from "react-hook-form";
 import type RecipeForm from "./interfaces/RecipeForm";
 import IngredientsContainer from "./components/IngredientsContainer";
+import type RecipeObject from "../../interfaces/recipe/RecipeObject";
+import { v4 as uuid } from "uuid";
+import type RecipeIngredientGroup from "../../interfaces/recipe/RecipeIngredientGroup";
+import type RecipeIngredient from "../../interfaces/recipe/RecipeIngredient";
 
 function CreateRecipePage() {
 	const defaultFormValues: Partial<RecipeForm> = {
@@ -34,8 +38,59 @@ function CreateRecipePage() {
 		defaultValues: defaultFormValues,
 	});
 
+	const recipeFormToRecipe = (recipeForm: RecipeForm) => {
+		const ingredientGroups: RecipeIngredientGroup[] =
+			recipeForm.formIngredientGroups.map(
+				(formIngredientGroup): RecipeIngredientGroup => ({
+					name: formIngredientGroup.formIngredientGroupName,
+					ingredients:
+						formIngredientGroup.formIngredientGroupIngredients.map(
+							(formIngredient): RecipeIngredient => ({
+								name: formIngredient.formIngredientName,
+								measurement:
+									formIngredient.formIngredientMeasurement,
+								amount: isNaN(
+									formIngredient.formIngredientAmount ?? 0,
+								)
+									? 0
+									: formIngredient.formIngredientAmount ?? 0,
+							}),
+						),
+				}),
+			);
+
+		if (recipeForm.formIngredients.length > 0)
+			ingredientGroups.unshift({
+				ingredients: recipeForm.formIngredients.map(
+					(formIngredient): RecipeIngredient => ({
+						name: formIngredient.formIngredientName,
+						measurement: formIngredient.formIngredientMeasurement,
+						amount: isNaN(formIngredient.formIngredientAmount ?? 0)
+							? 0
+							: formIngredient.formIngredientAmount ?? 0,
+					}),
+				),
+			});
+
+		const recipe: Partial<RecipeObject> = {
+			id: uuid(),
+			createdAt: new Date(),
+			name: recipeForm.formName,
+			desc: recipeForm.formDesc ?? undefined,
+			costPerServing: 0,
+			servings: recipeForm.formServings,
+			cookingTime: recipeForm.formCookingTime,
+			originalRecipe: recipeForm.formOriginalRecipe ?? undefined,
+			steps: recipeForm.formSteps.map((step) => step.formStep),
+			ingredientGroups: ingredientGroups,
+		};
+
+		alert(JSON.stringify(recipe, null, 4));
+		console.log(recipe);
+	};
+
 	const handleFormSubmit = (data: RecipeForm) => {
-		alert(JSON.stringify(data, null, 4));
+		recipeFormToRecipe(data);
 	};
 
 	return (

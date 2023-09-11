@@ -1,13 +1,13 @@
-import type WeekMenuRecipe from "./WeekMenuRecipe";
+import type WeekMenuDay from "./WeekMenuDay";
 
 interface WeekMenu {
-	mon: WeekMenuRecipe[];
-	tue: WeekMenuRecipe[];
-	wed: WeekMenuRecipe[];
-	thur: WeekMenuRecipe[];
-	fri: WeekMenuRecipe[];
-	sat: WeekMenuRecipe[];
-	sun: WeekMenuRecipe[];
+	mon: WeekMenuDay;
+	tue: WeekMenuDay;
+	wed: WeekMenuDay;
+	thur: WeekMenuDay;
+	fri: WeekMenuDay;
+	sat: WeekMenuDay;
+	sun: WeekMenuDay;
 }
 
 export default WeekMenu;

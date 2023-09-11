@@ -20,27 +20,45 @@ import AccessTimeRoundedIcon from "@mui/icons-material/AccessTimeRounded";
 import EggOutlinedIcon from "@mui/icons-material/EggOutlined";
 import PaymentsOutlinedIcon from "@mui/icons-material/PaymentsOutlined";
 import ClearRoundedIcon from "@mui/icons-material/ClearRounded";
+import type RecipeIngredientGroup from "../../../../../interfaces/recipe/RecipeIngredientGroup";
+import countNoOfIngredients from "../../../../../utils/countNoOfIngredients";
 
-function SummaryCard() {
+interface Props {
+	index: number;
+	name: string;
+	image: string;
+	cookingTime: number;
+	costPerServing: number;
+	ingredientGroups: RecipeIngredientGroup[];
+	menuServings: number;
+	day: string;
+	onRemoveRecipe: (day: string, indexToRemove: number) => void;
+}
+
+function MenuSummaryCard({
+	index,
+	name,
+	image,
+	cookingTime,
+	costPerServing,
+	ingredientGroups,
+	menuServings,
+	day,
+	onRemoveRecipe,
+}: Props) {
 	return (
 		<Card direction="row" w="full">
-			<Image
-				aspectRatio="16/9"
-				objectFit="cover"
-				maxW="xs"
-				src="https://images.unsplash.com/photo-1667489022797-ab608913feeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60"
-				alt="Caffe Latte"
-			/>
+			<Image aspectRatio="16/9" objectFit="cover" maxW="xs" src={image} />
 			<CardBody>
 				<HStack align="start" justify="space-between" h="full">
 					<VStack justify="space-between" align="start" h="full">
 						<VStack spacing="4" align="start">
-							<Heading size="md">Fläskytterfilé</Heading>
+							<Heading size="md">{name}</Heading>
 							<HStack>
 								<Text>Port:</Text>
 								<NumberInput
 									size="sm"
-									defaultValue={4}
+									defaultValue={menuServings}
 									max={50}
 									min={1}
 									clampValueOnBlur={false}
@@ -60,15 +78,20 @@ function SummaryCard() {
 						>
 							<HStack spacing="1">
 								<Icon as={AccessTimeRoundedIcon} boxSize="4" />
-								<Text fontSize="sm">60 min</Text>
+								<Text fontSize="sm">{cookingTime} min</Text>
 							</HStack>
 							<HStack spacing="1">
 								<Icon as={EggOutlinedIcon} boxSize="4" />
-								<Text fontSize="sm">15 ingredienser</Text>
+								<Text fontSize="sm">
+									{countNoOfIngredients(ingredientGroups)}{" "}
+									ingredienser
+								</Text>
 							</HStack>
 							<HStack spacing="1">
 								<Icon as={PaymentsOutlinedIcon} boxSize="4" />
-								<Text fontSize="sm">40.46 kr</Text>
+								<Text fontSize="sm">
+									{costPerServing.toFixed(2)} kr
+								</Text>
 							</HStack>
 						</HStack>
 					</VStack>
@@ -78,6 +101,9 @@ function SummaryCard() {
 						variant="ghost"
 						borderRadius="full"
 						size="sm"
+						onClick={() => {
+							onRemoveRecipe(day, index);
+						}}
 					/>
 				</HStack>
 			</CardBody>
@@ -85,4 +111,4 @@ function SummaryCard() {
 	);
 }
 
-export default SummaryCard;
+export default MenuSummaryCard;

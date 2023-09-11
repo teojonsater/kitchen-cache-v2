@@ -2,7 +2,7 @@ import type RecipeObject from "../../../interfaces/recipe/RecipeObject";
 
 interface WeekMenuRecipe {
 	recipe: RecipeObject;
-	servings: number;
+	menuServings: number;
 }
 
 export default WeekMenuRecipe;

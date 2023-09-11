@@ -13,10 +13,10 @@ import {
 	VStack,
 } from "@chakra-ui/react";
 import type RecipeObject from "../../interfaces/recipe/RecipeObject";
-import SummaryCard from "./components/SummaryCard";
+import SummaryCard from "../../components/SummaryCard";
 import SearchBar from "./components/SearchBar";
 import filterRecipes from "./utils/filterRecipes";
-import NoSearchResults from "./components/NoSearchResults";
+import NoSearchResults from "../../components/NoSearchResults";
 import dummyRecipes from "../../utils/dummyRecipes";
 import getAllIngredients from "./utils/getAllIngredients";
 import getAllCookingTimes from "./utils/getAllCookingTimes";

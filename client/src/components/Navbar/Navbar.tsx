@@ -70,9 +70,13 @@ function Navbar() {
 				<Button leftIcon={<Icon as={EggOutlinedIcon} boxSize="8" />}>
 					Ingredienser
 				</Button>
-				<Button leftIcon={<Icon as={ListAltRoundedIcon} boxSize="8" />}>
-					Veckomeny
-				</Button>
+				<ChakraLink as={ReactRouterNavLink} to="/weekmenu">
+					<Button
+						leftIcon={<Icon as={ListAltRoundedIcon} boxSize="8" />}
+					>
+						Veckomeny
+					</Button>
+				</ChakraLink>
 			</HStack>
 		</HStack>
 	);

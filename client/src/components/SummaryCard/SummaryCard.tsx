@@ -15,8 +15,8 @@ import {
 import AccessTimeRoundedIcon from "@mui/icons-material/AccessTimeRounded";
 import EggOutlinedIcon from "@mui/icons-material/EggOutlined";
 import PaymentsOutlinedIcon from "@mui/icons-material/PaymentsOutlined";
-import type RecipeIngredientGroup from "../../../interfaces/recipe/RecipeIngredientGroup";
-import countNoOfIngredients from "../../../utils/countNoOfIngredients";
+import type RecipeIngredientGroup from "../../interfaces/recipe/RecipeIngredientGroup";
+import countNoOfIngredients from "../../utils/countNoOfIngredients";
 
 interface Props {
 	name: string;

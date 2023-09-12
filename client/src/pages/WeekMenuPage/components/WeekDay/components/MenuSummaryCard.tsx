@@ -1,4 +1,5 @@
 import React from "react";
+import type { ChangeEvent } from "react";
 import {
 	Card,
 	CardBody,
@@ -33,6 +34,11 @@ interface Props {
 	menuServings: number;
 	day: string;
 	onRemoveRecipe: (day: string, indexToRemove: number) => void;
+	onMenuServingsChange: (
+		day: string,
+		indexToChange: number,
+		value: number,
+	) => void;
 }
 
 function MenuSummaryCard({
@@ -45,6 +51,7 @@ function MenuSummaryCard({
 	menuServings,
 	day,
 	onRemoveRecipe,
+	onMenuServingsChange,
 }: Props) {
 	return (
 		<Card direction="row" w="full">
@@ -62,6 +69,17 @@ function MenuSummaryCard({
 									max={50}
 									min={1}
 									clampValueOnBlur={false}
+									onChange={(
+										valueAsString,
+										valueAsNumber,
+									) => {
+										onMenuServingsChange(
+											day,
+											index,
+											valueAsNumber,
+										);
+									}}
+									value={menuServings}
 								>
 									<NumberInputField w="20" />
 									<NumberInputStepper>

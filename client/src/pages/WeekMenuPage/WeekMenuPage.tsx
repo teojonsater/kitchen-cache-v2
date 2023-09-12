@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import type { ChangeEvent } from "react";
 import { Button, HStack, Heading, VStack } from "@chakra-ui/react";
 import SelectedWeekController from "./components/SelectedWeekController";
 import getCurrentWeekNumber from "./utils/getCurrentWeekNumber";
@@ -67,6 +68,25 @@ function WeekmenuPage() {
 		setCurrentWeekMenu(updatedWeekMenu);
 	};
 
+	const handleMenuServingsChange = (
+		day: string,
+		indexToChange: number,
+		value: number,
+	) => {
+		const dayIndex = currentWeekMenu.findIndex(
+			(weekMenu) => weekMenu.day === day,
+		);
+
+		const updatedWeekMenu = [...currentWeekMenu];
+		const updatedDay = { ...updatedWeekMenu[dayIndex] };
+
+		updatedDay.menuRecipes[indexToChange].menuServings = value;
+
+		updatedWeekMenu[dayIndex] = updatedDay;
+
+		setCurrentWeekMenu(updatedWeekMenu);
+	};
+
 	return (
 		<VStack spacing="8" align="stretch" p="8">
 			<Heading as="h1" size="2xl">
@@ -95,8 +115,17 @@ function WeekmenuPage() {
 					menu={weekMenuDay}
 					onAddRecipe={handleAddRecipe}
 					onRemoveRecipe={handleRemoveRecipe}
+					onMenuServingsChange={handleMenuServingsChange}
 				/>
 			))}
+
+			<Button
+				onClick={() => {
+					console.log(currentWeekMenu);
+				}}
+			>
+				Skriv ut data
+			</Button>
 		</VStack>
 	);
 }

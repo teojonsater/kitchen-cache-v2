@@ -9,9 +9,19 @@ interface Props {
 	menu: WeekMenuDay;
 	onAddRecipe: (day: string, addedRecipe: RecipeObject) => void;
 	onRemoveRecipe: (day: string, indexToRemove: number) => void;
+	onMenuServingsChange: (
+		day: string,
+		indexToChange: number,
+		value: number,
+	) => void;
 }
 
-function WeekDay({ menu, onAddRecipe, onRemoveRecipe }: Props) {
+function WeekDay({
+	menu,
+	onAddRecipe,
+	onRemoveRecipe,
+	onMenuServingsChange,
+}: Props) {
 	return (
 		<VStack align="start">
 			<Heading color="teal.700">{menu.day}</Heading>
@@ -28,6 +38,7 @@ function WeekDay({ menu, onAddRecipe, onRemoveRecipe }: Props) {
 					menuServings={menuRecipe.menuServings}
 					day={menu.day}
 					onRemoveRecipe={onRemoveRecipe}
+					onMenuServingsChange={onMenuServingsChange}
 				/>
 			))}
 

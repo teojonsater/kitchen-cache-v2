@@ -4,10 +4,10 @@ import { Button, HStack, Heading, VStack } from "@chakra-ui/react";
 import SelectedWeekController from "../../components/SelectedWeekController";
 import getCurrentWeekNumber from "../../utils/getCurrentWeekNumber";
 import WeekDay from "./components/WeekDay";
-import dummyWeekMenu from "./dummyData/dummyWeekMenu";
-import type WeekMenuDay from "./interfaces/WeekMenuDay";
+import dummyWeekMenu from "../../dummyData/dummyWeekMenu";
+import type WeekMenuDay from "../../interfaces/weekmenu/WeekMenuDay";
 import type RecipeObject from "../../interfaces/recipe/RecipeObject";
-import type WeekMenuRecipe from "./interfaces/WeekMenuRecipe";
+import type WeekMenuRecipe from "../../interfaces/weekmenu/WeekMenuRecipe";
 
 function WeekMenuPage() {
 	const currentWeekNumber: number = getCurrentWeekNumber();

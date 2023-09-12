@@ -1,4 +1,4 @@
-import type RecipeObject from "../../../interfaces/recipe/RecipeObject";
+import type RecipeObject from "../recipe/RecipeObject";
 
 interface WeekMenuRecipe {
 	recipe: RecipeObject;

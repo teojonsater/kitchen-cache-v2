@@ -1,5 +1,5 @@
-import dummyRecipes from "../../../utils/dummyRecipes";
-import type WeekMenuDay from "../interfaces/WeekMenuDay";
+import dummyRecipes from "../utils/dummyRecipes";
+import type WeekMenuDay from "../interfaces/weekmenu/WeekMenuDay";
 
 const dummyWeekMenu: WeekMenuDay[] = [
 	{

@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import type { ChangeEvent } from "react";
 import { Button, HStack, Heading, VStack } from "@chakra-ui/react";
-import SelectedWeekController from "./components/SelectedWeekController";
-import getCurrentWeekNumber from "./utils/getCurrentWeekNumber";
+import SelectedWeekController from "../../components/SelectedWeekController";
+import getCurrentWeekNumber from "../../utils/getCurrentWeekNumber";
 import WeekDay from "./components/WeekDay";
 import dummyWeekMenu from "./dummyData/dummyWeekMenu";
 import type WeekMenuDay from "./interfaces/WeekMenuDay";
 import type RecipeObject from "../../interfaces/recipe/RecipeObject";
 import type WeekMenuRecipe from "./interfaces/WeekMenuRecipe";
 
-function WeekmenuPage() {
+function WeekMenuPage() {
 	const currentWeekNumber: number = getCurrentWeekNumber();
 
 	const [selectedWeekNumber, setSelectedWeekNumber] =
@@ -130,4 +130,4 @@ function WeekmenuPage() {
 	);
 }
 
-export default WeekmenuPage;
+export default WeekMenuPage;

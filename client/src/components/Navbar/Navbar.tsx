@@ -70,13 +70,33 @@ function Navbar() {
 				<Button leftIcon={<Icon as={EggOutlinedIcon} boxSize="8" />}>
 					Ingredienser
 				</Button>
-				<ChakraLink as={ReactRouterNavLink} to="/weekmenu">
-					<Button
-						leftIcon={<Icon as={ListAltRoundedIcon} boxSize="8" />}
-					>
-						Veckomeny
-					</Button>
-				</ChakraLink>
+				<Popover>
+					<PopoverTrigger>
+						<Button
+							leftIcon={
+								<Icon as={ListAltRoundedIcon} boxSize="8" />
+							}
+						>
+							Veckomeny
+						</Button>
+					</PopoverTrigger>
+					<PopoverContent w="fit-content">
+						<PopoverArrow />
+						<ChakraLink as={ReactRouterNavLink} to="/weekmenu">
+							<Button w="full" borderBottomRadius="0">
+								Veckomeny
+							</Button>
+						</ChakraLink>
+						<ChakraLink
+							as={ReactRouterNavLink}
+							to="/weekmenu/ingredients"
+						>
+							<Button w="full" borderTopRadius="0">
+								Inköpslista
+							</Button>
+						</ChakraLink>
+					</PopoverContent>
+				</Popover>
 			</HStack>
 		</HStack>
 	);

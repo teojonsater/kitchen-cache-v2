@@ -20,7 +20,6 @@ import NoSearchResults from "../../components/NoSearchResults";
 import dummyRecipes from "../../utils/dummyRecipes";
 import getAllIngredients from "./utils/getAllIngredients";
 import getAllCookingTimes from "./utils/getAllCookingTimes";
-import sortByOptions from "./utils/sortByOptions";
 import recipeSort from "./utils/recipeSort";
 import getAllCostPerServings from "./utils/getAllCostPerServings";
 
@@ -186,15 +185,13 @@ function AllRecipesPage() {
 						<Button
 							variant="outline"
 							colorScheme="teal"
-							isDisabled={
-								filteredRecipes.length == 0 ? true : false
-							}
+							isDisabled={filteredRecipes.length == 0}
 						>
 							Slumpa Recept
 						</Button>
 					</Link>
 				</HStack>
-				<HStack>
+				<HStack flexWrap="wrap">
 					{filteredIngredients.map((ingredient, index) => (
 						<Tag
 							borderRadius="full"

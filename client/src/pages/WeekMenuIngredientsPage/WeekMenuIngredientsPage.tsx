@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Heading, VStack } from "@chakra-ui/react";
 import getCurrentWeekNumber from "../../utils/getCurrentWeekNumber";
 import SelectedWeekController from "../../components/SelectedWeekController";
+import IngredientsTable from "./components/IngredientsTable";
 
 function WeekMenuIngredientsPage() {
 	const currentWeekNumber: number = getCurrentWeekNumber();
@@ -37,6 +38,7 @@ function WeekMenuIngredientsPage() {
 				weekNumber={selectedWeekNumber}
 				currentWeekNumber={currentWeekNumber}
 			/>
+			<IngredientsTable />
 		</VStack>
 	);
 }

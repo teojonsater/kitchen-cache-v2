@@ -22,6 +22,7 @@ import getAllIngredients from "./utils/getAllIngredients";
 import getAllCookingTimes from "./utils/getAllCookingTimes";
 import recipeSort from "./utils/recipeSort";
 import getAllCostPerServings from "./utils/getAllCostPerServings";
+import cleanString from "../../utils/cleanString";
 
 function AllRecipesPage() {
 	const [filteredRecipes, setFilteredRecipes] =
@@ -76,9 +77,9 @@ function AllRecipesPage() {
 	useEffect(() => {
 		setSearchedIngredients(
 			allIngredients.filter((ingredient) =>
-				ingredient
-					.toLowerCase()
-					.includes(filterIngredientsSearchQuery.toLowerCase()),
+				cleanString(ingredient.toLocaleLowerCase()).includes(
+					cleanString(filterIngredientsSearchQuery.toLowerCase()),
+				),
 			),
 		);
 	}, [filterIngredientsSearchQuery]);

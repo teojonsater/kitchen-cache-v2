@@ -1,4 +1,5 @@
 import type RecipeObject from "../../../interfaces/recipe/RecipeObject";
+import cleanString from "../../../utils/cleanString";
 import recipeContainsAnyIngredient from "./recipeContainsAnyIngredient";
 import recipeContainsEveryIngredient from "./recipeContainsEveryIngredient";
 
@@ -14,7 +15,9 @@ function filterRecipes(
 		// Return all recipes if no ingredients are filtered
 		return allRecipes.filter(
 			(recipe) =>
-				recipe.name.toLowerCase().includes(searchQuery.toLowerCase()) &&
+				cleanString(recipe.name.toLowerCase()).includes(
+					cleanString(searchQuery.toLowerCase()),
+				) &&
 				recipe.cookingTime >= filterCookingTimeValues[0] &&
 				recipe.cookingTime <= filterCookingTimeValues[1] &&
 				recipe.costPerServing >= filterCostPerServing[0] &&
@@ -24,7 +27,9 @@ function filterRecipes(
 		// Return recipes matching both name and ingredient criteria
 		return allRecipes.filter(
 			(recipe) =>
-				recipe.name.toLowerCase().includes(searchQuery.toLowerCase()) &&
+				cleanString(recipe.name.toLowerCase()).includes(
+					cleanString(searchQuery.toLowerCase()),
+				) &&
 				/*recipeContainsEveryIngredient(recipe, filteredIngredients),*/
 				(ingredientFilterSwitch
 					? !recipeContainsAnyIngredient(recipe, filteredIngredients)

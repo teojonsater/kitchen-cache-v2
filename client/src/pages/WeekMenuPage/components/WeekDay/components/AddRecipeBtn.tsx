@@ -15,7 +15,7 @@ import {
 	useDisclosure,
 } from "@chakra-ui/react";
 import AddRoundedIcon from "@mui/icons-material/AddRounded";
-import filterRecipes from "../../../utils/filterRecipes";
+import filterRecipesBySearchQuery from "../../../utils/filterRecipesBySearchQuery";
 import dummyRecipes from "../../../../../utils/dummyRecipes";
 import type RecipeObject from "../../../../../interfaces/recipe/RecipeObject";
 import SummaryCard from "../../../../../components/SummaryCard";
@@ -70,39 +70,42 @@ function AddRecipeBtn({ onAddRecipe, day }: Props) {
 						/>
 
 						<VStack spacing="8" align="stretch" py="6">
-							{filterRecipes(allRecipes, modalSearchQuery)
-								.length == 0 && <NoSearchResults />}
+							{filterRecipesBySearchQuery(
+								allRecipes,
+								modalSearchQuery,
+							).length == 0 && <NoSearchResults />}
 
 							{modalSearchQuery.length > 0 &&
-								filterRecipes(allRecipes, modalSearchQuery).map(
-									(recipe, index) => (
-										<Link
-											key={index}
-											onClick={() => {
-												recipePickerModalDisclosure.onClose();
-												setModalSearchQuery("");
-												onAddRecipe(day, recipe);
-											}}
-											_hover={{
-												textDecoration: "none",
-												boxShadow: "xl",
-											}}
-										>
-											<SummaryCard
-												name={recipe.name}
-												cookingTime={recipe.cookingTime}
-												ingredientGroups={
-													recipe.ingredientGroups
-												}
-												image={recipe.image}
-												costPerServing={
-													recipe.costPerServing
-												}
-												searchQuery={modalSearchQuery}
-											/>
-										</Link>
-									),
-								)}
+								filterRecipesBySearchQuery(
+									allRecipes,
+									modalSearchQuery,
+								).map((recipe, index) => (
+									<Link
+										key={index}
+										onClick={() => {
+											recipePickerModalDisclosure.onClose();
+											setModalSearchQuery("");
+											onAddRecipe(day, recipe);
+										}}
+										_hover={{
+											textDecoration: "none",
+											boxShadow: "xl",
+										}}
+									>
+										<SummaryCard
+											name={recipe.name}
+											cookingTime={recipe.cookingTime}
+											ingredientGroups={
+												recipe.ingredientGroups
+											}
+											image={recipe.image}
+											costPerServing={
+												recipe.costPerServing
+											}
+											searchQuery={modalSearchQuery}
+										/>
+									</Link>
+								))}
 						</VStack>
 					</ModalBody>
 				</ModalContent>

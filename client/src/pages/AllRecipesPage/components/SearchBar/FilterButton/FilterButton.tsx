@@ -19,7 +19,6 @@ import IngredientFilter from "./IngredientFilter";
 import TimeFilter from "./TimeFilter";
 import PriceFilter from "./PriceFilter";
 import type RecipeObject from "../../../../../interfaces/recipe/RecipeObject";
-import { on } from "events";
 
 interface Props {
 	searchedIngredients: string[];

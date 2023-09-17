@@ -25,7 +25,7 @@
             "ingredients": [
                 {
                     "amount": 1,
-                    "measurement": "1/2",
+                    "measurement": "msk",
                     "name": "hoisinsås"
                 },
                 {
@@ -70,7 +70,7 @@
                 },
                 {
                     "amount": 4,
-                    "measurement": "cm",
+                    "measurement": "msk",
                     "name": "färsk ingefära"
                 },
                 {

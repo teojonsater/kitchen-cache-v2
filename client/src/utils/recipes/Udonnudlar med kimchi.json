@@ -25,7 +25,7 @@
                 },
                 {
                     "amount": 2,
-                    "measurement": "1/2",
+                    "measurement": "st",
                     "name": "kimchi"
                 },
                 {
@@ -49,8 +49,8 @@
                     "name": "smör"
                 },
                 {
-                    "amount": 1,
-                    "measurement": "1/2",
+                    "amount": 1.5,
+                    "measurement": "msk",
                     "name": "japansk soja"
                 },
                 {
@@ -59,8 +59,8 @@
                     "name": "finskurna salladslökar"
                 },
                 {
-                    "amount": 1,
-                    "measurement": "1/2",
+                    "amount": 1.5,
+                    "measurement": "msk",
                     "name": "rostade sesamfrön"
                 }
             ]

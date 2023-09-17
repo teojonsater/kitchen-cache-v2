@@ -22,6 +22,7 @@ import getAllIngredients from "./utils/getAllIngredients";
 import getAllCookingTimes from "./utils/getAllCookingTimes";
 import recipeSort from "./utils/recipeSort";
 import getAllCostPerServings from "./utils/getAllCostPerServings";
+import bundleIngredients from "../../utils/measurements/bundleIngredients";
 
 function AllRecipesPage() {
 	const [filteredRecipes, setFilteredRecipes] =
@@ -63,8 +64,6 @@ function AllRecipesPage() {
 				filterCostPerServingValues,
 			),
 		);
-
-		console.log(ingredientFilterSwitch);
 	}, [
 		searchQuery,
 		filteredIngredients,

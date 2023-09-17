@@ -27,9 +27,9 @@ const volumeMeasurements: MeasurementUnit[] = [
 ];
 
 const getMeasurementCategory = (unit: MeasurementUnit) => {
-	if (weightMeasurements.includes(unit)) return weightMeasurements;
-	if (volumeMeasurements.includes(unit)) return volumeMeasurements;
-	if (otherMeasurements.includes(unit)) return otherMeasurements;
+	if (weightMeasurements.includes(unit)) return "weightMeasurements";
+	if (volumeMeasurements.includes(unit)) return "volumeMeasurements";
+	if (otherMeasurements.includes(unit)) return "otherMeasurements";
 	throw new Error(`Unsupported unit: ${unit}`);
 };
 

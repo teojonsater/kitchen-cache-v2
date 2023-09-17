@@ -33,7 +33,7 @@
                 },
                 {
                     "amount": 650,
-                    "measurement": "650",
+                    "measurement": "g",
                     "name": "fläskytterfilé"
                 },
                 {
@@ -52,8 +52,8 @@
                     "name": "peppar"
                 },
                 {
-                    "amount": 2,
-                    "measurement": "1/2",
+                    "amount": 2.5,
+                    "measurement": "dl",
                     "name": "vispgrädde"
                 },
                 {

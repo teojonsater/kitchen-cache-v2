@@ -19,8 +19,8 @@ function convertMeasurement(
 		[MeasurementUnit.DL]: 10,
 		[MeasurementUnit.CL]: 100,
 		[MeasurementUnit.ML]: 1000,
-		[MeasurementUnit.TBSP]: 15000,
-		[MeasurementUnit.TSP]: 5000,
+		[MeasurementUnit.TBSP]: 1000 / 15,
+		[MeasurementUnit.TSP]: 200,
 		[MeasurementUnit.KRM]: 1000,
 		[MeasurementUnit.CUP]: 4.23, // Approximate value for 1 cup in ml
 		[MeasurementUnit.FLOZ]: 33.81, // Approximate value for 1 fluid ounce in ml
@@ -40,3 +40,5 @@ function convertMeasurement(
 
 	return quantity * (conversionTable[toUnit] / conversionTable[fromUnit]);
 }
+
+export default convertMeasurement;

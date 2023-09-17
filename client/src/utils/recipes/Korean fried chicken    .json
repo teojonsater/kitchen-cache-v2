@@ -45,7 +45,7 @@
                 },
                 {
                     "amount": 10,
-                    "measurement": "cm",
+                    "measurement": "g",
                     "name": "rättika"
                 },
                 {
@@ -69,8 +69,8 @@
                     "name": "neutral olja"
                 },
                 {
-                    "amount": 1,
-                    "measurement": "1/2",
+                    "amount": 1.5,
+                    "measurement": "msk",
                     "name": "japansk soja"
                 },
                 {
@@ -105,17 +105,17 @@
             "ingredients": [
                 {
                     "amount": 1,
-                    "measurement": "1/2",
+                    "measurement": "dl",
                     "name": "vetemjöl"
                 },
                 {
                     "amount": 1,
-                    "measurement": "1/2",
+                    "measurement": "tsk",
                     "name": "majsstärkelse"
                 },
                 {
                     "amount": 1,
-                    "measurement": "1/2",
+                    "measurement": "krm",
                     "name": "bakpulver"
                 },
                 {
@@ -130,12 +130,12 @@
             "ingredients": [
                 {
                     "amount": 2,
-                    "measurement": "1/2",
+                    "measurement": "msk",
                     "name": "majsstärkelse"
                 },
                 {
                     "amount": 2,
-                    "measurement": "1/2",
+                    "measurement": "tsk",
                     "name": "vitlökspulver"
                 },
                 {
@@ -155,7 +155,7 @@
                 },
                 {
                     "amount": 1,
-                    "measurement": "1",
+                    "measurement": "l",
                     "name": "neutral olja (till fritering)"
                 }
             ],

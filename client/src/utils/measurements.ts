@@ -4,7 +4,6 @@ const measurementsArray = [
 	"förp",
 	"port",
 	"kg",
-	"hg",
 	"g",
 	"mg",
 	"l",

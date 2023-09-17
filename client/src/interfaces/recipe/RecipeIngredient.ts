@@ -1,25 +1,9 @@
+import type MeasurementUnit from "../../utils/measurements/MeasurementUnit";
+
 interface RecipeIngredient {
 	name: string;
 	amount: number;
-	measurement:
-		| "-"
-		| "st"
-		| "förp"
-		| "port"
-		| "kg"
-		| "hg"
-		| "g"
-		| "mg"
-		| "l"
-		| "dl"
-		| "cl"
-		| "ml"
-		| "msk"
-		| "tsk"
-		| "krm"
-		| "cup"
-		| "floz"
-		| "oz";
+	measurement: MeasurementUnit;
 }
 
 export default RecipeIngredient;

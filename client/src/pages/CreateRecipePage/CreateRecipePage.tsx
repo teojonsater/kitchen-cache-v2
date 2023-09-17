@@ -14,6 +14,7 @@ import type RecipeObject from "../../interfaces/recipe/RecipeObject";
 import { v4 as uuid } from "uuid";
 import type RecipeIngredientGroup from "../../interfaces/recipe/RecipeIngredientGroup";
 import type RecipeIngredient from "../../interfaces/recipe/RecipeIngredient";
+import MeasurementUnit from "../../utils/measurements/MeasurementUnit";
 
 function CreateRecipePage() {
 	const defaultFormValues: Partial<RecipeForm> = {
@@ -23,7 +24,7 @@ function CreateRecipePage() {
 		formIngredients: [
 			{
 				formIngredientAmount: undefined,
-				formIngredientMeasurement: "-",
+				formIngredientMeasurement: MeasurementUnit.NONE,
 				formIngredientName: "",
 			},
 		],
@@ -86,7 +87,7 @@ function CreateRecipePage() {
 			steps: recipeForm.formSteps.map((step) => step.formStep),
 			ingredientGroups: ingredientGroups,
 		};
-		console.log(recipe);
+		console.log(JSON.stringify(recipe));
 	};
 
 	const handleFormSubmit = (data: RecipeForm) => {
@@ -107,7 +108,6 @@ function CreateRecipePage() {
 		}
 
 		alert(JSON.stringify(data, null, 4));
-		console.log(data);
 		recipeFormToRecipe(data);
 	};
 

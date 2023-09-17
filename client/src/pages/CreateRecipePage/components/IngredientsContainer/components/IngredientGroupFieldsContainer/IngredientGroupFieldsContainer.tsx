@@ -5,6 +5,7 @@ import { Button, Icon, VStack } from "@chakra-ui/react";
 import AddRoundedIcon from "@mui/icons-material/AddRounded";
 import IngredientGroupFields from "./components/IngredientGroupFields";
 import { useFieldArray } from "react-hook-form";
+import MeasurementUnit from "../../../../../../utils/measurements/MeasurementUnit";
 
 interface Props {
 	hookFormControl: any;
@@ -44,7 +45,7 @@ function IngredientGroupFieldsContainer({
 						formIngredientGroupName: "",
 						formIngredientGroupIngredients: [
 							{
-								formIngredientMeasurement: "-",
+								formIngredientMeasurement: MeasurementUnit.NONE,
 								formIngredientName: "",
 							},
 						],

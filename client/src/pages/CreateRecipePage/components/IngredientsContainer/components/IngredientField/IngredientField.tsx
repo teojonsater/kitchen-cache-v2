@@ -14,8 +14,8 @@ import {
 	Select,
 } from "@chakra-ui/react";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
-import { measurementsArray } from "../../../../../../utils/measurements";
 import SubdirectoryArrowRightRoundedIcon from "@mui/icons-material/SubdirectoryArrowRightRounded";
+import MeasurementUnit from "../../../../../../utils/measurements/MeasurementUnit";
 
 interface Props {
 	ingredientIndex: number;
@@ -75,11 +75,17 @@ function IngredientField({
 							`${registerName}..formIngredientMeasurement`,
 						)}
 					>
-						{measurementsArray.map((measurement, index) => (
-							<option key={index} value={measurement}>
-								{measurement}
-							</option>
-						))}
+						{Object.keys(MeasurementUnit).map(
+							(measurement, index) => (
+								<option key={index} value={measurement}>
+									{
+										MeasurementUnit[
+											measurement as keyof typeof MeasurementUnit
+										]
+									}
+								</option>
+							),
+						)}
 					</Select>
 				</FormControl>
 				<FormControl isRequired>

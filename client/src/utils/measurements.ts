@@ -1,23 +1,3 @@
-const measurementsArray = [
-	"-",
-	"st",
-	"förp",
-	"port",
-	"kg",
-	"g",
-	"mg",
-	"l",
-	"dl",
-	"cl",
-	"ml",
-	"msk",
-	"tsk",
-	"krm",
-	"cup",
-	"floz",
-	"oz",
-];
-
 type MetricUnit = "ml" | "dl" | "g";
 
 function convertToMetric(
@@ -50,4 +30,4 @@ function convertToMetric(
 	return [metricAmount, metricUnit];
 }
 
-export { measurementsArray, convertToMetric };
+export { convertToMetric };

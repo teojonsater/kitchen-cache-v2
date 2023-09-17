@@ -6,6 +6,7 @@ import { Button, Icon, VStack } from "@chakra-ui/react";
 import AddRoundedIcon from "@mui/icons-material/AddRounded";
 import IngredientField from "../IngredientField";
 import { useFieldArray } from "react-hook-form";
+import MeasurementUnit from "../../../../../../utils/measurements/MeasurementUnit";
 
 interface Props {
 	hookFormControl: any;
@@ -41,7 +42,7 @@ function IngredientFieldsContainer({
 				onClick={() => {
 					formIngredientFields.append({
 						formIngredientAmount: undefined,
-						formIngredientMeasurement: "-",
+						formIngredientMeasurement: MeasurementUnit.NONE,
 						formIngredientName: "",
 					});
 				}}

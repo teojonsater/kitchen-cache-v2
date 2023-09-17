@@ -3,20 +3,24 @@ import { extendTheme } from "@chakra-ui/react";
 import "@fontsource-variable/josefin-sans";
 import "@fontsource/yeseva-one";
 
-const JosefinFontTheme = extendTheme({
-	fonts: {
-		heading: `"Yeseva One", sans-serif`,
-		body: `"Josefin Sans Variable", sans-serif`,
-	},
-	fontWeights: {
-		thin: 100,
-		extraLight: 200,
-		light: 300,
-		normal: 400,
-		medium: 500,
-		semiBold: 600,
-		bold: 700,
-	},
+const fonts = {
+	heading: `"Yeseva One", sans-serif`,
+	body: `"Josefin Sans Variable", sans-serif`,
+};
+
+const fontWeights = {
+	thin: 100,
+	extraLight: 200,
+	light: 300,
+	normal: 400,
+	medium: 500,
+	semiBold: 600,
+	bold: 700,
+};
+
+const overrides = {
+	fonts,
+	fontWeights,
 	styles: {
 		global: {
 			b: {
@@ -70,6 +74,6 @@ const JosefinFontTheme = extendTheme({
 			},
 		},
 	},
-});
+};
 
-export default JosefinFontTheme;
+export default extendTheme(overrides);

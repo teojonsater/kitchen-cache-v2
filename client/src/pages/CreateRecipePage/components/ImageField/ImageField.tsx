@@ -81,7 +81,7 @@ function ImageField({ hookFormControl, hookFormErrors, imageFile }: Props) {
 								src={
 									imageFile
 										? URL.createObjectURL(imageFile)
-										: "https://worldfoodtour.co.uk/wp-content/uploads/2013/06/neptune-placeholder-48.jpg"
+										: "https://assets.icanet.se/e_sharpen:80,f_auto,q_auto,dpr_2,w_710,h_710,c_lfill/v1589267894/Receptsidan/fallback-receptbild-liten.jpg"
 								}
 								alt="Receptbild"
 								objectFit="cover"

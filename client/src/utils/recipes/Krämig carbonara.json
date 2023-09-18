@@ -21,38 +21,38 @@
             "ingredients": [
                 {
                     "amount": 500,
-                    "measurement": "g",
-                    "name": "färsk spaghetti"
+                    "measurement": "G",
+                    "name": "spaghetti"
                 },
                 {
-                    "amount": 2,
-                    "measurement": "-",
-                    "name": "paket bacon (klippt i 2 cm bitar)"
+                    "amount": 280,
+                    "measurement": "G",
+                    "name": "bacon"
                 },
                 {
                     "amount": 4,
-                    "measurement": "-",
+                    "measurement": "PCS",
                     "name": "ägg"
                 },
                 {
                     "amount": 1,
-                    "measurement": "dl",
+                    "measurement": "DL",
                     "name": "vispgrädde"
                 },
                 {
                     "amount": 2,
-                    "measurement": "dl",
+                    "measurement": "DL",
                     "name": "riven parmesan"
                 },
                 {
                     "amount": 0.5,
-                    "measurement": "tsk",
+                    "measurement": "TSP",
                     "name": "salt"
                 },
                 {
                     "amount": 2,
-                    "measurement": "krm",
-                    "name": "nymalen Tellicherry svartpeppar"
+                    "measurement": "KRM",
+                    "name": "svartpeppar"
                 }
             ]
         },
@@ -60,12 +60,12 @@
             "ingredients": [
                 {
                     "amount": 70,
-                    "measurement": "g",
-                    "name": "rucola"
+                    "measurement": "G",
+                    "name": "ruccola"
                 },
                 {
                     "amount": 4,
-                    "measurement": "-",
+                    "measurement": "PCS",
                     "name": "äggulor"
                 }
             ],

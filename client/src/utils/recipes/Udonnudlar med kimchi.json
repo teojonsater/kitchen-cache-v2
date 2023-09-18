@@ -20,48 +20,48 @@
             "ingredients": [
                 {
                     "amount": 140,
-                    "measurement": "g",
+                    "measurement": "G",
                     "name": "bacon"
                 },
                 {
                     "amount": 2,
-                    "measurement": "st",
+                    "measurement": "PCS",
                     "name": "kimchi"
                 },
                 {
                     "amount": 4,
-                    "measurement": "-",
+                    "measurement": "PCS",
                     "name": "ägg"
                 },
                 {
                     "amount": 1,
-                    "measurement": "msk",
+                    "measurement": "TBSP",
                     "name": "neutral matolja"
                 },
                 {
                     "amount": 250,
-                    "measurement": "g",
-                    "name": "nudlar (gärna udon)"
+                    "measurement": "G",
+                    "name": "nudlar"
                 },
                 {
                     "amount": 4,
-                    "measurement": "msk",
+                    "measurement": "TBSP",
                     "name": "smör"
                 },
                 {
                     "amount": 1.5,
-                    "measurement": "msk",
+                    "measurement": "TBSP",
                     "name": "japansk soja"
                 },
                 {
                     "amount": 2,
-                    "measurement": "-",
-                    "name": "finskurna salladslökar"
+                    "measurement": "PCS",
+                    "name": "salladslök"
                 },
                 {
                     "amount": 1.5,
-                    "measurement": "msk",
-                    "name": "rostade sesamfrön"
+                    "measurement": "TBSP",
+                    "name": "sesamfrön"
                 }
             ]
         }

@@ -22,8 +22,8 @@
             "ingredients": [
                 {
                     "amount": 4,
-                    "measurement": "-",
-                    "name": "port ris"
+                    "measurement": "SERV",
+                    "name": "ris"
                 }
             ]
         },
@@ -31,57 +31,57 @@
             "ingredients": [
                 {
                     "amount": 3,
-                    "measurement": "-",
-                    "name": "morötter"
+                    "measurement": "PCS",
+                    "name": "morot"
                 },
                 {
                     "amount": 600,
-                    "measurement": "g",
-                    "name": "strimlad kycklingfilé"
+                    "measurement": "G",
+                    "name": "kycklingfilé"
                 },
                 {
                     "amount": 2,
-                    "measurement": "msk",
+                    "measurement": "TBSP",
                     "name": "olja"
                 },
                 {
                     "amount": 0,
-                    "measurement": "-",
+                    "measurement": "NONE",
                     "name": "salt"
                 },
                 {
                     "amount": 0,
-                    "measurement": "-",
-                    "name": "peppar"
+                    "measurement": "NONE",
+                    "name": "svartpeppar"
                 },
                 {
                     "amount": 150,
-                    "measurement": "g",
-                    "name": "haricots verts (bönor)"
+                    "measurement": "G",
+                    "name": "haricots verts"
                 },
                 {
                     "amount": 1,
-                    "measurement": "-",
-                    "name": "vitlöksklyfta"
+                    "measurement": "PCS",
+                    "name": "vitlöksklyftor"
                 },
                 {
                     "amount": 4,
-                    "measurement": "-",
+                    "measurement": "PCS",
                     "name": "ägg"
                 },
                 {
                     "amount": 3,
-                    "measurement": "msk",
+                    "measurement": "TBSP",
                     "name": "sweet chilisås"
                 },
                 {
                     "amount": 3,
-                    "measurement": "msk",
-                    "name": "japansk sojasås"
+                    "measurement": "TBSP",
+                    "name": "japansk soja"
                 },
                 {
                     "amount": 2,
-                    "measurement": "msk",
+                    "measurement": "TBSP",
                     "name": "sesamfrön"
                 }
             ]

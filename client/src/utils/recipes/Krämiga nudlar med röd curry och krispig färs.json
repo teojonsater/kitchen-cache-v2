@@ -21,73 +21,73 @@
             "ingredients": [
                 {
                     "amount": 2,
-                    "measurement": "msk",
+                    "measurement": "TBSP",
                     "name": "röd currypaste"
                 },
                 {
                     "amount": 1,
-                    "measurement": "msk",
+                    "measurement": "TBSP",
                     "name": "olja"
                 },
                 {
-                    "amount": 1,
-                    "measurement": "-",
-                    "name": "förp kokosmjölk (à 400 ml)"
+                    "amount": 400,
+                    "measurement": "ML",
+                    "name": "kokosmjölk"
                 },
                 {
                     "amount": 0,
-                    "measurement": "-",
+                    "measurement": "NONE",
                     "name": "salt"
                 },
                 {
                     "amount": 400,
-                    "measurement": "g",
-                    "name": "vego- eller fläskfärs"
+                    "measurement": "G",
+                    "name": "fläskfärs"
                 },
                 {
                     "amount": 2,
-                    "measurement": "msk",
+                    "measurement": "TBSP",
                     "name": "olja"
                 },
                 {
                     "amount": 1,
-                    "measurement": "-",
-                    "name": "riven vitlöksklyfta"
+                    "measurement": "PCS",
+                    "name": "vitlöksklyftor"
                 },
                 {
                     "amount": 2,
-                    "measurement": "msk",
-                    "name": "riven ingefära"
+                    "measurement": "TBSP",
+                    "name": "ingefära"
                 },
                 {
                     "amount": 2,
-                    "measurement": "-",
+                    "measurement": "TBSP",
                     "name": "japansk soja"
                 },
                 {
                     "amount": 1,
-                    "measurement": "msk",
+                    "measurement": "TBSP",
                     "name": "socker"
                 },
                 {
                     "amount": 250,
-                    "measurement": "g",
+                    "measurement": "G",
                     "name": "pak choi"
                 },
                 {
                     "amount": 200,
-                    "measurement": "g",
+                    "measurement": "G",
                     "name": "äggnudlar"
                 },
                 {
                     "amount": 3,
-                    "measurement": "-",
-                    "name": "finskurna salladslök"
+                    "measurement": "PCS",
+                    "name": "salladslök"
                 },
                 {
                     "amount": 2,
-                    "measurement": "msk",
-                    "name": "rostade sesamfrön"
+                    "measurement": "TBSP",
+                    "name": "sesamfrön"
                 }
             ]
         },
@@ -101,7 +101,7 @@
                 {
                     "amount": 0,
                     "measurement": "-",
-                    "name": "gärna koriander"
+                    "name": "koriander"
                 }
             ],
             "name": "Serveringsförslag"

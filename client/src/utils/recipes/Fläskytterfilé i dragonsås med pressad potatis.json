@@ -23,62 +23,62 @@
             "ingredients": [
                 {
                     "amount": 900,
-                    "measurement": "g",
+                    "measurement": "G",
                     "name": "potatis"
                 },
                 {
                     "amount": 250,
-                    "measurement": "g",
+                    "measurement": "G",
                     "name": "broccoli"
                 },
                 {
                     "amount": 650,
-                    "measurement": "g",
+                    "measurement": "G",
                     "name": "fläskytterfilé"
                 },
                 {
                     "amount": 1,
-                    "measurement": "tsk",
+                    "measurement": "TSP",
                     "name": "olja"
                 },
                 {
                     "amount": 0,
-                    "measurement": "-",
+                    "measurement": "NONE",
                     "name": "salt"
                 },
                 {
                     "amount": 0,
-                    "measurement": "-",
-                    "name": "peppar"
+                    "measurement": "NONE",
+                    "name": "svartpeppar"
                 },
                 {
                     "amount": 2.5,
-                    "measurement": "dl",
+                    "measurement": "DL",
                     "name": "vispgrädde"
                 },
                 {
                     "amount": 2,
-                    "measurement": "tsk",
+                    "measurement": "TSP",
                     "name": "majsstärkelse"
                 },
                 {
                     "amount": 2,
-                    "measurement": "dl",
+                    "measurement": "DL",
                     "name": "mjölk"
                 },
                 {
                     "amount": 1,
-                    "measurement": "-",
-                    "name": "köttbuljongtärning"
+                    "measurement": "PCS",
+                    "name": "köttbuljongtärningar"
                 },
                 {
                     "amount": 1,
-                    "measurement": "msk",
+                    "measurement": "TBSP",
                     "name": "vitvinsvinäger"
                 },
                 {
                     "amount": 2,
-                    "measurement": "tsk",
+                    "measurement": "TSP",
                     "name": "torkad dragon"
                 }
             ]

@@ -20,57 +20,57 @@
             "ingredients": [
                 {
                     "amount": 800,
-                    "measurement": "g",
-                    "name": "blandade tärnade skalade rotfrukter (t ex potatis, rotselleri och palsternacka)"
+                    "measurement": "G",
+                    "name": "rotfrukter"
                 },
                 {
                     "amount": 2,
-                    "measurement": "-",
-                    "name": "små gula lökar"
+                    "measurement": "PCS",
+                    "name": "gullök"
                 },
                 {
                     "amount": 2,
-                    "measurement": "-",
+                    "measurement": "PCS",
                     "name": "vitlöksklyftor"
                 },
                 {
                     "amount": 2,
-                    "measurement": "msk",
+                    "measurement": "TBSP",
                     "name": "olivolja"
                 },
                 {
                     "amount": 1,
-                    "measurement": "msk",
-                    "name": "hackad färsk timjan (1 msk färsk motsvarar ca 1 tsk torkad)"
+                    "measurement": "TBSP",
+                    "name": "timjan"
                 },
                 {
                     "amount": 2,
-                    "measurement": "-",
+                    "measurement": "PCS",
                     "name": "grönsaksbuljongtärningar"
                 },
                 {
                     "amount": 8,
-                    "measurement": "dl",
+                    "measurement": "DL",
                     "name": "vatten"
                 },
                 {
                     "amount": 1,
-                    "measurement": "dl",
+                    "measurement": "DL",
                     "name": "vispgrädde"
                 },
                 {
                     "amount": 1,
-                    "measurement": "msk",
-                    "name": "vit- eller äppelcidervinäger"
+                    "measurement": "TBSP",
+                    "name": "äppelcidervinäger"
                 },
                 {
                     "amount": 0,
-                    "measurement": "-",
+                    "measurement": "NONE",
                     "name": "salt"
                 },
                 {
                     "amount": 0,
-                    "measurement": "-",
+                    "measurement": "NONE",
                     "name": "svartpeppar"
                 }
             ]
@@ -79,17 +79,17 @@
             "ingredients": [
                 {
                     "amount": 0,
-                    "measurement": "-",
+                    "measurement": "NONE",
                     "name": "färsk timjan"
                 },
                 {
                     "amount": 0,
-                    "measurement": "-",
+                    "measurement": "NONE",
                     "name": "olivolja"
                 },
                 {
                     "amount": 0,
-                    "measurement": "-",
+                    "measurement": "NONE",
                     "name": "svartpeppar"
                 }
             ],

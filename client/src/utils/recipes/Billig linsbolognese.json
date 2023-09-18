@@ -22,67 +22,67 @@
             "ingredients": [
                 {
                     "amount": 3,
-                    "measurement": "-",
-                    "name": "gula lökar"
+                    "measurement": "PCS",
+                    "name": "gullök"
                 },
                 {
                     "amount": 3,
-                    "measurement": "-",
+                    "measurement": "PCS",
                     "name": "vitlöksklyftor"
                 },
                 {
-                    "amount": 3,
-                    "measurement": "-",
-                    "name": "morötter (à ca 100 g)"
+                    "amount": 100,
+                    "measurement": "G",
+                    "name": "morot"
                 },
                 {
                     "amount": 4,
-                    "measurement": "msk",
+                    "measurement": "TBSP",
                     "name": "matolja"
                 },
                 {
                     "amount": 1,
-                    "measurement": "dl",
+                    "measurement": "DL",
                     "name": "tomatpuré"
                 },
                 {
                     "amount": 1,
-                    "measurement": "msk",
-                    "name": "torkad rosmarin eller timjan"
+                    "measurement": "TBSP",
+                    "name": "rosmarin"
                 },
                 {
-                    "amount": 3,
-                    "measurement": "-",
-                    "name": "förp krossade tomater (à ca 500 g)"
+                    "amount": 500,
+                    "measurement": "G",
+                    "name": "krossade tomater"
                 },
                 {
                     "amount": 4,
-                    "measurement": "-",
+                    "measurement": "PCS",
                     "name": "grönsaksbuljongtärningar"
                 },
                 {
                     "amount": 3,
-                    "measurement": "msk",
+                    "measurement": "TBSP",
                     "name": "japansk soja"
                 },
                 {
                     "amount": 6,
-                    "measurement": "dl",
+                    "measurement": "DL",
                     "name": "vatten"
                 },
                 {
-                    "amount": 3,
-                    "measurement": "-",
-                    "name": "förp kokta linser (à ca 500 g)"
+                    "amount": 500,
+                    "measurement": "G",
+                    "name": "kokta linser"
                 },
                 {
                     "amount": 0,
-                    "measurement": "-",
+                    "measurement": "NONE",
                     "name": "salt"
                 },
                 {
                     "amount": 0,
-                    "measurement": "-",
+                    "measurement": "NONE",
                     "name": "svartpeppar"
                 }
             ],
@@ -92,8 +92,8 @@
             "ingredients": [
                 {
                     "amount": 10,
-                    "measurement": "-",
-                    "name": "port pasta (gärna penne)"
+                    "measurement": "SERV",
+                    "name": "penne"
                 }
             ]
         }

@@ -25,32 +25,32 @@
             "ingredients": [
                 {
                     "amount": 1,
-                    "measurement": "dl",
+                    "measurement": "DL",
                     "name": "risvinäger"
                 },
                 {
                     "amount": 3,
-                    "measurement": "msk",
+                    "measurement": "TBSP",
                     "name": "strösocker"
                 },
                 {
                     "amount": 0.5,
-                    "measurement": "tsk",
+                    "measurement": "TSP",
                     "name": "salt"
                 },
                 {
                     "amount": 1,
-                    "measurement": "-",
+                    "measurement": "PCS",
                     "name": "morot"
                 },
                 {
                     "amount": 10,
-                    "measurement": "g",
+                    "measurement": "G",
                     "name": "rättika"
                 },
                 {
                     "amount": 0.5,
-                    "measurement": "-",
+                    "measurement": "PCS",
                     "name": "rödlök"
                 }
             ],
@@ -60,42 +60,42 @@
             "ingredients": [
                 {
                     "amount": 4,
-                    "measurement": "-",
+                    "measurement": "PCS",
                     "name": "vitlöksklyftor"
                 },
                 {
                     "amount": 1,
-                    "measurement": "msk",
+                    "measurement": "TBSP",
                     "name": "neutral olja"
                 },
                 {
                     "amount": 1.5,
-                    "measurement": "msk",
+                    "measurement": "TBSP",
                     "name": "japansk soja"
                 },
                 {
                     "amount": 2,
-                    "measurement": "-",
-                    "name": "gochujang (eller 2 msk sriracha och 1 msk misopaste, för 4 port)"
+                    "measurement": "TBSP",
+                    "name": "gochujang"
                 },
                 {
                     "amount": 0.5,
-                    "measurement": "dl",
+                    "measurement": "DL",
                     "name": "honung"
                 },
                 {
                     "amount": 2,
-                    "measurement": "msk",
+                    "measurement": "TBSP",
                     "name": "risvinäger"
                 },
                 {
                     "amount": 1,
-                    "measurement": "dl",
+                    "measurement": "DL",
                     "name": "farinsocker"
                 },
                 {
                     "amount": 3,
-                    "measurement": "msk",
+                    "measurement": "TBSP",
                     "name": "ketchup"
                 }
             ],
@@ -105,22 +105,22 @@
             "ingredients": [
                 {
                     "amount": 1,
-                    "measurement": "dl",
+                    "measurement": "DL",
                     "name": "vetemjöl"
                 },
                 {
                     "amount": 1,
-                    "measurement": "tsk",
+                    "measurement": "TSP",
                     "name": "majsstärkelse"
                 },
                 {
                     "amount": 1,
-                    "measurement": "krm",
+                    "measurement": "KRM",
                     "name": "bakpulver"
                 },
                 {
                     "amount": 3,
-                    "measurement": "dl",
+                    "measurement": "DL",
                     "name": "iskallt vatten"
                 }
             ],
@@ -130,33 +130,33 @@
             "ingredients": [
                 {
                     "amount": 2,
-                    "measurement": "msk",
+                    "measurement": "TBSP",
                     "name": "majsstärkelse"
                 },
                 {
                     "amount": 2,
-                    "measurement": "tsk",
+                    "measurement": "TSP",
                     "name": "vitlökspulver"
                 },
                 {
                     "amount": 2,
-                    "measurement": "tsk",
-                    "name": "gochugaru, koreansk chili (eller se tips)"
+                    "measurement": "TSP",
+                    "name": "gochugaru"
                 },
                 {
                     "amount": 1,
-                    "measurement": "tsk",
+                    "measurement": "TSP",
                     "name": "salt"
                 },
                 {
                     "amount": 600,
-                    "measurement": "g",
+                    "measurement": "G",
                     "name": "kycklinglårfilé"
                 },
                 {
                     "amount": 1,
-                    "measurement": "l",
-                    "name": "neutral olja (till fritering)"
+                    "measurement": "L",
+                    "name": "frityrolja"
                 }
             ],
             "name": "Kyckling"
@@ -165,18 +165,18 @@
             "ingredients": [
                 {
                     "amount": 2,
-                    "measurement": "msk",
-                    "name": "rostade sesamfrön"
+                    "measurement": "TBSP",
+                    "name": "sesamfrön"
                 },
                 {
                     "amount": 1,
-                    "measurement": "dl",
-                    "name": "hackade rostade jordnötter"
+                    "measurement": "DL",
+                    "name": "jordnötter"
                 },
                 {
-                    "amount": 0,
-                    "measurement": "-",
-                    "name": "kokt ris (gärna jasminris)"
+                    "amount": 4,
+                    "measurement": "SERV",
+                    "name": "jasmineris"
                 }
             ],
             "name": "Till servering"

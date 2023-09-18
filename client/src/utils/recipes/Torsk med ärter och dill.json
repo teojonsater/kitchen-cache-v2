@@ -25,12 +25,12 @@
             "ingredients": [
                 {
                     "amount": 900,
-                    "measurement": "g",
+                    "measurement": "G",
                     "name": "mjölig potatis"
                 },
                 {
                     "amount": 2,
-                    "measurement": "dl",
+                    "measurement": "DL",
                     "name": "mjölk"
                 }
             ],
@@ -40,33 +40,33 @@
             "ingredients": [
                 {
                     "amount": 600,
-                    "measurement": "g",
+                    "measurement": "G",
                     "name": "torskfilé"
                 },
                 {
                     "amount": 0,
-                    "measurement": "-",
+                    "measurement": "NONE",
                     "name": "salt"
                 },
                 {
                     "amount": 0,
-                    "measurement": "-",
-                    "name": "peppar"
+                    "measurement": "NONE",
+                    "name": "svartpeppar"
                 },
                 {
-                    "amount": 1,
-                    "measurement": "-",
-                    "name": "ask färsk dill (à 20 g)"
+                    "amount": 20,
+                    "measurement": "G",
+                    "name": "dill"
                 },
                 {
                     "amount": 50,
-                    "measurement": "g",
+                    "measurement": "G",
                     "name": "smör"
                 },
                 {
                     "amount": 250,
-                    "measurement": "g",
-                    "name": "frysta gröna ärtor"
+                    "measurement": "G",
+                    "name": "gröna ärtor"
                 }
             ],
             "name": "Fisk och ärter"

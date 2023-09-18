@@ -22,67 +22,72 @@
             "ingredients": [
                 {
                     "amount": 4,
-                    "measurement": "-",
-                    "name": "port ris"
-                },
-                {
-                    "amount": 4,
-                    "measurement": "-",
-                    "name": "kycklingfiléer"
-                },
-                {
-                    "amount": 2,
-                    "measurement": "-",
-                    "name": "rödlökar"
+                    "measurement": "SERV",
+                    "name": "ris"
                 },
                 {
                     "amount": 1,
-                    "measurement": "-",
+                    "measurement": "KG",
+                    "name": "kycklingfilé"
+                },
+                {
+                    "amount": 2,
+                    "measurement": "PCS",
+                    "name": "rödlök"
+                },
+                {
+                    "amount": 1,
+                    "measurement": "PCS",
                     "name": "äpple"
                 },
                 {
                     "amount": 1,
-                    "measurement": "msk",
+                    "measurement": "TBSP",
                     "name": "olja"
                 },
                 {
                     "amount": 0,
-                    "measurement": "-",
-                    "name": "salt och peppar"
+                    "measurement": "NONE",
+                    "name": "salt"
+                },
+                {
+                    "amount": 0,
+                    "measurement": "NONE",
+                    "name": "svartpeppar"
                 },
                 {
                     "amount": 2,
-                    "measurement": "dl",
+                    "measurement": "DL",
                     "name": "vispgrädde"
                 },
                 {
                     "amount": 2,
-                    "measurement": "tsk",
+                    "measurement": "TSP",
                     "name": "majsstärkelse"
                 },
                 {
                     "amount": 3,
-                    "measurement": "dl",
+                    "measurement": "DL",
                     "name": "äppelcider"
                 },
                 {
                     "amount": 1,
-                    "measurement": "-",
-                    "name": "tärning kycklingbuljong eller motsvarande mängd fond"
+                    "measurement": "PCS",
+                    "name": "kycklingbuljongtärningar"
                 },
                 {
                     "amount": 1,
-                    "measurement": "tsk",
+                    "measurement": "TSP",
                     "name": "dragon"
                 },
                 {
                     "amount": 1,
-                    "measurement": "tsk",
+                    "measurement": "TSP",
                     "name": "vitvinsvinäger"
                 },
                 {
                     "amount": 250,
-                    "measurement": "g",
+                    "measurement": "G",
                     "name": "körsbärstomater"
                 }
             ]

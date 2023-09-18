@@ -23,22 +23,22 @@
             "ingredients": [
                 {
                     "amount": 900,
-                    "measurement": "g",
-                    "name": "potatis (gärna amandine)"
+                    "measurement": "G",
+                    "name": "amandine"
                 },
                 {
                     "amount": 2,
-                    "measurement": "tsk",
+                    "measurement": "TSP",
                     "name": "rapsolja"
                 },
                 {
                     "amount": 0,
-                    "measurement": "-",
+                    "measurement": "NONE",
                     "name": "salt"
                 },
                 {
                     "amount": 0,
-                    "measurement": "-",
+                    "measurement": "NONE",
                     "name": "svartpeppar"
                 }
             ]
@@ -47,82 +47,82 @@
             "ingredients": [
                 {
                     "amount": 1,
-                    "measurement": "-",
-                    "name": "gul lök"
+                    "measurement": "PCS",
+                    "name": "gullök"
                 },
                 {
                     "amount": 1,
-                    "measurement": "-",
-                    "name": "vitlöksklyfta"
+                    "measurement": "PCS",
+                    "name": "vitlöksklyftor"
                 },
                 {
                     "amount": 2,
-                    "measurement": "msk",
+                    "measurement": "TBSP",
                     "name": "olivolja"
                 },
                 {
                     "amount": 1,
-                    "measurement": "tsk",
+                    "measurement": "TSP",
                     "name": "timjan"
                 },
                 {
                     "amount": 1,
-                    "measurement": "tsk",
+                    "measurement": "TSP",
                     "name": "oregano"
                 },
                 {
                     "amount": 1,
-                    "measurement": "tsk",
+                    "measurement": "TSP",
                     "name": "rosmarin"
                 },
                 {
                     "amount": 390,
-                    "measurement": "g",
+                    "measurement": "G",
                     "name": "krossade tomater"
                 },
                 {
                     "amount": 390,
-                    "measurement": "g",
+                    "measurement": "G",
                     "name": "pastasås med tomat och basilika"
                 },
                 {
                     "amount": 1,
-                    "measurement": "dl",
+                    "measurement": "DL",
                     "name": "vatten"
                 },
                 {
                     "amount": 1,
-                    "measurement": "tsk",
+                    "measurement": "TSP",
                     "name": "vitvinsvinäger"
                 },
                 {
                     "amount": 1,
-                    "measurement": "-",
-                    "name": "grönsaksbuljongtärning"
+                    "measurement": "PCS",
+                    "name": "grönsaksbuljongtärningar"
                 },
                 {
                     "amount": 250,
-                    "measurement": "g",
+                    "measurement": "G",
                     "name": "körsbärstomater"
                 },
                 {
-                    "amount": 2,
-                    "measurement": "-",
-                    "name": "förp, stekt & skivad minutfilé av kyckling à 200 g (gärna classic)"
+                    "amount": 400,
+                    "measurement": "G",
+                    "name": "kycklingfilé"
                 },
                 {
                     "amount": 0.5,
-                    "measurement": "-",
-                    "name": "kruka persilja"
+                    "measurement": "PACK",
+                    "name": "persilja"
                 },
                 {
                     "amount": 1,
-                    "measurement": "dl",
+                    "measurement": "DL",
                     "name": "smetana"
                 },
                 {
                     "amount": 1,
-                    "measurement": "tsk",
+                    "measurement": "TSP",
                     "name": "dijonsenap"
                 }
             ],

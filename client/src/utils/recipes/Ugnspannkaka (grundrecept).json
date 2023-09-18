@@ -22,33 +22,33 @@
             "ingredients": [
                 {
                     "amount": 4,
-                    "measurement": "dl",
+                    "measurement": "DL",
                     "name": "vetemjöl"
                 },
                 {
                     "amount": 1,
-                    "measurement": "tsk",
+                    "measurement": "TSP",
                     "name": "strösocker"
                 },
                 {
                     "amount": 1,
-                    "measurement": "tsk",
+                    "measurement": "TSP",
                     "name": "salt"
                 },
                 {
                     "amount": 8,
-                    "measurement": "dl",
-                    "name": "mjölk (3 %)"
+                    "measurement": "DL",
+                    "name": "standardmjölk"
                 },
                 {
                     "amount": 4,
-                    "measurement": "-",
+                    "measurement": "PCS",
                     "name": "ägg"
                 },
                 {
                     "amount": 0,
-                    "measurement": "-",
-                    "name": "smör (till formen)"
+                    "measurement": "NONE",
+                    "name": "smör"
                 }
             ]
         }

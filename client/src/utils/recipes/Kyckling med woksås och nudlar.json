@@ -22,48 +22,48 @@
             "ingredients": [
                 {
                     "amount": 4,
-                    "measurement": "-",
-                    "name": "port äggnudlar eller ris"
+                    "measurement": "SERV",
+                    "name": "äggnudlar"
                 },
                 {
                     "amount": 600,
-                    "measurement": "g",
-                    "name": "strimlad kycklingfilé"
+                    "measurement": "G",
+                    "name": "kycklingfilé"
                 },
                 {
                     "amount": 1,
-                    "measurement": "msk",
+                    "measurement": "TBSP",
                     "name": "olja"
                 },
                 {
                     "amount": 0,
-                    "measurement": "-",
+                    "measurement": "NONE",
                     "name": "salt"
                 },
                 {
                     "amount": 0,
-                    "measurement": "-",
-                    "name": "peppar"
+                    "measurement": "NONE",
+                    "name": "svartpeppar"
                 },
                 {
                     "amount": 500,
-                    "measurement": "g",
+                    "measurement": "G",
                     "name": "wokgrönsaker"
                 },
                 {
                     "amount": 250,
-                    "measurement": "g",
-                    "name": "woksås (gärna asian woksauce teriyaki)"
+                    "measurement": "G",
+                    "name": "teriyakisås"
                 },
                 {
                     "amount": 1,
-                    "measurement": "-",
+                    "measurement": "PCS",
                     "name": "lime"
                 },
                 {
                     "amount": 1,
-                    "measurement": "msk",
-                    "name": "sesamfrö"
+                    "measurement": "TBSP",
+                    "name": "sesamfrön"
                 }
             ]
         }

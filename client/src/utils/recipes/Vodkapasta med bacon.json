@@ -27,67 +27,67 @@
             "ingredients": [
                 {
                     "amount": 2,
-                    "measurement": "-",
-                    "name": "schalottenlökar"
+                    "measurement": "PCS",
+                    "name": "schalottenlök"
                 },
                 {
                     "amount": 1,
-                    "measurement": "-",
-                    "name": "vitlöksklyfta"
+                    "measurement": "PCS",
+                    "name": "vitlöksklyftor"
+                },
+                {
+                    "amount": 280,
+                    "measurement": "G",
+                    "name": "bacon"
                 },
                 {
                     "amount": 2,
-                    "measurement": "-",
-                    "name": "pkt bacon (à 140 g)"
-                },
-                {
-                    "amount": 2,
-                    "measurement": "-",
+                    "measurement": "PCS",
                     "name": "tomater"
                 },
                 {
                     "amount": 1,
-                    "measurement": "krm",
+                    "measurement": "KRM",
                     "name": "chiliflakes"
                 },
                 {
                     "amount": 2,
-                    "measurement": "msk",
+                    "measurement": "TBSP",
                     "name": "tomatpuré"
                 },
                 {
                     "amount": 1,
-                    "measurement": "dl",
+                    "measurement": "DL",
                     "name": "vodka"
                 },
                 {
                     "amount": 2,
-                    "measurement": "dl",
+                    "measurement": "DL",
                     "name": "vispgrädde"
                 },
                 {
                     "amount": 0,
-                    "measurement": "-",
+                    "measurement": "NONE",
                     "name": "salt"
                 },
                 {
                     "amount": 0,
-                    "measurement": "-",
+                    "measurement": "NONE",
                     "name": "svartpeppar"
                 },
                 {
                     "amount": 1,
-                    "measurement": "-",
-                    "name": "kruka bladpersilja"
+                    "measurement": "PACK",
+                    "name": "bladpersilja"
                 },
                 {
                     "amount": 4,
-                    "measurement": "-",
-                    "name": "port pasta (gärna penne)"
+                    "measurement": "SERV",
+                    "name": "penne"
                 },
                 {
                     "amount": 1,
-                    "measurement": "dl",
+                    "measurement": "DL",
                     "name": "kokvatten från pastan"
                 }
             ]
@@ -96,13 +96,13 @@
             "ingredients": [
                 {
                     "amount": 0,
-                    "measurement": "-",
-                    "name": "hyvlad parmesan"
+                    "measurement": "NONE",
+                    "name": "riven parmesan"
                 },
                 {
                     "amount": 0,
-                    "measurement": "-",
-                    "name": "nymalen svartpeppar"
+                    "measurement": "NONE",
+                    "name": "svartpeppar"
                 }
             ],
             "name": "Till servering"

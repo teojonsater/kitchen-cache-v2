@@ -22,58 +22,58 @@
         {
             "ingredients": [
                 {
-                    "amount": 3,
-                    "measurement": "-",
-                    "name": "morötter (à ca 100 g)"
+                    "amount": 100,
+                    "measurement": "G",
+                    "name": "morot"
                 },
                 {
                     "amount": 1,
-                    "measurement": "-",
-                    "name": "gul lök"
+                    "measurement": "PCS",
+                    "name": "gullök"
                 },
                 {
                     "amount": 1,
-                    "measurement": "-",
-                    "name": "vitlöksklyfta"
+                    "measurement": "PCS",
+                    "name": "vitlöksklyftor"
                 },
                 {
                     "amount": 400,
-                    "measurement": "g",
+                    "measurement": "G",
                     "name": "falukorv"
                 },
                 {
                     "amount": 10,
-                    "measurement": "dl",
-                    "name": "grönsaksbuljong (vatten och tärningar eller fond)"
+                    "measurement": "DL",
+                    "name": "grönsaksbuljong"
                 },
                 {
                     "amount": 1,
-                    "measurement": "tsk",
-                    "name": "torkad rosmarin"
+                    "measurement": "TSP",
+                    "name": "rosmarin"
                 },
                 {
-                    "amount": 1,
-                    "measurement": "-",
-                    "name": "förp kokta stora vita bönor (à ca 400 g)"
+                    "amount": 400,
+                    "measurement": "G",
+                    "name": "kokta vita bönor"
                 },
                 {
                     "amount": 2,
-                    "measurement": "dl",
-                    "name": "pasta (gärna makaroner)"
+                    "measurement": "DL",
+                    "name": "makaroner"
                 },
                 {
                     "amount": 3,
-                    "measurement": "msk",
+                    "measurement": "TBSP",
                     "name": "basilikapesto"
                 },
                 {
                     "amount": 0,
-                    "measurement": "-",
+                    "measurement": "NONE",
                     "name": "salt"
                 },
                 {
                     "amount": 0,
-                    "measurement": "-",
+                    "measurement": "NONE",
                     "name": "svartpeppar"
                 }
             ]
@@ -82,7 +82,7 @@
             "ingredients": [
                 {
                     "amount": 0,
-                    "measurement": "-",
+                    "measurement": "NONE",
                     "name": "bröd"
                 }
             ],

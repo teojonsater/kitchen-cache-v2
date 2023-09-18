@@ -20,48 +20,53 @@
             "ingredients": [
                 {
                     "amount": 2,
-                    "measurement": "-",
-                    "name": "port ris eller kokt potatis"
+                    "measurement": "SERV",
+                    "name": "ris"
                 },
                 {
                     "amount": 250,
-                    "measurement": "g",
+                    "measurement": "G",
                     "name": "champinjoner"
                 },
                 {
                     "amount": 140,
-                    "measurement": "g",
-                    "name": "tärnat bacon"
+                    "measurement": "G",
+                    "name": "bacon"
                 },
                 {
                     "amount": 300,
-                    "measurement": "g",
-                    "name": "strimlad kycklingfilé"
+                    "measurement": "G",
+                    "name": "kycklingfilé"
                 },
                 {
                     "amount": 1,
-                    "measurement": "tsk",
+                    "measurement": "TSP",
                     "name": "smör"
                 },
                 {
                     "amount": 0,
-                    "measurement": "-",
-                    "name": "salt och peppar"
+                    "measurement": "NONE",
+                    "name": "salt"
+                },
+                {
+                    "amount": 0,
+                    "measurement": "NONE",
+                    "name": "svartpeppar"
                 },
                 {
                     "amount": 1,
-                    "measurement": "dl",
+                    "measurement": "DL",
                     "name": "vatten"
                 },
                 {
                     "amount": 2,
-                    "measurement": "dl",
+                    "measurement": "DL",
                     "name": "rödvinssås"
                 },
                 {
-                    "amount": 0.5,
-                    "measurement": "-",
-                    "name": "ask färsk persilja (à 20 g)"
+                    "amount": 20,
+                    "measurement": "G",
+                    "name": "persilja"
                 }
             ]
         }

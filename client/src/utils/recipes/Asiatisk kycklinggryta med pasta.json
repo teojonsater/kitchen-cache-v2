@@ -25,27 +25,27 @@
             "ingredients": [
                 {
                     "amount": 1,
-                    "measurement": "msk",
+                    "measurement": "TBSB",
                     "name": "hoisinsås"
                 },
                 {
                     "amount": 1,
-                    "measurement": "dl",
+                    "measurement": "DL",
                     "name": "jordnötssmör"
                 },
                 {
                     "amount": 2,
-                    "measurement": "msk",
+                    "measurement": "TBSB",
                     "name": "sesamolja"
                 },
                 {
                     "amount": 2,
-                    "measurement": "msk",
-                    "name": "mirin (risvin)"
+                    "measurement": "TBSB",
+                    "name": "mirin"
                 },
                 {
                     "amount": 2,
-                    "measurement": "msk",
+                    "measurement": "TBSB",
                     "name": "japansk soja"
                 }
             ],
@@ -55,47 +55,47 @@
             "ingredients": [
                 {
                     "amount": 250,
-                    "measurement": "g",
+                    "measurement": "G",
                     "name": "champinjoner"
                 },
                 {
                     "amount": 1,
-                    "measurement": "-",
-                    "name": "gul lök"
+                    "measurement": "PCS",
+                    "name": "gullök"
                 },
                 {
                     "amount": 6,
-                    "measurement": "-",
+                    "measurement": "PCS",
                     "name": "vitlöksklyftor"
                 },
                 {
                     "amount": 4,
-                    "measurement": "msk",
+                    "measurement": "TBSB",
                     "name": "färsk ingefära"
                 },
                 {
-                    "amount": 1,
-                    "measurement": "-",
-                    "name": "förp gräslök (à 20 g)"
+                    "amount": 20,
+                    "measurement": "G",
+                    "name": "gräslök"
                 },
                 {
                     "amount": 2,
-                    "measurement": "msk",
+                    "measurement": "TBSB",
                     "name": "neutral rapsolja"
                 },
                 {
-                    "amount": 1,
-                    "measurement": "-",
-                    "name": "förp kycklingfärs (à 800 g)"
+                    "amount": 800,
+                    "measurement": "G",
+                    "name": "kycklingfärs"
                 },
                 {
                     "amount": 1,
-                    "measurement": "msk",
+                    "measurement": "TBSB",
                     "name": "chiliflakes"
                 },
                 {
                     "amount": 2,
-                    "measurement": "tsk",
+                    "measurement": "TSP",
                     "name": "salt"
                 }
             ]
@@ -103,14 +103,14 @@
         {
             "ingredients": [
                 {
-                    "amount": 2,
-                    "measurement": "-",
-                    "name": "förp färsk pasta gärna fettuchine (à 250 g)"
+                    "amount": 250,
+                    "measurement": "G",
+                    "name": "fettuchine"
                 },
                 {
-                    "amount": 2,
-                    "measurement": "-",
-                    "name": "förp babyspenat (à 65 g)"
+                    "amount": 65,
+                    "measurement": "G",
+                    "name": "babyspenat"
                 }
             ]
         }

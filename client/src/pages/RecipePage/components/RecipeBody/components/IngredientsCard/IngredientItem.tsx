@@ -1,6 +1,7 @@
 import React from "react";
 import { ListItem } from "@chakra-ui/react";
 import { convertToMetric } from "../../../../../../utils/measurements";
+import MeasurementUnit from "../../../../../../utils/measurements/MeasurementUnit";
 
 interface Props {
 	amount: number;
@@ -24,26 +25,15 @@ function IngredientItem({
 			((amount / originalServings) * alteredServings + Number.EPSILON) *
 				100,
 		) / 100;
-	let changedServingMeasurement = measurement;
-
-	if (useMetric) {
-		// Convert to metric
-		const amountMeasurement = convertToMetric(
-			changedServingAmount,
-			measurement,
-		);
-
-		if (amountMeasurement) {
-			changedServingAmount = amountMeasurement[0];
-			changedServingMeasurement = amountMeasurement[1];
-		}
-	}
 
 	return (
 		<ListItem>
 			<b>
 				{amount > 0 && changedServingAmount}{" "}
-				{measurement != "-" && changedServingMeasurement}
+				{measurement !== "NONE" &&
+					MeasurementUnit[
+						measurement as unknown as keyof typeof MeasurementUnit
+					]}
 			</b>{" "}
 			{ingredient}
 		</ListItem>

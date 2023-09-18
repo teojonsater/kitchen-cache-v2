@@ -1,27 +1,29 @@
-type MetricUnit = "ml" | "dl" | "g";
+import MeasurementUnit from "./measurements/MeasurementUnit";
+
+type MetricUnit = MeasurementUnit.ML | MeasurementUnit.DL | MeasurementUnit.G;
 
 function convertToMetric(
 	amount: number,
-	imperialUnit: string,
+	imperialUnit: MeasurementUnit,
 ): [number, MetricUnit] | undefined {
 	let metricAmount: number;
 	let metricUnit: MetricUnit | undefined = undefined;
 
 	switch (imperialUnit) {
-		case "cup":
+		case MeasurementUnit.CUP:
 			metricAmount =
 				Math.round((amount * 2.36588 + Number.EPSILON) * 100) / 100; // 1 cup = 236.588 ml
-			metricUnit = "dl";
+			metricUnit = MeasurementUnit.DL;
 			break;
-		case "floz":
+		case MeasurementUnit.FLOZ:
 			metricAmount =
 				Math.round((amount * 29.5735 + Number.EPSILON) * 100) / 100; // 1 fl oz = 29.5735 ml
-			metricUnit = "ml";
+			metricUnit = MeasurementUnit.ML;
 			break;
-		case "oz":
+		case MeasurementUnit.OZ:
 			metricAmount =
 				Math.round((amount * 28.3495 + Number.EPSILON) * 100) / 100; // 1 oz = 28.3495 g
-			metricUnit = "g";
+			metricUnit = MeasurementUnit.G;
 			break;
 		default:
 			return undefined; // Invalid input unit

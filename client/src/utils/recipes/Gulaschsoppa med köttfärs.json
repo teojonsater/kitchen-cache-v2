@@ -20,48 +20,48 @@
             "ingredients": [
                 {
                     "amount": 1,
-                    "measurement": "-",
-                    "name": "gul lök"
+                    "measurement": "PCS",
+                    "name": "gullök"
                 },
                 {
-                    "amount": 4,
-                    "measurement": "-",
-                    "name": "potatisar"
+                    "amount": 320,
+                    "measurement": "G",
+                    "name": "potatis"
                 },
                 {
                     "amount": 1,
-                    "measurement": "-",
+                    "measurement": "PCS",
                     "name": "paprika"
                 },
                 {
                     "amount": 2,
-                    "measurement": "msk",
+                    "measurement": "TBSP",
                     "name": "olja"
                 },
                 {
                     "amount": 500,
-                    "measurement": "g",
+                    "measurement": "G",
                     "name": "köttfärs"
                 },
                 {
                     "amount": 6,
-                    "measurement": "dl",
+                    "measurement": "DL",
                     "name": "vatten"
                 },
                 {
                     "amount": 1,
-                    "measurement": "-",
-                    "name": "köttbuljongtärning"
+                    "measurement": "PCS",
+                    "name": "köttbuljongtärningar"
                 },
                 {
                     "amount": 500,
-                    "measurement": "g",
+                    "measurement": "G",
                     "name": "krossade tomater"
                 },
                 {
                     "amount": 2,
-                    "measurement": "tsk",
-                    "name": "malen kummin"
+                    "measurement": "TSP",
+                    "name": "kummin"
                 },
                 {
                     "amount": 0,
@@ -71,7 +71,7 @@
                 {
                     "amount": 0,
                     "measurement": "-",
-                    "name": "peppar"
+                    "name": "svartpeppar"
                 }
             ]
         },
@@ -85,7 +85,7 @@
                 {
                     "amount": 0,
                     "measurement": "-",
-                    "name": "ev varmt vitlöksbröd"
+                    "name": "vitlöksbröd"
                 }
             ],
             "name": "Till servering"

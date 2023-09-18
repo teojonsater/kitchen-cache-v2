@@ -1,5 +1,4 @@
 import React from "react";
-import type { ChangeEvent } from "react";
 import { Button, Icon, Text } from "@chakra-ui/react";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 

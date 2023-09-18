@@ -1,5 +1,4 @@
 import React from "react";
-import type { ChangeEvent } from "react";
 import {
 	Card,
 	CardBody,

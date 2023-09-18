@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Heading, Text, VStack } from "@chakra-ui/react";
 
 function NoSearchResults() {

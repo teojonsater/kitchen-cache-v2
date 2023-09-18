@@ -31,7 +31,7 @@ function AddRecipeBtn({ onAddRecipe, day }: Props) {
 
 	const [modalSearchQuery, setModalSearchQuery] = useState<string>("");
 
-	const [allRecipes, setAllRecipes] = useState<RecipeObject[]>(dummyRecipes);
+	const [allRecipes] = useState<RecipeObject[]>(dummyRecipes);
 
 	const handleModalSearchQueryChange = (
 		event: ChangeEvent<HTMLInputElement>,

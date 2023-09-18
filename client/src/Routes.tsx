@@ -11,6 +11,7 @@ import CreateRecipePage from "./pages/CreateRecipePage";
 import { Heading } from "@chakra-ui/react";
 import AllRecipesPage from "./pages/AllRecipesPage";
 import WeekMenuPage from "./pages/WeekMenuPage";
+import WeekMenuIngredientsPage from "./pages/WeekMenuIngredientsPage";
 
 const router = createBrowserRouter(
 	createRoutesFromElements(
@@ -29,7 +30,13 @@ const router = createBrowserRouter(
 				<Route index element={<AllRecipesPage />} />
 				<Route path="new" element={<CreateRecipePage />} />
 			</Route>
-			<Route path="weekmenu" element={<WeekMenuPage />} />
+			<Route path="weekmenu">
+				<Route index element={<WeekMenuPage />} />
+				<Route
+					path="ingredients"
+					element={<WeekMenuIngredientsPage />}
+				/>
+			</Route>
 		</Route>,
 	),
 );

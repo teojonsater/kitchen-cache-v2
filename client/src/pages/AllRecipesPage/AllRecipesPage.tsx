@@ -64,8 +64,6 @@ function AllRecipesPage() {
 				filterCostPerServingValues,
 			),
 		);
-
-		console.log(ingredientFilterSwitch);
 	}, [
 		searchQuery,
 		filteredIngredients,

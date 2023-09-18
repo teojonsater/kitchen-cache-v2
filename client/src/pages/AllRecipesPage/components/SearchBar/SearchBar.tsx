@@ -10,7 +10,6 @@ import {
 import FilterButton from "./FilterButton";
 import sortByOptions from "../../utils/sortByOptions";
 import type RecipeObject from "../../../../interfaces/recipe/RecipeObject";
-import { on } from "events";
 
 interface Props {
 	searchQuery: string;

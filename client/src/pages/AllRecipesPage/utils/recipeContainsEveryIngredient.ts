@@ -1,4 +1,3 @@
-import type RecipeIngredientGroup from "../../../interfaces/recipe/RecipeIngredientGroup";
 import type RecipeObject from "../../../interfaces/recipe/RecipeObject";
 import getAllIngredients from "./getAllIngredients";
 

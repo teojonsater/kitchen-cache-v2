@@ -14,6 +14,7 @@ import type RecipeObject from "../../interfaces/recipe/RecipeObject";
 import { v4 as uuid } from "uuid";
 import type RecipeIngredientGroup from "../../interfaces/recipe/RecipeIngredientGroup";
 import type RecipeIngredient from "../../interfaces/recipe/RecipeIngredient";
+import MeasurementUnit from "../../utils/measurements/MeasurementUnit";
 
 function CreateRecipePage() {
 	const defaultFormValues: Partial<RecipeForm> = {
@@ -24,7 +25,7 @@ function CreateRecipePage() {
 			{
 				formIngredientGroupIngredients: [
 					{
-						formIngredientMeasurement: "-",
+						formIngredientMeasurement: MeasurementUnit.NONE,
 						formIngredientName: "",
 					},
 				],

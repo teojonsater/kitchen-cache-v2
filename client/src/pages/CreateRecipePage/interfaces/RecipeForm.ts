@@ -1,3 +1,5 @@
+import type MeasurementUnit from "../../../utils/measurements/MeasurementUnit";
+
 interface RecipeForm {
 	formName: string;
 	formOriginalRecipe: string;
@@ -10,25 +12,7 @@ interface RecipeForm {
 		formIngredientGroupName?: string;
 		formIngredientGroupIngredients: Array<{
 			formIngredientAmount?: number;
-			formIngredientMeasurement:
-				| "-"
-				| "st"
-				| "förp"
-				| "port"
-				| "kg"
-				| "hg"
-				| "g"
-				| "mg"
-				| "l"
-				| "dl"
-				| "cl"
-				| "ml"
-				| "msk"
-				| "tsk"
-				| "krm"
-				| "cup"
-				| "floz"
-				| "oz";
+			formIngredientMeasurement: MeasurementUnit;
 			formIngredientName: string;
 		}>;
 	}>;

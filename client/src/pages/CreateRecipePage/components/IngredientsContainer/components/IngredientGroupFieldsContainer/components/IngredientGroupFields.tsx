@@ -15,6 +15,7 @@ import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 import { useFieldArray } from "react-hook-form";
 import AddRoundedIcon from "@mui/icons-material/AddRounded";
 import IngredientField from "../../IngredientField";
+import MeasurementUnit from "../../../../../../../utils/measurements/MeasurementUnit";
 
 interface Props {
 	formIngredientGroupFields: any;
@@ -82,7 +83,7 @@ function IngredientGroupFields({
 				onClick={() => {
 					formIngredientGroupIngredientsFields.append({
 						formIngredientName: "",
-						formIngredientMeasurement: "-",
+						formIngredientMeasurement: MeasurementUnit.NONE,
 					});
 				}}
 			>

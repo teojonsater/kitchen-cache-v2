@@ -1,15 +1,14 @@
 import React, { useState } from "react";
-import type { ChangeEvent } from "react";
 import { Button, HStack, Heading, VStack } from "@chakra-ui/react";
-import SelectedWeekController from "./components/SelectedWeekController";
-import getCurrentWeekNumber from "./utils/getCurrentWeekNumber";
+import SelectedWeekController from "../../components/SelectedWeekController";
+import getCurrentWeekNumber from "../../utils/getCurrentWeekNumber";
 import WeekDay from "./components/WeekDay";
-import dummyWeekMenu from "./dummyData/dummyWeekMenu";
-import type WeekMenuDay from "./interfaces/WeekMenuDay";
+import dummyWeekMenu from "../../dummyData/dummyWeekMenu";
+import type WeekMenuDay from "../../interfaces/weekmenu/WeekMenuDay";
 import type RecipeObject from "../../interfaces/recipe/RecipeObject";
-import type WeekMenuRecipe from "./interfaces/WeekMenuRecipe";
+import type WeekMenuRecipe from "../../interfaces/weekmenu/WeekMenuRecipe";
 
-function WeekmenuPage() {
+function WeekMenuPage() {
 	const currentWeekNumber: number = getCurrentWeekNumber();
 
 	const [selectedWeekNumber, setSelectedWeekNumber] =
@@ -104,7 +103,6 @@ function WeekmenuPage() {
 						handleBackToCurrentWeekBtnClick
 					}
 					weekNumber={selectedWeekNumber}
-					currentWeekNumber={currentWeekNumber}
 				/>
 				<Button colorScheme="teal">Spara</Button>
 			</HStack>
@@ -130,4 +128,4 @@ function WeekmenuPage() {
 	);
 }
 
-export default WeekmenuPage;
+export default WeekMenuPage;

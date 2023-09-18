@@ -7,14 +7,12 @@ interface Props {
 	ingredientGroup: RecipeIngredientGroup;
 	originalServings: number;
 	alteredServings: number;
-	useMetric: boolean;
 }
 
 function IngredientGroupBox({
 	ingredientGroup,
 	originalServings,
 	alteredServings,
-	useMetric,
 }: Props) {
 	return (
 		<Box border="1px solid" borderColor="gray.200" borderRadius="lg" p="3">
@@ -27,15 +25,16 @@ function IngredientGroupBox({
 			<UnorderedList spacing="2">
 				{ingredientGroup.ingredients.map((ingredient, index) => {
 					return (
-						<IngredientItem
-							amount={ingredient.amount}
-							measurement={ingredient.measurement}
-							ingredient={ingredient.name}
-							originalServings={originalServings}
-							alteredServings={alteredServings}
-							useMetric={useMetric}
-							key={index}
-						/>
+						<>
+							<IngredientItem
+								amount={ingredient.amount}
+								measurement={ingredient.measurement}
+								ingredient={ingredient.name}
+								originalServings={originalServings}
+								alteredServings={alteredServings}
+								key={index}
+							/>
+						</>
 					);
 				})}
 			</UnorderedList>

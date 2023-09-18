@@ -10,6 +10,9 @@ import {
 	PopoverContent,
 	PopoverTrigger,
 	Link as ChakraLink,
+	Avatar,
+	Spacer,
+	Text,
 } from "@chakra-ui/react";
 import {
 	Link as ReactRouterLink,
@@ -19,6 +22,7 @@ import LogoTextBlack from "../../assets/logo/LogoTextBlack.svg";
 import RestaurantMenuRoundedIcon from "@mui/icons-material/RestaurantMenuRounded";
 import EggOutlinedIcon from "@mui/icons-material/EggOutlined";
 import ListAltRoundedIcon from "@mui/icons-material/ListAltRounded";
+import LogoutRoundedIcon from "@mui/icons-material/LogoutRounded";
 
 function Navbar() {
 	return (
@@ -77,6 +81,34 @@ function Navbar() {
 						Veckomeny
 					</Button>
 				</ChakraLink>
+				<Spacer />
+				<HStack>
+					<Text>Teo Jonsäter</Text>
+					<Popover>
+						<PopoverTrigger>
+							<ChakraLink>
+								<Avatar bg="teal.500" size="sm" />
+							</ChakraLink>
+						</PopoverTrigger>
+						<PopoverContent w="fit-content">
+							<PopoverArrow />
+							<ChakraLink as={ReactRouterNavLink} to="/logout">
+								<Button
+									w="full"
+									colorScheme="red"
+									rightIcon={
+										<Icon
+											as={LogoutRoundedIcon}
+											boxSize="5"
+										/>
+									}
+								>
+									Logga ut
+								</Button>
+							</ChakraLink>
+						</PopoverContent>
+					</Popover>
+				</HStack>
 			</HStack>
 		</HStack>
 	);

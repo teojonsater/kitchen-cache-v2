@@ -12,8 +12,14 @@ import {
 	Tr,
 	VStack,
 } from "@chakra-ui/react";
+import type RecipeIngredient from "../../../../interfaces/recipe/RecipeIngredient";
+import TableRow from "./TableRow";
 
-function IngredientsTable() {
+interface Props {
+	weekMenuIngredients: RecipeIngredient[];
+}
+
+function IngredientsTable({ weekMenuIngredients }: Props) {
 	return (
 		<VStack spacing="8" w="full">
 			<TableContainer w="full">
@@ -38,38 +44,30 @@ function IngredientsTable() {
 									Ingrediens
 								</Heading>
 							</Th>
-							<Th
-								color="black"
-								textTransform="none"
-								as={Flex}
-								justifyContent="flex-end"
-							>
-								<Heading
-									size="md"
-									variant="highlighted"
-									w="fit-content"
-								>
-									Pris
-								</Heading>
+							<Th color="black" textTransform="none">
+								<Flex justifyContent="flex-end">
+									<Heading
+										size="md"
+										variant="highlighted"
+										w="fit-content"
+									>
+										Pris
+									</Heading>
+								</Flex>
 							</Th>
 						</Tr>
 					</Thead>
 					<Tbody>
-						<Tr>
-							<Td fontWeight="bold">3 l</Td>
-							<Td>Mjölk</Td>
-							<Td isNumeric>54.90 kr</Td>
-						</Tr>
-						<Tr>
-							<Td fontWeight="bold">3 kg</Td>
-							<Td>Kycklingfilé</Td>
-							<Td isNumeric>54.90 kr</Td>
-						</Tr>
-						<Tr>
-							<Td fontWeight="bold">4 dl</Td>
-							<Td>Vispgrädde</Td>
-							<Td isNumeric>54.90 kr</Td>
-						</Tr>
+						{weekMenuIngredients
+							.sort((a, b) => a.name.localeCompare(b.name))
+							.map((weekMenuIngredient, index) => {
+								return (
+									<TableRow
+										key={index}
+										weekMenuIngredient={weekMenuIngredient}
+									/>
+								);
+							})}
 					</Tbody>
 					<Tfoot>
 						<Tr>

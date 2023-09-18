@@ -5,7 +5,7 @@ import MeasurementUnit from "../../../../../../utils/measurements/MeasurementUni
 
 interface Props {
 	amount: number;
-	measurement: string;
+	measurement: MeasurementUnit;
 	ingredient: string;
 	originalServings: number;
 	alteredServings: number;
@@ -30,10 +30,7 @@ function IngredientItem({
 		<ListItem>
 			<b>
 				{amount > 0 && changedServingAmount}{" "}
-				{measurement !== "NONE" &&
-					MeasurementUnit[
-						measurement as unknown as keyof typeof MeasurementUnit
-					]}
+				{measurement !== MeasurementUnit.NONE && measurement}
 			</b>{" "}
 			{ingredient}
 		</ListItem>

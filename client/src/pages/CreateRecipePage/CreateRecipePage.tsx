@@ -20,11 +20,14 @@ function CreateRecipePage() {
 		formServings: 4,
 		formCookingTime: 60,
 		formSteps: [{ formStep: "" }],
-		formIngredients: [
+		formIngredientGroups: [
 			{
-				formIngredientAmount: undefined,
-				formIngredientMeasurement: "-",
-				formIngredientName: "",
+				formIngredientGroupIngredients: [
+					{
+						formIngredientMeasurement: "-",
+						formIngredientName: "",
+					},
+				],
 			},
 		],
 	};
@@ -61,20 +64,7 @@ function CreateRecipePage() {
 				}),
 			);
 
-		if (recipeForm.formIngredients.length > 0)
-			ingredientGroups.unshift({
-				ingredients: recipeForm.formIngredients.map(
-					(formIngredient): RecipeIngredient => ({
-						name: formIngredient.formIngredientName,
-						measurement: formIngredient.formIngredientMeasurement,
-						amount: isNaN(formIngredient.formIngredientAmount ?? 0)
-							? 0
-							: formIngredient.formIngredientAmount ?? 0,
-					}),
-				),
-			});
-
-		const recipe: Partial<RecipeObject> = {
+		const recipe: Omit<RecipeObject, "image"> = {
 			id: uuid(),
 			createdAt: new Date(),
 			name: recipeForm.formName,
@@ -86,7 +76,7 @@ function CreateRecipePage() {
 			steps: recipeForm.formSteps.map((step) => step.formStep),
 			ingredientGroups: ingredientGroups,
 		};
-		console.log(recipe);
+		return recipe;
 	};
 
 	const handleFormSubmit = (data: RecipeForm) => {
@@ -106,9 +96,7 @@ function CreateRecipePage() {
 			return;
 		}
 
-		alert(JSON.stringify(data, null, 4));
-		console.log(data);
-		recipeFormToRecipe(data);
+		alert(JSON.stringify(recipeFormToRecipe(data), null, 2));
 	};
 
 	return (

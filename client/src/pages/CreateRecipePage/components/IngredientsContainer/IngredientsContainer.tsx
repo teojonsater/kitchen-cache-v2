@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import React from "react";
 import { Card, CardBody, Divider, FormLabel, VStack } from "@chakra-ui/react";
-import IngredientFieldsContainer from "./components/IngredientFieldsContainer";
 import IngredientGroupFieldsContainer from "./components/IngredientGroupFieldsContainer";
 
 interface Props {
@@ -15,10 +14,6 @@ function IngredientsContainer({ hookFormControl, hookFormRegister }: Props) {
 			<CardBody>
 				<FormLabel>Ingredienser</FormLabel>
 				<VStack align="stretch" spacing="4" divider={<Divider />}>
-					<IngredientFieldsContainer
-						hookFormControl={hookFormControl}
-						hookFormRegister={hookFormRegister}
-					/>
 					<IngredientGroupFieldsContainer
 						hookFormControl={hookFormControl}
 						hookFormRegister={hookFormRegister}

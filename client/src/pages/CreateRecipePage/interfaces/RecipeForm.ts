@@ -6,31 +6,8 @@ interface RecipeForm {
 	formCookingTime: number;
 	formImage: File;
 	formSteps: Array<{ formStep: string }>;
-	formIngredients: Array<{
-		formIngredientAmount?: number;
-		formIngredientMeasurement:
-			| "-"
-			| "st"
-			| "förp"
-			| "port"
-			| "kg"
-			| "hg"
-			| "g"
-			| "mg"
-			| "l"
-			| "dl"
-			| "cl"
-			| "ml"
-			| "msk"
-			| "tsk"
-			| "krm"
-			| "cup"
-			| "floz"
-			| "oz";
-		formIngredientName: string;
-	}>;
 	formIngredientGroups: Array<{
-		formIngredientGroupName: string;
+		formIngredientGroupName?: string;
 		formIngredientGroupIngredients: Array<{
 			formIngredientAmount?: number;
 			formIngredientMeasurement:

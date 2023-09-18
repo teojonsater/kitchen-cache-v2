@@ -36,7 +36,7 @@ function IngredientGroupFields({
 	return (
 		<VStack align="stretch">
 			<HStack>
-				<FormControl isRequired>
+				<FormControl>
 					<Input
 						placeholder={`Gruppnamn ${groupIndex + 1}`}
 						{...hookFormRegister(

@@ -61,7 +61,7 @@ const overrides = {
 		},
 		FormLabel: {
 			baseStyle: {
-				fontWeight: "bold",
+				fontWeight: "semiBold",
 				color: "teal.400",
 			},
 		},

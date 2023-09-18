@@ -21,6 +21,7 @@ interface Props {
 	hookFormRegister: any;
 	hookFormControl: any;
 	groupIndex: number;
+	canRemoveGroup?: boolean;
 }
 
 function IngredientGroupFields({
@@ -28,6 +29,7 @@ function IngredientGroupFields({
 	hookFormRegister,
 	hookFormControl,
 	groupIndex,
+	canRemoveGroup = true,
 }: Props) {
 	const formIngredientGroupIngredientsFields = useFieldArray<RecipeForm>({
 		control: hookFormControl,
@@ -53,6 +55,7 @@ function IngredientGroupFields({
 					onClick={() => {
 						formIngredientGroupFields.remove(groupIndex);
 					}}
+					isDisabled={!canRemoveGroup}
 				/>
 			</HStack>
 			{formIngredientGroupIngredientsFields.fields.map((field, index) => (

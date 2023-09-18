@@ -30,6 +30,9 @@ function IngredientGroupFieldsContainer({
 						formIngredientGroupFields={formIngredientGroupFields}
 						hookFormRegister={hookFormRegister}
 						hookFormControl={hookFormControl}
+						canRemoveGroup={
+							formIngredientGroupFields.fields.length > 1
+						}
 					/>
 				);
 			})}

@@ -62,7 +62,6 @@ function IngredientsCard({ ingredientGroups, servings }: Props) {
 							ingredientGroup={ingredientGroup}
 							originalServings={servings}
 							alteredServings={alteredServings}
-							useMetric={useMetric}
 							key={index}
 						/>
 					))}

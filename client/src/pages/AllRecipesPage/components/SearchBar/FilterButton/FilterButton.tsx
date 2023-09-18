@@ -19,7 +19,6 @@ import IngredientFilter from "./IngredientFilter";
 import TimeFilter from "./TimeFilter";
 import PriceFilter from "./PriceFilter";
 import type RecipeObject from "../../../../../interfaces/recipe/RecipeObject";
-
 interface Props {
 	searchedIngredients: string[];
 	filterIngredientsSearchQuery: string;
@@ -28,13 +27,16 @@ interface Props {
 	) => void;
 	onIngredientFilterChange: (ingredient: string) => void;
 	filteredIngredients: string[];
-	onIngredientFilterSwitchChange: () => void;
+	onRecipeShouldNotContainSwitchChange: () => void;
 	allRecipes: RecipeObject[];
 	filterCookingTimeValues: number[];
 	onFilterCookingTimeValuesChange: (newValues: [number, number]) => void;
 	onClearFilterBtnClick: () => void;
 	filterCostPerServingValues: number[];
 	onFilterCostPerServingValues: (newValues: [number, number]) => void;
+	recipeShouldNotContainSwitch: boolean;
+	onRecipeShouldContainEveryIngredientSwitch: () => void;
+	recipeShouldContainEveryIngredientSwitch: boolean;
 }
 
 function FilterButton({
@@ -43,13 +45,16 @@ function FilterButton({
 	onFilterIngredientsSearchQueryChange,
 	onIngredientFilterChange,
 	filteredIngredients,
-	onIngredientFilterSwitchChange,
+	onRecipeShouldNotContainSwitchChange,
 	allRecipes,
 	filterCookingTimeValues,
 	onFilterCookingTimeValuesChange,
 	onClearFilterBtnClick,
 	filterCostPerServingValues,
 	onFilterCostPerServingValues,
+	recipeShouldNotContainSwitch,
+	onRecipeShouldContainEveryIngredientSwitch,
+	recipeShouldContainEveryIngredientSwitch,
 }: Props) {
 	const drawerDisclosure = useDisclosure();
 
@@ -69,6 +74,7 @@ function FilterButton({
 				placement="right"
 				onClose={drawerDisclosure.onClose}
 				size="sm"
+				blockScrollOnMount={false}
 			>
 				<DrawerContent>
 					<DrawerCloseButton />
@@ -90,8 +96,17 @@ function FilterButton({
 									onIngredientFilterChange
 								}
 								filteredIngredients={filteredIngredients}
-								onIngredientFilterSwitchChange={
-									onIngredientFilterSwitchChange
+								onRecipeShouldNotContainSwitchChange={
+									onRecipeShouldNotContainSwitchChange
+								}
+								recipeShouldNotContainSwitch={
+									recipeShouldNotContainSwitch
+								}
+								onRecipeShouldContainEveryIngredientSwitch={
+									onRecipeShouldContainEveryIngredientSwitch
+								}
+								recipeShouldContainEveryIngredientSwitch={
+									recipeShouldContainEveryIngredientSwitch
 								}
 							/>
 							<TimeFilter

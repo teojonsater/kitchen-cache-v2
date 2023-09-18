@@ -24,7 +24,10 @@ interface Props {
 	) => void;
 	onIngredientFilterChange: (ingredient: string) => void;
 	filteredIngredients: string[];
-	onIngredientFilterSwitchChange: () => void;
+	onRecipeShouldNotContainSwitchChange: () => void;
+	recipeShouldNotContainSwitch: boolean;
+	onRecipeShouldContainEveryIngredientSwitch: () => void;
+	recipeShouldContainEveryIngredientSwitch: boolean;
 }
 
 function IngredientFilter({
@@ -33,7 +36,10 @@ function IngredientFilter({
 	onFilterIngredientsSearchQueryChange,
 	onIngredientFilterChange,
 	filteredIngredients,
-	onIngredientFilterSwitchChange,
+	onRecipeShouldNotContainSwitchChange,
+	recipeShouldNotContainSwitch,
+	onRecipeShouldContainEveryIngredientSwitch,
+	recipeShouldContainEveryIngredientSwitch,
 }: Props) {
 	return (
 		<AccordionItem>
@@ -57,16 +63,35 @@ function IngredientFilter({
 						onChange={onFilterIngredientsSearchQueryChange}
 					/>
 					<FormControl>
-						<HStack>
+						<HStack justifyContent="space-between">
 							<FormLabel mb="0">
 								Receptet ska inte innehålla...
 							</FormLabel>
 							<Switch
-								onChange={onIngredientFilterSwitchChange}
+								isChecked={recipeShouldNotContainSwitch}
+								onChange={onRecipeShouldNotContainSwitchChange}
 								colorScheme="teal"
 							/>
 						</HStack>
 					</FormControl>
+					{!recipeShouldNotContainSwitch && (
+						<FormControl>
+							<HStack justifyContent="space-between">
+								<FormLabel mb="0">
+									Receptet ska innehålla alla ingredienser...
+								</FormLabel>
+								<Switch
+									isChecked={
+										recipeShouldContainEveryIngredientSwitch
+									}
+									onChange={
+										onRecipeShouldContainEveryIngredientSwitch
+									}
+									colorScheme="teal"
+								/>
+							</HStack>
+						</FormControl>
+					)}
 					<VStack w="full" align="start">
 						{searchedIngredients.map((ingredient, index) => (
 							<IngredientItem

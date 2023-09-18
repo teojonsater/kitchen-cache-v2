@@ -38,8 +38,12 @@ function AllRecipesPage() {
 	const [filteredIngredients, setFilteredIngredients] = useState<string[]>(
 		[],
 	);
-	const [ingredientFilterSwitch, setIngredientFilterSwitch] =
+	const [recipeShouldNotContainSwitch, setRecipeShouldNotContainSwitch] =
 		useState<boolean>(false);
+	const [
+		recipeShouldContainEveryIngredientSwitch,
+		setRecipeShouldContainEveryIngredientSwitch,
+	] = useState<boolean>(true);
 	const [filterCookingTimeValues, setFilterCookingTimeValues] = useState<
 		[number, number]
 	>([
@@ -59,17 +63,19 @@ function AllRecipesPage() {
 				dummyRecipes,
 				searchQuery,
 				filteredIngredients,
-				ingredientFilterSwitch,
+				recipeShouldNotContainSwitch,
 				filterCookingTimeValues,
 				filterCostPerServingValues,
+				recipeShouldContainEveryIngredientSwitch,
 			),
 		);
 	}, [
 		searchQuery,
 		filteredIngredients,
-		ingredientFilterSwitch,
+		recipeShouldNotContainSwitch,
 		filterCookingTimeValues,
 		filterCostPerServingValues,
+		recipeShouldContainEveryIngredientSwitch,
 	]);
 
 	useEffect(() => {
@@ -107,8 +113,14 @@ function AllRecipesPage() {
 		}
 	};
 
-	const handleIngredientFilterSwitchChange = () => {
-		setIngredientFilterSwitch(!ingredientFilterSwitch);
+	const handleRecipeShouldNotContainSwitchChange = () => {
+		setRecipeShouldNotContainSwitch(!recipeShouldNotContainSwitch);
+	};
+
+	const handleRecipeShouldContainEveryIngredientSwitch = () => {
+		setRecipeShouldContainEveryIngredientSwitch(
+			!recipeShouldContainEveryIngredientSwitch,
+		);
 	};
 
 	const handleFilterCookingTimeValuesChange = (
@@ -128,7 +140,8 @@ function AllRecipesPage() {
 	};
 
 	const handleClearFilterBtnClick = () => {
-		setIngredientFilterSwitch(false);
+		setRecipeShouldNotContainSwitch(false);
+		setRecipeShouldContainEveryIngredientSwitch(true);
 		setFilteredIngredients([]);
 		setFilterCookingTimeValues([
 			Math.min(...getAllCookingTimes(dummyRecipes)),
@@ -160,8 +173,8 @@ function AllRecipesPage() {
 						}
 						onIngredientFilterChange={handleIngredientFilterChange}
 						filteredIngredients={filteredIngredients}
-						onIngredientFilterSwitchChange={
-							handleIngredientFilterSwitchChange
+						onRecipeShouldNotContainSwitchChange={
+							handleRecipeShouldNotContainSwitchChange
 						}
 						allRecipes={dummyRecipes}
 						filterCookingTimeValues={filterCookingTimeValues}
@@ -174,6 +187,15 @@ function AllRecipesPage() {
 						filterCostPerServingValues={filterCostPerServingValues}
 						onFilterCostPerServingValues={
 							handleFilterCostPerServingValues
+						}
+						recipeShouldNotContainSwitch={
+							recipeShouldNotContainSwitch
+						}
+						onRecipeShouldContainEveryIngredientSwitch={
+							handleRecipeShouldContainEveryIngredientSwitch
+						}
+						recipeShouldContainEveryIngredientSwitch={
+							recipeShouldContainEveryIngredientSwitch
 						}
 					/>
 					<Link
@@ -195,7 +217,7 @@ function AllRecipesPage() {
 						<Tag
 							borderRadius="full"
 							colorScheme={
-								ingredientFilterSwitch ? "red" : "teal"
+								recipeShouldNotContainSwitch ? "red" : "teal"
 							}
 							key={index}
 						>

@@ -7,9 +7,10 @@ function filterRecipes(
 	allRecipes: RecipeObject[],
 	searchQuery: string,
 	filteredIngredients: string[],
-	ingredientFilterSwitch: boolean,
+	recipeShouldNotContainSwitch: boolean,
 	filterCookingTimeValues: [number, number],
 	filterCostPerServing: [number, number],
+	RecipeShouldContainEveryIngredientSwitch: boolean,
 ) {
 	if (filteredIngredients.length === 0) {
 		// Return all recipes if no ingredients are filtered
@@ -31,9 +32,11 @@ function filterRecipes(
 					cleanString(searchQuery.toLowerCase()),
 				) &&
 				/*recipeContainsEveryIngredient(recipe, filteredIngredients),*/
-				(ingredientFilterSwitch
+				(recipeShouldNotContainSwitch
 					? !recipeContainsAnyIngredient(recipe, filteredIngredients)
-					: recipeContainsEveryIngredient(
+					: RecipeShouldContainEveryIngredientSwitch
+					? recipeContainsEveryIngredient(recipe, filteredIngredients)
+					: recipeContainsAnyIngredient(
 							recipe,
 							filteredIngredients,
 					  )) &&

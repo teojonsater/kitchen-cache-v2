@@ -21,7 +21,7 @@ interface Props {
 	) => void;
 	onIngredientFilterChange: (ingredient: string) => void;
 	filteredIngredients: string[];
-	onIngredientFilterSwitchChange: () => void;
+	onRecipeShouldNotContainSwitchChange: () => void;
 	allRecipes: RecipeObject[];
 	filterCookingTimeValues: number[];
 	onFilterCookingTimeValuesChange: (newValues: [number, number]) => void;
@@ -30,6 +30,9 @@ interface Props {
 	onClearFilterBtnClick: () => void;
 	filterCostPerServingValues: number[];
 	onFilterCostPerServingValues: (newValues: [number, number]) => void;
+	recipeShouldNotContainSwitch: boolean;
+	onRecipeShouldContainEveryIngredientSwitch: () => void;
+	recipeShouldContainEveryIngredientSwitch: boolean;
 }
 
 function SearchBar({
@@ -40,7 +43,7 @@ function SearchBar({
 	onFilterIngredientsSearchQueryChange,
 	onIngredientFilterChange,
 	filteredIngredients,
-	onIngredientFilterSwitchChange,
+	onRecipeShouldNotContainSwitchChange,
 	allRecipes,
 	filterCookingTimeValues,
 	onFilterCookingTimeValuesChange,
@@ -49,6 +52,9 @@ function SearchBar({
 	onClearFilterBtnClick,
 	filterCostPerServingValues,
 	onFilterCostPerServingValues,
+	recipeShouldNotContainSwitch,
+	onRecipeShouldContainEveryIngredientSwitch,
+	recipeShouldContainEveryIngredientSwitch,
 }: Props) {
 	return (
 		<InputGroup>
@@ -96,8 +102,8 @@ function SearchBar({
 					}
 					onIngredientFilterChange={onIngredientFilterChange}
 					filteredIngredients={filteredIngredients}
-					onIngredientFilterSwitchChange={
-						onIngredientFilterSwitchChange
+					onRecipeShouldNotContainSwitchChange={
+						onRecipeShouldNotContainSwitchChange
 					}
 					allRecipes={allRecipes}
 					filterCookingTimeValues={filterCookingTimeValues}
@@ -107,6 +113,13 @@ function SearchBar({
 					onClearFilterBtnClick={onClearFilterBtnClick}
 					filterCostPerServingValues={filterCostPerServingValues}
 					onFilterCostPerServingValues={onFilterCostPerServingValues}
+					recipeShouldNotContainSwitch={recipeShouldNotContainSwitch}
+					onRecipeShouldContainEveryIngredientSwitch={
+						onRecipeShouldContainEveryIngredientSwitch
+					}
+					recipeShouldContainEveryIngredientSwitch={
+						recipeShouldContainEveryIngredientSwitch
+					}
 				/>
 			</InputRightElement>
 		</InputGroup>

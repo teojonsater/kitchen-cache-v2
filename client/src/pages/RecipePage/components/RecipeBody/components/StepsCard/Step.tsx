@@ -18,6 +18,7 @@ function Step({ step }: Props) {
 		>
 			<HStack align="start">
 				<Checkbox
+					mt="1"
 					onChange={setChecked.toggle}
 					isChecked={checked}
 					colorScheme="teal"

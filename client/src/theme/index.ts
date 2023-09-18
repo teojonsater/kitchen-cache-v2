@@ -1,21 +1,23 @@
 /* eslint-disable @typescript-eslint/naming-convention */
 import { extendTheme } from "@chakra-ui/react";
-import "@fontsource-variable/josefin-sans";
 import "@fontsource/yeseva-one";
+import "@fontsource-variable/outfit";
 
 const fonts = {
 	heading: `"Yeseva One", sans-serif`,
-	body: `"Josefin Sans Variable", sans-serif`,
+	body: `"Outfit Variable", sans-serif`,
 };
 
 const fontWeights = {
 	thin: 100,
 	extraLight: 200,
 	light: 300,
-	normal: 400,
+	normal: 350,
 	medium: 500,
 	semiBold: 600,
 	bold: 700,
+	extraBold: 800,
+	black: 900,
 };
 
 const overrides = {
@@ -24,7 +26,7 @@ const overrides = {
 	styles: {
 		global: {
 			b: {
-				fontWeight: "bold",
+				fontWeight: "semiBold",
 			},
 			body: {
 				fontWeight: "normal",
@@ -33,6 +35,11 @@ const overrides = {
 		},
 	},
 	components: {
+		Button: {
+			baseStyle: {
+				fontWeight: "medium",
+			},
+		},
 		Mark: {
 			baseStyle: {
 				background:

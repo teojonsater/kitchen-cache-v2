@@ -11,13 +11,13 @@ function recipeSort(
 		case sortByOptions[0]:
 			// Titel: A-Ö
 			sortedRecipes.sort((recipeA: RecipeObject, recipeB: RecipeObject) =>
-				recipeA.name.localeCompare(recipeB.name),
+				recipeA.name.localeCompare(recipeB.name, "sv"),
 			);
 			break;
 		case sortByOptions[1]:
 			// Titel: Ö-A
 			sortedRecipes.sort((recipeA: RecipeObject, recipeB: RecipeObject) =>
-				recipeA.name.localeCompare(recipeB.name),
+				recipeA.name.localeCompare(recipeB.name, "sv"),
 			);
 			sortedRecipes.reverse();
 			break;

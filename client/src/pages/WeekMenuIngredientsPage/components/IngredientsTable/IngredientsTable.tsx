@@ -59,7 +59,7 @@ function IngredientsTable({ weekMenuIngredients }: Props) {
 					</Thead>
 					<Tbody>
 						{weekMenuIngredients
-							.sort((a, b) => a.name.localeCompare(b.name))
+							.sort((a, b) => a.name.localeCompare(b.name, "sv"))
 							.map((weekMenuIngredient, index) => {
 								return (
 									<TableRow

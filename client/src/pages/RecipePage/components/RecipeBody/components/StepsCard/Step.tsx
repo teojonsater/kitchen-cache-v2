@@ -1,4 +1,11 @@
-import { Box, Checkbox, HStack, Text, useBoolean } from "@chakra-ui/react";
+import {
+	Box,
+	Checkbox,
+	FormControl,
+	FormLabel,
+	HStack,
+	useBoolean,
+} from "@chakra-ui/react";
 import React from "react";
 
 interface Props {
@@ -16,7 +23,7 @@ function Step({ step }: Props) {
 			p="3"
 			w="full"
 		>
-			<HStack align="start">
+			<FormControl as={HStack} align="start">
 				<Checkbox
 					mt="1"
 					onChange={setChecked.toggle}
@@ -24,14 +31,16 @@ function Step({ step }: Props) {
 					colorScheme="teal"
 				/>
 
-				<Text
+				<FormLabel
 					color={checked ? "gray.300" : "gray.800"}
 					textDecoration={checked ? "line-through" : "none"}
 					noOfLines={checked ? 1 : undefined}
+					fontWeight="normal"
+					cursor="pointer"
 				>
 					{step}
-				</Text>
-			</HStack>
+				</FormLabel>
+			</FormControl>
 		</Box>
 	);
 }
